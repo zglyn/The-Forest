@@ -1,0 +1,30 @@
+{
+  "name": "tracemap",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ask an AI about a company, trace its resources through Tradeverifyd and Sayari, and explore cost, disruption risk and CO2 on a D3 world map.",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/static": "^8.0.0",
+    "@langchain/anthropic": "^1.0.0",
+    "@langchain/core": "^1.0.0",
+    "@langchain/mcp-adapters": "^1.0.0",
+    "@langchain/openai": "^1.0.0",
+    "@langchain/tavily": "^1.0.0",
+    "@sayari/sdk": "^0.1.44",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "fastify": "^5.0.0",
+    "geojson-path-finder": "1.5.3",
+    "langchain": "^1.0.0",
+    "searoute-js": "^0.1.0",
+    "zod": "^3.25.0"
+  }
+}

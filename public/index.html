@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tracemap — trace a company's resources</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">Tracemap</div>
+  <div class="sources" id="sources" aria-live="polite"></div>
+</header>
+
+<div class="layout">
+  <aside class="chat" aria-label="Ask about a company">
+    <div class="log" id="log">
+      <div class="setup" id="setup" hidden></div>
+      <div class="intro">
+        <p>Name a company. The assistant looks up its shipments in Tradeverifyd, resolves its suppliers in Sayari, and draws where each resource comes from.</p>
+      </div>
+    </div>
+    <form class="composer" id="composer">
+      <label for="q" class="sr-only">Ask about a company</label>
+      <textarea id="q" rows="2" placeholder="Ask about a company, e.g. what does it import and from whom?" required maxlength="6000"></textarea>
+      <button type="submit" id="send">Ask</button>
+    </form>
+  </aside>
+
+  <main class="mapcol">
+    <div class="toolbar">
+      <label class="field">
+        <span>Colour by</span>
+        <select id="metric">
+          <option value="cost">Cost</option>
+          <option value="risk">Risk of supply disruption</option>
+          <option value="co2">CO₂ emissions</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Resource</span>
+        <select id="resource" disabled><option value="all">All resources</option></select>
+      </label>
+      <div class="legend" id="legend" aria-live="polite"></div>
+    </div>
+    <div class="map" id="map">
+      <div class="empty" id="empty">Ask about a company to trace its resources on the map.</div>
+      <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+      <section class="detail" id="detail" hidden aria-live="polite"></section>
+      <div class="zoom">
+        <button type="button" id="zin" aria-label="Zoom in">+</button>
+        <button type="button" id="zout" aria-label="Zoom out">−</button>
+        <button type="button" id="zreset" aria-label="Reset view">⤢</button>
+      </div>
+    </div>
+    <div class="summary" id="summary"></div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
