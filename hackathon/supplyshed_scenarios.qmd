@@ -1,0 +1,946 @@
+---
+title: "Cedar Rapids Supply Shed: Two Supply-Chain Scenarios"
+subtitle: "Field (CDL 30 m pixels → 5 km hexagons) to first buyer · 50-mile radius around Cedar Rapids, Iowa"
+date: today
+format:
+  html:
+    embed-resources: true
+    page-layout: full
+    toc: true
+    toc-location: left
+    theme: cosmo
+    code-fold: true
+    code-summary: "R code"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+suppressPackageStartupMessages({library(sf); library(dplyr); library(tidyr); library(leaflet); library(plotly); library(DT); library(scales)})
+r      <- readRDS("data/derived/results.rds")
+hex    <- st_read("data/derived/hex.gpkg", quiet = TRUE) |> st_transform(4326)
+shed   <- st_read("data/derived/shed.gpkg", quiet = TRUE) |> st_transform(4326)
+col_s  <- c(S1 = "#2a78d6", S2 = "#eb6834")            # scenario identity (validated categorical slots 1-2)
+lab_s  <- c(S1 = "S1 · Corn & soybeans (current)", S2 = "S2 · Diversified, 10 commodities (hypothetical)")
+src_col <- c("Fertilizer N₂O" = "#2a78d6", "Enteric CH₄" = "#eb6834", "Manure CH₄" = "#1baf7a", "Transport to buyer" = "#eda100")
+k <- r$kpi |> mutate(intensity = ghg_total / value)
+fmt_usd <- function(x) paste0("$", format(round(x / 1e9, 2), nsmall = 2), "B")
+fmt_kt  <- function(x) paste0(comma(round(x / 1e6)), " kt")
+tile <- function(lbl, s1, s2, note = "") htmltools::div(class = "kpi",
+  htmltools::div(class = "kpi-l", lbl),
+  htmltools::div(class = "kpi-row", htmltools::span(class = "s1", "S1 ", htmltools::strong(s1)), htmltools::span(class = "s2", "S2 ", htmltools::strong(s2))),
+  htmltools::div(class = "kpi-n", note))
+```
+
+```{=html}
+<style>
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:8px 0 20px}
+.kpi{border:1px solid #e3e2de;border-radius:8px;padding:12px 14px;background:#fcfcfb}
+.kpi-l{font-size:.8rem;color:#52514e;text-transform:uppercase;letter-spacing:.04em}
+.kpi-row{display:flex;gap:16px;margin-top:6px;font-size:1.15rem;color:#0b0b0b}
+.kpi-row .s1 strong,.kpi-row .s2 strong{font-variant-numeric:tabular-nums}
+.kpi-row .s1::before,.kpi-row .s2::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px}
+.kpi-row .s1::before{background:#2a78d6}.kpi-row .s2::before{background:#eb6834}
+.kpi-n{font-size:.75rem;color:#6b6a66;margin-top:4px}
+.callout-note p{margin-bottom:.3rem}
+svg a, svg a text{text-decoration:none!important}
+svg a:hover rect{filter:brightness(.97)}
+.econ{border:1px solid #e3e2de;border-radius:10px;padding:16px 18px;background:#fcfcfb;margin:4px 0 22px}
+.econ h4{margin:0 0 10px;font-size:1rem;color:#0b0b0b}
+.econ-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:end}
+.econ-v{font-size:1.9rem;font-weight:600;font-variant-numeric:tabular-nums;color:#0b0b0b;line-height:1.1}
+.econ-l{font-size:.8rem;color:#52514e}
+.econ-bar{height:10px;border-radius:0 4px 4px 0;margin-top:6px}
+.econ-d{font-size:1.4rem;font-weight:600;font-variant-numeric:tabular-nums}
+.econ-n{font-size:.75rem;color:#6b6a66;margin-top:10px}
+</style>
+```
+
+## Scenarios at a glance
+
+Each circle is a crop or livestock type. Circle **area is proportional to its farm-gate economic output**, on the same scale in both rows. Arrows lead to the first buyers.
+
+```{r concept}
+emo <- c(corn = "🌽", soybeans = "🫘", oats = "🌾", wheat = "🌾", barley = "🌾", alfalfa = "🌿", apples = "🍎", cattle = "🐄", sheep = "🐑", goats = "🐐")
+vmax <- max(r$by_comm$value); rmax <- 88; rad <- function(v) rmax * sqrt(v / vmax)
+esc <- function(x) htmltools::htmlEscape(x)
+soy_svg <- function(cx, cy, size) {                              # light-green soybean pod with three beans (drawn, not emoji)
+  k <- size / 110
+  sprintf(paste0('<g transform="translate(%.1f,%.1f) scale(%.3f) rotate(-28)">',
+    '<path d="M-58,0 q-4,-6 2,-9" stroke="#6f9a45" stroke-width="4" fill="none" stroke-linecap="round"/>',
+    '<rect x="-52" y="-21" width="104" height="42" rx="21" fill="#a9cf7a" stroke="#6f9a45" stroke-width="3"/>',
+    '<path d="M-44,-10 Q0,-26 44,-10" stroke="#c9e4a3" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>',
+    '<circle cx="-30" cy="2" r="14" fill="#cfe8a6" stroke="#8cb65a" stroke-width="2"/>',
+    '<circle cx="0" cy="2" r="14.5" fill="#cfe8a6" stroke="#8cb65a" stroke-width="2"/>',
+    '<circle cx="30" cy="2" r="14" fill="#cfe8a6" stroke="#8cb65a" stroke-width="2"/>',
+    '<path d="M52,0 q7,1 9,-5" stroke="#6f9a45" stroke-width="3" fill="none" stroke-linecap="round"/></g>'), cx, cy, k)
+}
+row_svg <- function(sc, y0, fill, stroke) {
+  d <- r$by_comm |> filter(scenario == sc) |> arrange(desc(value)) |> mutate(rr = rad(value), w = pmax(2 * rr, 64))
+  x <- 190; base <- y0 + 2 * rmax + 8; out <- character()
+  for (i in seq_len(nrow(d))) {
+    cx <- x + d$w[i] / 2; cy <- base - d$rr[i]
+    out <- c(out, sprintf('<circle cx="%.1f" cy="%.1f" r="%.2f" fill="%s" stroke="%s" stroke-width="1.5"><title>%s: %s</title></circle>', cx, cy, max(d$rr[i], 1.2), fill, stroke, esc(d$label[i]), fmt_usd(d$value[i])))
+    if (d$commodity[i] == "soybeans") out <- c(out, soy_svg(cx, cy, min(d$rr[i] * 1.35, 90)))
+    else if (d$rr[i] >= 13) out <- c(out, sprintf('<text x="%.1f" y="%.1f" text-anchor="middle" dominant-baseline="central" font-size="%.0f">%s</text>', cx, cy, min(d$rr[i] * 1.05, 64), emo[d$commodity[i]]))
+    else out <- c(out, sprintf('<text x="%.1f" y="%.1f" text-anchor="middle" font-size="15">%s</text>', cx, cy - d$rr[i] - 6, emo[d$commodity[i]]))
+    val <- if (d$value[i] >= 1e9) fmt_usd(d$value[i]) else paste0("$", format(round(d$value[i] / 1e6, ifelse(d$value[i] < 1e7, 1, 0)), big.mark = ","), "M")
+    out <- c(out, sprintf('<text x="%.1f" y="%.1f" text-anchor="middle" font-size="11.5" fill="#0b0b0b">%s</text>', cx, base + 16, esc(sub(" \\(.*", "", d$label[i]))),
+                  sprintf('<text x="%.1f" y="%.1f" text-anchor="middle" font-size="11" fill="#52514e">%s</text>', cx, base + 30, val))
+    x <- x + d$w[i] + 6
+  }
+  kk <- r$kpi[r$kpi$scenario == sc, ]
+  ax <- max(x + 10, 560); bx <- 1010; ym <- base - 40
+  c(sprintf('<text x="12" y="%.0f" font-size="15" font-weight="600" fill="%s">%s</text>', y0 + 60, stroke, sc),
+    sprintf('<text x="12" y="%.0f" font-size="12.5" fill="#0b0b0b">%s</text>', y0 + 80, if (sc == "S1") "Corn &amp; soybeans" else "Diversified crops"),
+    sprintf('<text x="12" y="%.0f" font-size="12.5" fill="#0b0b0b">%s</text>', y0 + 96, if (sc == "S1") "(current)" else "&amp; livestock (hypothetical)"),
+    sprintf('<text x="12" y="%.0f" font-size="11.5" fill="#52514e">3.24M acres · %s</text>', y0 + 116, fmt_usd(kk$value)),
+    out,
+    sprintf('<line x1="%.0f" y1="%.0f" x2="%.0f" y2="%.0f" stroke="#8a8984" stroke-width="2" marker-end="url(#arr)"/>', ax, ym, bx - 8, ym),
+    sprintf('<rect x="%d" y="%.0f" width="130" height="64" rx="8" fill="#fcfcfb" stroke="#8a8984"/>', bx, ym - 32),
+    sprintf('<text x="%d" y="%.0f" text-anchor="middle" font-size="12.5" font-weight="600" fill="#0b0b0b">%d first buyers</text>', bx + 65, ym - 8, kk$n_buyers),
+    sprintf('<text x="%d" y="%.0f" text-anchor="middle" font-size="11" fill="#52514e">%d companies</text>', bx + 65, ym + 9, kk$n_parents),
+    sprintf('<text x="%d" y="%.0f" text-anchor="middle" font-size="11" fill="#52514e">HHI %s</text>', bx + 65, ym + 24, comma(round(kk$hhi))))
+}
+h_row <- 2 * rmax + 60
+svg <- c('<svg viewBox="0 0 1150 ', 2 * h_row + 10, '" width="100%" role="img" aria-label="Conceptual diagram: S1 corn and soybeans vs S2 ten crop and livestock types, circle area proportional to economic output" style="font-family:inherit;max-width:1150px">',
+  '<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#8a8984"/></marker></defs>',
+  row_svg("S1", 0, "#cde2fb", "#2a78d6"),
+  sprintf('<line x1="12" x2="1140" y1="%d" y2="%d" stroke="#e3e2de"/>', h_row, h_row),
+  row_svg("S2", h_row + 4, "#fde4d8", "#eb6834"), '</svg>')
+htmltools::HTML(paste(svg, collapse = ""))
+```
+
+## Field to consumer: supply-chain steps and data sources {#chain}
+
+This report models steps 2–4 in detail (field to first buyer) and uses Tradeverifyd for parts of steps 7–8. Each box lists a potential data source for that step. **Solid boxes** are steps that use data in this report; **dashed boxes** are not yet covered.
+
+```{r chain}
+sc <- read.csv("data/params/supply_chain_steps.csv")
+wrap <- function(x, n) strwrap(x, n)
+box <- function(i, x, y, w = 206, h = 178) {
+  d <- sc[i, ]; used <- !grepl("^No", d$in_report)
+  src <- wrap(d$source, 34); act <- wrap(d$what_happens, 34)
+  tx <- function(lines, y0, size, col, wt = "400") paste(sprintf('<text x="%.0f" y="%.0f" font-size="%s" fill="%s" font-weight="%s">%s</text>', x + 10, y0 + (seq_along(lines) - 1) * (as.numeric(size) + 3), size, col, wt, htmltools::htmlEscape(lines)), collapse = "")
+  paste0(sprintf('<a href="%s" target="_blank"><rect x="%.0f" y="%.0f" width="%d" height="%d" rx="10" fill="%s" stroke="%s" stroke-width="%s" %s/>', d$source_url, x, y, w, h,
+                 if (used) "#eef4fc" else "#fcfcfb", if (used) "#2a78d6" else "#8a8984", if (used) 1.8 else 1.4, if (used) "" else 'stroke-dasharray="5 4"'),
+         sprintf('<circle cx="%.0f" cy="%.0f" r="11" fill="%s"/><text x="%.0f" y="%.0f" text-anchor="middle" font-size="11" font-weight="700" fill="#fcfcfb">%d</text>', x + 18, y + 18, if (used) "#2a78d6" else "#8a8984", x + 18, y + 22, d$step),
+         sprintf('<text x="%.0f" y="%.0f" font-size="12.5" font-weight="600" fill="#0b0b0b">%s</text>', x + 36, y + 22, htmltools::htmlEscape(sub(" to processor or terminal", " onward", sub(" & level-2 buyers", "", d$stage)))),
+         tx(head(act, 3), y + 44, "10.5", "#52514e"),
+         sprintf('<text x="%.0f" y="%.0f" font-size="9.5" font-weight="700" fill="#6b6a66" letter-spacing=".05em">DATA SOURCE</text>', x + 10, y + 100),
+         tx(head(src, 4), y + 114, "10", "#0b0b0b"), '</a>')
+}
+xs <- 12 + (0:4) * 228; out <- character()
+for (i in 1:5) out <- c(out, box(i, xs[i], 10))
+for (i in 6:10) out <- c(out, box(i, xs[11 - i], 228))                       # second row runs right-to-left (snake)
+arr <- function(x1, y1, x2, y2) sprintf('<line x1="%.0f" y1="%.0f" x2="%.0f" y2="%.0f" stroke="#8a8984" stroke-width="2" marker-end="url(#arr2)"/>', x1, y1, x2, y2)
+for (i in 1:4) out <- c(out, arr(xs[i] + 206, 99, xs[i + 1] - 4, 99))
+out <- c(out, sprintf('<path d="M%.0f,99 C%.0f,99 %.0f,317 %.0f,317" stroke="#8a8984" stroke-width="2" fill="none" marker-end="url(#arr2)"/>', xs[5] + 206, xs[5] + 236, xs[5] + 236, xs[5] + 210))
+for (i in 5:2) out <- c(out, arr(xs[i] - 2, 317, xs[i - 1] + 210, 317))
+out <- c(out, sprintf('<text x="%.0f" y="%.0f" font-size="11" fill="#52514e">Modeled in this report: steps 2–4 · Tradeverifyd: steps 7–8 · click a box to open its data source</text>', 12, 426))
+htmltools::HTML(paste0('<svg viewBox="0 0 1170 434" width="100%" role="img" aria-label="Ten-step supply chain from farm inputs to consumer with a data source for each step" style="font-family:inherit;max-width:1170px">',
+  '<defs><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#8a8984"/></marker></defs>', paste(out, collapse = ""), '</svg>'))
+```
+
+```{r chaintbl}
+sc |> transmute(Step = step, Stage = stage, `What happens` = what_happens, `In S2` = s2_notes,
+                `Potential data source` = sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>', source_url, source), `Used in this report` = in_report) |>
+  datatable(rownames = FALSE, escape = FALSE, options = list(dom = "t", pageLength = 10), caption = "Supply-chain steps and data sources (data/params/supply_chain_steps.csv)")
+```
+
+## Summary
+
+**S1** keeps today's corn and soybean pixels from the 2025 Cropland Data Layer. **S2** reallocates those same acres to ten commodities (shares in the assumptions table). Both are traced only to the **first buyer**.
+
+```{r kpis}
+g <- function(s, v) k[[v]][k$scenario == s]
+htmltools::div(class = "kpis",
+  tile("Farm-gate value", fmt_usd(g("S1", "value")), fmt_usd(g("S2", "value")), "Gross sales; production × price"),
+  tile("GHG emissions", fmt_kt(g("S1", "ghg_total")), fmt_kt(g("S2", "ghg_total")), "kt CO₂e/yr, farm + haul to first buyer"),
+  tile("GHG intensity", paste0(round(g("S1", "intensity"), 2)), paste0(round(g("S2", "intensity"), 2)), "kg CO₂e per $ of farm-gate value"),
+  tile("First buyers used", g("S1", "n_buyers"), g("S2", "n_buyers"), paste0("Companies: ", g("S1", "n_parents"), " vs ", g("S2", "n_parents"))),
+  tile("Buyer concentration (HHI)", comma(round(g("S1", "hhi"))), comma(round(g("S2", "hhi"))), "By company share of shed value; <1,500 = unconcentrated"))
+```
+
+```{r econcard}
+v1 <- g("S1", "value"); v2 <- g("S2", "value"); a <- g("S1", "acres"); d <- v2 - v1; mx <- max(v1, v2)
+arrow <- if (d < 0) "▼" else "▲"
+htmltools::div(class = "econ",
+  htmltools::h4("Total economic output (farm-gate value of all commodities, $/yr)"),
+  htmltools::div(class = "econ-grid",
+    htmltools::div(htmltools::div(class = "econ-l", lab_s["S1"]), htmltools::div(class = "econ-v", fmt_usd(v1)),
+      htmltools::div(class = "econ-l", paste0("$", comma(round(v1 / a)), " per acre")),
+      htmltools::div(class = "econ-bar", style = sprintf("width:%.0f%%;background:%s", 100 * v1 / mx, col_s["S1"]))),
+    htmltools::div(htmltools::div(class = "econ-l", lab_s["S2"]), htmltools::div(class = "econ-v", fmt_usd(v2)),
+      htmltools::div(class = "econ-l", paste0("$", comma(round(v2 / a)), " per acre")),
+      htmltools::div(class = "econ-bar", style = sprintf("width:%.0f%%;background:%s", 100 * v2 / mx, col_s["S2"]))),
+    htmltools::div(htmltools::div(class = "econ-l", "Difference, S2 − S1"),
+      htmltools::div(class = "econ-d", paste0(arrow, " ", ifelse(d < 0, "−", "+"), "$", format(round(abs(d) / 1e6)), "M")),
+      htmltools::div(class = "econ-l", paste0(ifelse(d < 0, "", "+"), percent(d / v1, accuracy = 0.1), " vs S1")))),
+  htmltools::div(class = "econ-n", "Same 3.24M acres in both scenarios. Gross sales at first buyer (production × price); excludes production costs and downstream processing value."))
+```
+
+::: {.callout-note}
+The diversified scenario spreads sales across more buyers and buyer types. But several new markets are **thin**: wool has one regional cooperative, goats and hay go mainly to one auction, and apples to two modeled local markets. So concentration *within* each commodity rises even as the number of buyers goes up (see [Buyer concentration](#buyer-concentration)).
+:::
+
+## Maps
+
+Hexagons are 5 km CDL pixel aggregates. Toggle layers in each map. The lines show each hexagon's largest first-buyer flow by value, and circles are buyers sized by the value they receive. The two maps share the same color scales.
+
+```{r maps}
+hs <- r$hex_sum |> mutate(val_ac = ifelse(acres > 0, value / acres, NA), ghg_ac = ifelse(acres > 0, (ghg_farm + coalesce(ghg_transport, 0)) / acres / 1000, NA))
+pal_v <- colorNumeric(c("#cde2fb", "#86b6ef", "#3987e5", "#1c5cab", "#0d366b"), domain = range(hs$val_ac, na.rm = TRUE), na.color = "transparent")
+pal_g <- colorNumeric(c("#fde4d8", "#f5a57f", "#eb6834", "#b8441a", "#7a2a0e"), domain = range(hs$ghg_ac, na.rm = TRUE), na.color = "transparent")
+cent <- st_centroid(st_geometry(hex)) |> st_coordinates() |> as.data.frame() |> mutate(hex_id = hex$hex_id)
+mk_map <- function(sc) {
+  hx <- hex |> left_join(filter(hs, scenario == sc), by = "hex_id")
+  fl <- r$top_flow |> filter(scenario == sc) |> left_join(cent, by = "hex_id")
+  lines <- st_sfc(lapply(seq_len(nrow(fl)), function(i) st_linestring(matrix(c(fl$X[i], fl$blon[i], fl$Y[i], fl$blat[i]), 2))), crs = 4326)
+  fl <- st_sf(fl, geometry = lines)
+  bs <- r$buyer_sum |> filter(scenario == sc)
+  leaflet(options = leafletOptions(zoomSnap = 0.25)) |> addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+    addPolygons(data = hx, group = "Value per acre", fillColor = ~pal_v(val_ac), fillOpacity = .85, color = "#fcfcfb", weight = .6,
+                label = ~sprintf("%s · $%s/ac · top use: %s", hex_id, comma(round(val_ac)), top)) |>
+    addPolygons(data = hx, group = "GHG per acre", fillColor = ~pal_g(ghg_ac), fillOpacity = .85, color = "#fcfcfb", weight = .6,
+                label = ~sprintf("%s · %.2f t CO₂e/ac", hex_id, ghg_ac)) |>
+    addPolylines(data = fl, group = "Flows to first buyer", color = "#52514e", weight = ~pmax(.5, sqrt(value / 1e6)), opacity = .45,
+                 label = ~sprintf("→ %s (%s)", buyer, dollar(value, scale = 1e-6, suffix = "M", accuracy = .1))) |>
+    addCircleMarkers(data = bs, lng = ~blon, lat = ~blat, group = "First buyers", radius = ~pmax(4, sqrt(value / 1e6) * 1.1),
+                     color = "#fcfcfb", weight = 2, fillColor = "#0b0b0b", fillOpacity = .8,
+                     label = ~sprintf("%s — %s · %s · %s", buyer, type, commodities, dollar(value, scale = 1e-6, suffix = "M", accuracy = .1))) |>
+    addPolylines(data = shed, color = "#0b0b0b", weight = 1.5, dashArray = "4 4", fill = FALSE, group = "Shed boundary") |>
+    addLayersControl(baseGroups = c("Value per acre", "GHG per acre"), overlayGroups = c("Flows to first buyer", "First buyers", "Shed boundary"),
+                     options = layersControlOptions(collapsed = FALSE)) |>
+    addLegend("bottomright", pal = pal_v, values = hs$val_ac, title = "$ / acre", className = "info legend leg-v", labFormat = labelFormat(prefix = "$")) |>
+    addLegend("bottomright", pal = pal_g, values = hs$ghg_ac, title = "t CO₂e / acre", className = "info legend leg-g") |>
+    setView(-91.6656, 41.9779, 8.25) |>
+    htmlwidgets::onRender("function(el, x) {
+      var upd = function(n) {
+        el.querySelectorAll('.leg-v').forEach(function(e) { e.style.display = n === 'Value per acre' ? '' : 'none'; });
+        el.querySelectorAll('.leg-g').forEach(function(e) { e.style.display = n === 'GHG per acre' ? '' : 'none'; });
+      };
+      upd('Value per acre'); this.on('baselayerchange', function(e) { upd(e.name); });
+    }")
+}
+```
+
+::: {layout-ncol=2}
+#### S1 · Corn & soybeans (current)
+```{r m1}
+mk_map("S1")
+```
+
+#### S2 · Diversified (hypothetical)
+```{r m2}
+mk_map("S2")
+```
+:::
+
+## Economic value
+
+#### Economic output by crop and livestock type
+
+Each panel shows one scenario's farm-gate output by type, on a shared scale. Labels give the dollar value and its share of that scenario's total.
+
+```{r valuefacet, fig.height=4.6}
+bcf <- r$by_comm |> group_by(scenario) |> mutate(share = value / sum(value)) |> ungroup()
+ordf <- bcf |> group_by(label) |> summarise(v = max(value)) |> arrange(v) |> pull(label)
+xmax <- max(bcf$value) / 1e6 * 1.28
+panel <- function(s) {
+  d <- filter(bcf, scenario == s) |> mutate(lab = ifelse(value >= 1e7, sprintf("$%s M · %s", comma(round(value / 1e6)), percent(share, 1)), sprintf("$%.1f M · %s", value / 1e6, ifelse(share < 0.001, "<0.1%", percent(share, .1)))))
+  plot_ly(d, y = ~factor(label, ordf), x = ~value / 1e6, type = "bar", orientation = "h", name = lab_s[s],
+          marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)), text = ~lab, textposition = "outside", cliponaxis = FALSE,
+          textfont = list(color = "#52514e", size = 11), hovertemplate = "%{y}<br>$%{x:,.1f}M<extra></extra>") |>
+    layout(xaxis = list(range = c(0, xmax), title = "$ million / yr", gridcolor = "#ecebe8"),
+           yaxis = list(title = "", categoryorder = "array", categoryarray = ordf))
+}
+subplot(panel("S1"), panel("S2"), shareY = TRUE, titleX = TRUE, margin = 0.03) |>
+  layout(showlegend = FALSE, margin = list(l = 120, t = 30), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb",
+         annotations = list(list(text = paste0("<b>", lab_s["S1"], "</b>"), x = 0.24, y = 1.06, xref = "paper", yref = "paper", xanchor = "center", showarrow = FALSE, font = list(size = 12, color = "#0b0b0b")),
+                            list(text = paste0("<b>", lab_s["S2"], "</b>"), x = 0.76, y = 1.06, xref = "paper", yref = "paper", xanchor = "center", showarrow = FALSE, font = list(size = 12, color = "#0b0b0b"))))
+```
+
+#### Side-by-side comparison
+
+```{r value, fig.height=5}
+bc <- r$by_comm |> mutate(scenario = factor(scenario, c("S1", "S2")))
+ord <- bc |> group_by(label) |> summarise(v = max(value)) |> arrange(v) |> pull(label)
+p <- plot_ly()
+for (s in c("S1", "S2")) {
+  d <- filter(bc, scenario == s)
+  p <- add_bars(p, data = d, y = ~factor(label, ord), x = ~value / 1e6, name = lab_s[s], orientation = "h",
+                marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)),
+                hovertemplate = paste0("%{y}<br>$%{x:,.1f}M<br>", comma(round(d$acres)), " ac<extra>", s, "</extra>"))
+}
+layout(p, barmode = "group", xaxis = list(title = "Farm-gate value ($ million / yr)", gridcolor = "#ecebe8"), yaxis = list(title = ""),
+       legend = list(orientation = "h", y = 1.08), margin = list(l = 130), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+## GHG emissions
+
+```{r ghg, fig.height=4}
+gs <- r$by_comm |> group_by(scenario) |> summarise(`Fertilizer N₂O` = sum(ghg_fert_n2o), `Enteric CH₄` = sum(ghg_enteric),
+  `Manure CH₄` = sum(ghg_manure), `Transport to buyer` = sum(ghg_transport, na.rm = TRUE)) |>
+  pivot_longer(-scenario, names_to = "source", values_to = "kg") |> mutate(scen = lab_s[scenario])
+p <- plot_ly()
+for (s in names(src_col)) {
+  d <- filter(gs, source == s)
+  p <- add_bars(p, data = d, y = ~scen, x = ~kg / 1e6, name = s, orientation = "h", marker = list(color = src_col[[s]], line = list(color = "#fcfcfb", width = 2)),
+                hovertemplate = paste0(s, "<br>%{x:,.0f} kt CO₂e<extra></extra>"))
+}
+layout(p, barmode = "stack", xaxis = list(title = "kt CO₂e / yr", gridcolor = "#ecebe8"), yaxis = list(title = ""),
+       legend = list(orientation = "h", y = 1.15), margin = list(l = 290), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+#### Emissions by commodity
+
+```{r ghgcomm, fig.height=5}
+gc <- r$by_comm |> mutate(t = (ghg_fert_n2o + ghg_enteric + ghg_manure + coalesce(ghg_transport, 0)) / 1000, int = t * 1000 / value)
+ord2 <- gc |> group_by(label) |> summarise(v = max(t)) |> arrange(v) |> pull(label)
+p <- plot_ly()
+for (s in c("S1", "S2")) {
+  d <- filter(gc, scenario == s)
+  p <- add_bars(p, data = d, y = ~factor(label, ord2), x = ~t / 1000, name = lab_s[s], orientation = "h",
+                marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)),
+                customdata = ~int, hovertemplate = "%{y}<br>%{x:,.1f} kt CO₂e<br>%{customdata:.2f} kg CO₂e per $<extra></extra>")
+}
+layout(p, barmode = "group", xaxis = list(title = "kt CO₂e / yr", gridcolor = "#ecebe8"),
+       yaxis = list(title = ""), legend = list(orientation = "h", y = 1.1), margin = list(l = 130), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+## Buyer concentration {#buyer-concentration}
+
+The **Herfindahl-Hirschman Index (HHI)** is the sum of squared market shares (0–10,000). The U.S. DOJ/FTC 2023 Merger Guidelines treat HHI above 1,800 as highly concentrated. The left chart shows the top companies' share of the shed's total farm-gate value. The right chart shows HHI *within* each commodity market, based on tonnage.
+
+::: {layout-ncol=2}
+#### Top 10 buyer companies (share of value)
+```{r conc1, fig.height=5}
+top <- r$conc_parent |> group_by(scenario) |> slice_max(share, n = 10) |> ungroup()
+ordp <- top |> group_by(parent) |> summarise(v = max(share)) |> arrange(v) |> pull(parent)
+p <- plot_ly()
+for (s in c("S1", "S2")) {
+  d <- filter(top, scenario == s)
+  p <- add_bars(p, data = d, y = ~factor(parent, ordp), x = ~share * 100, name = s, orientation = "h",
+                marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)), hovertemplate = "%{y}<br>%{x:.1f}% of value<extra></extra>")
+}
+layout(p, barmode = "group", xaxis = list(title = "% of shed farm-gate value", gridcolor = "#ecebe8"), yaxis = list(title = ""), legend = list(orientation = "h", y = 1.08),
+       margin = list(l = 200), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+#### Concentration within each commodity (HHI)
+```{r conc2, fig.height=5}
+cc <- r$conc_comm |> left_join(distinct(r$cm, commodity, label), by = "commodity")
+ordc <- cc |> group_by(label) |> summarise(v = max(hhi)) |> arrange(v) |> pull(label)
+p <- plot_ly()
+for (s in c("S1", "S2")) {
+  d <- filter(cc, scenario == s)
+  p <- add_markers(p, data = d, y = ~factor(label, ordc), x = ~hhi, name = s, marker = list(color = col_s[s], size = 11, line = list(color = "#fcfcfb", width = 2)),
+                   customdata = ~n_buyers, hovertemplate = "%{y}<br>HHI %{x:,.0f}<br>%{customdata} buyer companies<extra></extra>")
+}
+layout(p, xaxis = list(title = "HHI (tonnage)", range = c(0, 10500), gridcolor = "#ecebe8"), yaxis = list(title = ""), legend = list(orientation = "h", y = 1.08),
+       shapes = list(list(type = "line", x0 = 1800, x1 = 1800, y0 = 0, y1 = 1, yref = "paper", line = list(color = "#8a8984", dash = "dot", width = 1))),
+       annotations = list(list(x = 1800, y = -0.02, yref = "paper", text = "1,800 highly concentrated", showarrow = FALSE, xanchor = "left", yanchor = "top", font = list(size = 10, color = "#52514e"))),
+       margin = list(l = 130), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+:::
+
+## Producer-level comparison {#producers}
+
+How do the scenarios compare for an individual farm? The three **representative farms** below are sized at the 25th, 50th and 75th percentiles of farmland acres in the shed (2022 Census of Agriculture: about 360, 690 and 1,350 acres operated; 85% assumed cropped). Each farm grows today's corn–soybean mix in S1 and the S2 commodity shares in S2.
+
+::: {.callout-note}
+**How to read this.** Costs are **economic** costs per acre or per head: they include operator labor and machinery or building ownership, from Iowa State 2026, USDA ERS 2025 and University of Missouri 2025–26 budgets (see the cost table below). "Net return" subtracts a uniform **$274/acre land charge** (the ISU 2026 cash-rent equivalent), so a negative value can still mean positive cash flow for an owner-operator. "Return to land & management" leaves the land charge out. Income risk replays **2006–2025** Iowa and U.S. yield and price swings (trend-adjusted) against today's costs. Costs per acre are the same for all farm sizes (no economies of scale). Apples are at full production (3–4 establishment years excluded), and sheep earn wool only.
+:::
+
+```{r farmsetup}
+fm <- readRDS("data/derived/farms.rds"); fa <- fm$farm |> mutate(farm = factor(farm, c("Small", "Median", "Large")))
+kusd <- function(x) paste0(ifelse(x < 0, "−", ""), "$", comma(round(abs(x) / 1000)), "k")
+fmed <- filter(fa, farm == "Median"); gm <- function(s, v) fmed[[v]][fmed$scenario == s]
+htmltools::div(class = "kpis",
+  tile("Median farm: net return", kusd(gm("S1", "net")), kusd(gm("S2", "net")), paste0(fmed$acres[1], " crop acres · after $274/ac land charge")),
+  tile("Return to land & management", kusd(gm("S1", "ret_land")), kusd(gm("S2", "ret_land")), "Before land charge"),
+  tile("Year-to-year income swing (SD)", kusd(gm("S1", "net_sd")), kusd(gm("S2", "net_sd")), paste0("Replaying ", paste(fm$years, collapse = "–"), " yields & prices")),
+  tile("Buyer companies within 30 mi", round(gm("S1", "buyers_30mi"), 1), round(gm("S2", "buyers_30mi"), 1), paste0("Revenue-weighted · S2 ", percent(gm("S2", "thin_share"), 1), " of revenue in markets with ≤2 buyers")),
+  tile("Farm GHG", paste0(comma(round(gm("S1", "ghg_t"))), " t"), paste0(comma(round(gm("S2", "ghg_t"))), " t"), "t CO₂e/yr incl. haul to first buyer"))
+```
+
+::: {layout-ncol=2}
+#### Net return by farm size
+```{r farmnet, fig.height=4}
+p <- plot_ly()
+for (s in c("S1", "S2")) { d <- filter(fa, scenario == s)
+  p <- add_bars(p, data = d, x = ~farm, y = ~net / 1000, name = lab_s[s], marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)),
+                customdata = ~ret_land / 1000, hovertemplate = paste0(s, " · %{x}<br>Net return: $%{y:,.0f}k<br>Return to land & mgmt: $%{customdata:,.0f}k<extra></extra>")) }
+layout(p, barmode = "group", yaxis = list(title = "$ thousand / yr (after land charge)", zeroline = TRUE, zerolinecolor = "#8a8984", gridcolor = "#ecebe8"),
+       xaxis = list(title = ""), legend = list(orientation = "h", y = 1.22), margin = list(t = 50), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+#### Median farm: net return replayed over 2006–2025
+```{r farmrisk, fig.height=4}
+fy <- fm$farm_year |> filter(farm == "Median")
+p <- plot_ly()
+for (s in c("S1", "S2")) { d <- filter(fy, scenario == s)
+  p <- add_trace(p, data = d, x = ~year, y = ~net / 1000, type = "scatter", mode = "lines+markers", name = lab_s[s],
+                 line = list(color = col_s[s], width = 2), marker = list(color = col_s[s], size = 8, line = list(color = "#fcfcfb", width = 2)),
+                 hovertemplate = paste0(s, " · %{x}: $%{y:,.0f}k<extra></extra>")) }
+layout(p, hovermode = "x unified", yaxis = list(title = "$ thousand / yr", zeroline = TRUE, zerolinecolor = "#8a8984", gridcolor = "#ecebe8"),
+       xaxis = list(title = "Yield & price year (today's costs)"), legend = list(orientation = "h", y = 1.22), margin = list(t = 50), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+:::
+
+#### Which enterprises drive the difference? Net return per acre by enterprise
+
+```{r farment, fig.height=4.2}
+pe <- fm$per_acre |> left_join(distinct(r$cm, commodity, label), by = "commodity") |> mutate(net_ac = val_ac - cost_ac - fm$params$land)
+orde <- pe |> filter(scenario == "S2") |> arrange(net_ac) |> pull(label)
+p <- plot_ly()
+for (s in c("S1", "S2")) { d <- filter(pe, scenario == s)
+  p <- add_bars(p, data = d, y = ~factor(label, orde), x = ~net_ac, name = lab_s[s], orientation = "h", marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)),
+                customdata = ~cbind(val_ac, cost_ac, share * 100),
+                hovertemplate = "%{y}<br>Net: $%{x:,.0f}/ac<br>Gross $%{customdata[0]:,.0f} − costs $%{customdata[1]:,.0f} − land $274<br>%{customdata[2]:.0f}% of acres<extra></extra>") }
+xlo <- -1000; off <- filter(pe, net_ac < xlo)
+layout(p, barmode = "group", xaxis = list(title = "Net return, $/acre (after land charge)", range = c(xlo * 1.12, 150), zeroline = TRUE, zerolinecolor = "#8a8984", gridcolor = "#ecebe8"),
+       yaxis = list(title = ""), legend = list(orientation = "h", y = 1.12), margin = list(l = 130), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb",
+       annotations = lapply(seq_len(nrow(off)), function(i) list(x = xlo * 0.55, y = off$label[i], text = sprintf("<b>◀ $%s/ac (off scale)</b>", comma(round(off$net_ac[i]))),
+                                                                 xanchor = "center", showarrow = FALSE, font = list(size = 11, color = "#fcfcfb"))))
+```
+
+```{r farmtbl}
+fa |> arrange(farm, scenario) |> transmute(Farm = farm, Scenario = scenario, `Crop acres` = acres, Enterprises = n_enterprises,
+  `Gross ($k)` = round(gross / 1000), `Costs ($k)` = round(costs / 1000), `Land ($k)` = round(land / 1000), `Net ($k)` = round(net / 1000),
+  `Income SD ($k)` = round(net_sd / 1000), `Worst year ($k)` = round(net_worst / 1000), `Loss years` = percent(p_loss, 1),
+  `GHG (t)` = round(ghg_t), `kg CO₂e per $ gross` = round(ghg_t * 1000 / gross, 2), `Revenue HHI` = round(rev_hhi),
+  `Buyer cos. ≤30 mi` = round(buyers_30mi, 1), `Revenue in thin markets` = percent(thin_share, 1)) |>
+  datatable(rownames = FALSE, options = list(dom = "t", scrollX = TRUE), caption = "Representative farm results. Revenue HHI: 10,000 = one enterprise. Thin market: ≤2 buyer companies within 30 road miles.")
+read.csv("data/params/farm_costs.csv") |> left_join(distinct(r$cm, commodity, label), by = "commodity") |>
+  transmute(Enterprise = label, `Non-land cost` = ifelse(is.na(cost_per_acre_nonland), sprintf("$%s/head + $%.0f/ac pasture", comma(cost_per_head_nonland, .01), pasture_cost_per_acre), sprintf("$%s/ac", comma(cost_per_acre_nonland, .01))),
+            Basis = basis, Source = sprintf('<a href="%s" target="_blank">%s</a>', url, source)) |>
+  datatable(rownames = FALSE, escape = FALSE, options = list(dom = "t", pageLength = 12), caption = "Enterprise cost assumptions (data/params/farm_costs.csv)")
+```
+
+#### Where in the shed does S2 gain or lose? (5 km hexagons)
+
+The change from S1 to S2 per acre of today's corn and soybean land. Use the radio buttons to switch metrics. Blue means S2 is better for that metric and red means worse (for GHG, an increase is shown red).
+
+```{r hexchg}
+hc <- hex |> left_join(fm$hexchg, by = "hex_id") |> filter(!is.na(acres))
+div_pal <- function(v, good_positive = TRUE) { m <- max(abs(range(v, na.rm = TRUE)))
+  cols <- c("#b8441a", "#eb6834", "#f5a57f", "#f0efec", "#86b6ef", "#2a78d6", "#1c5cab")
+  colorNumeric(if (good_positive) cols else rev(cols), domain = c(-m, m), na.color = "transparent") }
+mets <- list(list(v = "d_val_ac", g = "Δ Gross value ($/ac)", pos = TRUE, fmt = function(x) sprintf("$%+.0f/ac", x)),
+             list(v = "d_net_ac", g = "Δ Net return ($/ac)", pos = TRUE, fmt = function(x) sprintf("$%+.0f/ac", x)),
+             list(v = "d_ghg_ac", g = "Δ GHG (t CO₂e/ac)", pos = FALSE, fmt = function(x) sprintf("%+.3f t/ac", x)),
+             list(v = "d_access", g = "Δ Buyer companies ≤30 mi", pos = TRUE, fmt = function(x) sprintf("%+.1f", x)))
+m <- leaflet() |> addProviderTiles(providers$Esri.WorldGrayCanvas)
+for (k in seq_along(mets)) { mt <- mets[[k]]; pal <- div_pal(hc[[mt$v]], mt$pos); vv <- hc[[mt$v]]
+  m <- m |> addPolygons(data = hc, group = mt$g, fillColor = pal(vv), fillOpacity = .85, color = "#fcfcfb", weight = .5,
+                        label = sprintf("%s · %s · buyers ≤30 mi: %.1f → %.1f · S2 thin-market revenue %s", hc$hex_id, mt$fmt(vv), hc$access_S1, hc$access_S2, percent(hc$thin_S2, 1))) |>
+    addLegend("bottomright", pal = pal, values = c(-max(abs(vv), na.rm = TRUE), max(abs(vv), na.rm = TRUE)), title = mt$g, className = paste0("info legend legh", k)) }
+m |> addPolylines(data = shed, color = "#0b0b0b", weight = 1.5, dashArray = "4 4") |>
+  addLayersControl(baseGroups = sapply(mets, `[[`, "g"), options = layersControlOptions(collapsed = FALSE)) |>
+  setView(-91.6656, 41.9779, 8.25) |>
+  htmlwidgets::onRender(sprintf("function(el, x) {
+    var names = %s;
+    var upd = function(n) { names.forEach(function(g, i) { el.querySelectorAll('.legh' + (i + 1)).forEach(function(e) { e.style.display = g === n ? '' : 'none'; }); }); };
+    upd(names[0]); this.on('baselayerchange', function(e) { upd(e.name); });
+  }", jsonlite::toJSON(sapply(mets, `[[`, "g"))))
+```
+
+## Economic value retained in the supply shed {#retention}
+
+How much of each scenario's farm-gate sales stays in the 50-mile shed? Every dollar of sales pays for farm costs, and part of each cost leaves the region (fertilizer made elsewhere, machinery from out-of-state manufacturers, rent to non-resident landowners). **Value retained = farm-gate sales − spending that leaks outside the shed.** Whatever is left, including farm profit or loss, stays with local farm households. A second measure tracks **who owns the first buyers**, since profits of out-of-state corporations flow to their headquarters.
+
+::: {.callout-note}
+**Method and limits.** Costs by category come from USDA ERS 2025 cost-and-returns shares applied to the enterprise costs used in the producer analysis (apples approximated from the Missouri budget), plus the $274/acre land charge. Each category's **local share** is an assumption with a low–high range (table below). Rent leakage uses Iowa State's finding that 25% of Iowa farmland is owned by people who are not full-time residents ([2022 survey](https://farmland.card.iastate.edu/files/inline-files/farmland-ownership-tenure-2022_0.pdf)). This measures **direct** retention only: it leaves out re-spending multipliers (an input–output model such as IMPLAN would add those), wages at in-shed processing plants, and first-buyer margins.
+:::
+
+```{r ret}
+rt <- readRDS("data/derived/retention.rds"); tt <- rt$total
+gt <- function(s, v) tt[[v]][tt$scenario == s]
+musd <- function(x) paste0("$", comma(round(x / 1e6)), "M")
+fbl <- rt$first_buyer |> filter(grepl("^Local", ownership))
+htmltools::div(class = "kpis",
+  tile("Value retained in shed", musd(gt("S1", "retained")), musd(gt("S2", "retained")),
+       sprintf("Range: S1 %s–%s · S2 %s–%s", musd(gt("S1", "retained_lo")), musd(gt("S1", "retained_hi")), musd(gt("S2", "retained_lo")), musd(gt("S2", "retained_hi")))),
+  tile("Share of farm-gate sales retained", percent(gt("S1", "pct"), 1), percent(gt("S2", "pct"), 1), "Direct retention (no multipliers)"),
+  tile("Retained per acre", paste0("$", round(gt("S1", "per_ac"))), paste0("$", round(gt("S2", "per_ac"))), "Per acre of today's corn–soy land"),
+  tile("Sales to locally owned first buyers", percent(fbl$share[fbl$scenario == "S1"], 1), percent(fbl$share[fbl$scenario == "S2"], 1), "Share of farm-gate value (elevators, sale barns, local markets)"))
+```
+
+::: {layout-ncol=2}
+#### Where each scenario's farm-gate dollars go
+```{r retbar, fig.height=4.4}
+lk <- rt$leak |> filter(group != "Local services & labor" | TRUE) |> mutate(item = paste("Leaks:", tolower(group))) |>
+  select(scenario, item, v = leak, lo = leak_lo, hi = leak_hi) |> filter(v > 1e5) |>
+  bind_rows(tt |> transmute(scenario, item = "Retained in shed", v = retained, lo = retained_lo, hi = retained_hi))
+ordr <- c(rev(unique(lk$item[lk$item != "Retained in shed"][order(lk$v[lk$item != "Retained in shed"])])), "Retained in shed")
+ordr <- rev(unique(ordr))
+p <- plot_ly()
+for (s in c("S1", "S2")) { d <- filter(lk, scenario == s)
+  p <- add_bars(p, data = d, y = ~factor(item, rev(ordr)), x = ~v / 1e6, name = lab_s[s], orientation = "h",
+                marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)),
+                error_x = list(type = "data", symmetric = FALSE, array = (d$hi - d$v) / 1e6, arrayminus = (d$v - d$lo) / 1e6, color = "#52514e", thickness = 1, width = 3),
+                hovertemplate = "%{y}<br>$%{x:,.0f}M<extra></extra>") }
+layout(p, barmode = "group", xaxis = list(title = "$ million / yr · whiskers = low–high range", gridcolor = "#ecebe8"), yaxis = list(title = ""),
+       legend = list(orientation = "h", y = 1.14), margin = list(l = 230, t = 40), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+#### Who owns the first buyers? (share of farm-gate value)
+```{r retown, fig.height=4.4}
+oc <- c(`Local (in-shed) ownership` = "#104281", `Iowa-owned outside shed` = "#256abf", `Out-of-state cooperative` = "#5598e7", `Out-of-state corporation` = "#86b6ef")
+fbd <- rt$first_buyer |> mutate(scen = lab_s[scenario])
+p <- plot_ly()
+for (o in names(oc)) { d <- filter(fbd, ownership == o); if (!nrow(d)) next
+  p <- add_bars(p, data = d, y = ~scen, x = ~share * 100, name = o, orientation = "h", marker = list(color = oc[[o]], line = list(color = "#fcfcfb", width = 2)),
+                text = ~ifelse(share > 0.04, percent(share, 1), ""), textposition = "inside", insidetextanchor = "middle",
+                textfont = list(color = ifelse(o %in% names(oc)[1:2], "#fcfcfb", "#0b0b0b")),
+                hovertemplate = paste0(o, "<br>%{x:.1f}% · $", round(d$value / 1e6), "M<extra></extra>")) }
+layout(p, barmode = "stack", xaxis = list(title = "% of farm-gate value", range = c(0, 100), gridcolor = "#ecebe8"), yaxis = list(title = ""),
+       legend = list(orientation = "h", y = -0.25, traceorder = "normal"), margin = list(l = 290), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+:::
+
+```{r rettbl}
+rt$by_comm |> left_join(distinct(r$cm, commodity, label), by = "commodity") |> filter(acres > 0) |>
+  transmute(Scenario = scenario, Commodity = label, `Sales ($M)` = round(value / 1e6, 1), `Leakage ($M)` = round(leak / 1e6, 1),
+            `Retained ($M)` = round(retained / 1e6, 1), `Retained per acre ($)` = round(retained / acres), `Retained % of sales` = percent(retained / value, 1)) |>
+  arrange(Scenario, desc(`Sales ($M)`)) |> datatable(rownames = FALSE, options = list(dom = "t", pageLength = 15), caption = "Retention by commodity. Negative values mean the enterprise's local spending falls short of the leakage its costs create.")
+read.csv("data/params/local_shares.csv") |> transmute(Category = category, Group = group, `Local share` = percent(local_share), Range = paste0(percent(low), "–", percent(high)), Rationale = rationale) |>
+  datatable(rownames = FALSE, options = list(dom = "t", pageLength = 20), caption = "Local-share assumptions (data/params/local_shares.csv)")
+rt$buyers_own |> distinct(parent, type, ownership, hq) |> filter(!grepl("state-licensed", type) | ownership != "Local (in-shed) ownership") |>
+  transmute(`First buyer (company)` = parent, Type = type, Ownership = ownership, Headquarters = hq) |> arrange(Ownership) |>
+  datatable(rownames = FALSE, options = list(dom = "t", pageLength = 25), caption = "First-buyer ownership classification (data/params/buyer_ownership.csv); unlisted state-licensed elevators are treated as locally owned")
+```
+
+## Climate risk {#climate}
+
+Two complementary measures. **(1) Weather losses:** what federal crop insurance actually paid out for weather causes (drought, heat, excess moisture, flood, wind, hail, frost) from 2006 to 2025, expressed as a share of insured value (the "loss cost") for each commodity and applied to each scenario's output. **(2) Extreme-event exposure:** how much production and first-buyer business sits in FEMA 100-year flood zones, and how often damaging storms hit the shed's counties.
+
+::: {.callout-warning}
+**Read with care.** Loss costs come from USDA RMA [cause-of-loss data](https://www.rma.usda.gov/tools-reports/summary-of-business/cause-loss). Corn and soybeans use the shed's counties. Oats, wheat, alfalfa (forage) and pasture have little insured value locally, so they use **Iowa statewide** figures, and barley borrows oats' rates. **Livestock has no yield insurance**, so cattle, sheep and goats use Iowa's Pasture, Rangeland and Forage *rainfall-index* product, which pays out more often by design; results are therefore shown **with and without** it. **Apples are not covered** (no Iowa apple insurance data). Insurance only sees losses beyond the deductible, so these figures understate total weather damage but are consistent across crops. Buyers placed at town centroids have approximate flood status.
+:::
+
+```{r clim}
+cl <- readRDS("data/derived/climate.rds"); rk <- cl$risk; ex <- readRDS("data/derived/exposure.rds")
+ga <- function(s, v, ver = "All covered commodities") rk[[v]][rk$scenario == s & rk$version == ver]
+gc <- function(s, v) rk[[v]][rk$scenario == s & rk$version == "Crops only (no pasture proxy)"]
+fb <- cl$flood_buyers; ff <- cl$flood_fields
+htmltools::div(class = "kpis",
+  tile("Expected annual weather loss", musd(ga("S1", "exp_loss")), musd(ga("S2", "exp_loss")),
+       sprintf("%s vs %s of covered output · crops only: S2 %s (%s)", percent(ga("S1", "pct"), .1), percent(ga("S2", "pct"), .1), musd(gc("S2", "exp_loss")), percent(gc("S2", "pct"), .1))),
+  tile("Year-to-year swing (SD)", musd(ga("S1", "sd")), musd(ga("S2", "sd")), sprintf("Relative swing (CV): %.2f vs %.2f", ga("S1", "cv"), ga("S2", "cv"))),
+  tile("Worst year", paste0(musd(ga("S1", "worst")), " (", ga("S1", "worst_year"), ")"), paste0(musd(ga("S2", "worst")), " (", ga("S2", "worst_year"), ")"), "Loss replayed on today's output"),
+  tile("Output on flood-zone land", percent(ff$share[ff$scenario == "S1"], .1), percent(ff$share[ff$scenario == "S2"], .1), sprintf("%s of %s corn–soy acres in FEMA 100-yr zones", comma(round(sum(ex$hexfz$fz_ac))), comma(round(sum(ex$hexfz$cs_ac))))),
+  tile("Sales to buyers in / near flood zones", paste0(percent(fb$in_sfha[fb$scenario == "S1"], 1), " / ", percent(fb$near[fb$scenario == "S1"], 1)),
+       paste0(percent(fb$in_sfha[fb$scenario == "S2"], 1), " / ", percent(fb$near[fb$scenario == "S2"], 1)), "Inside a 100-yr zone / within 250 m of one"))
+```
+
+::: {layout-ncol=2}
+#### Weather losses replayed on today's output, 2006–2025
+```{r climseries, fig.height=4}
+p <- plot_ly()
+for (s in c("S1", "S2")) { d <- filter(cl$series, scenario == s)
+  p <- add_trace(p, data = d, x = ~year, y = ~loss / 1e6, type = "scatter", mode = "lines+markers", name = lab_s[s], line = list(color = col_s[s], width = 2),
+                 marker = list(color = col_s[s], size = 8, line = list(color = "#fcfcfb", width = 2)), hovertemplate = paste0(s, " · %{x}: $%{y:,.0f}M<extra></extra>")) }
+layout(p, hovermode = "x unified", yaxis = list(title = "$ million (insured weather losses)", gridcolor = "#ecebe8"), xaxis = list(title = ""),
+       legend = list(orientation = "h", y = 1.22), margin = list(t = 50), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb",
+       annotations = list(list(x = 2012, y = max(cl$series$loss) / 1e6, text = "2012 drought", showarrow = TRUE, ax = 40, ay = -10, font = list(size = 11, color = "#52514e")),
+                          list(x = 2020, y = cl$series$loss[cl$series$scenario == "S1" & cl$series$year == 2020] / 1e6, text = "2020 derecho", showarrow = TRUE, ax = -40, ay = -25, font = list(size = 11, color = "#52514e"))))
+```
+
+#### Expected annual loss by cause
+```{r climcause, fig.height=4}
+bcz <- cl$by_cause |> filter(loss > 0)
+ordz <- bcz |> group_by(g) |> summarise(v = max(loss)) |> arrange(v) |> pull(g)
+p <- plot_ly()
+for (s in c("S1", "S2")) { d <- filter(bcz, scenario == s)
+  p <- add_bars(p, data = d, y = ~factor(g, ordz), x = ~loss / 1e6, name = lab_s[s], orientation = "h", marker = list(color = col_s[s], line = list(color = "#fcfcfb", width = 2)),
+                hovertemplate = "%{y}: $%{x:,.1f}M/yr<extra></extra>") }
+layout(p, barmode = "group", xaxis = list(title = "$ million / yr", gridcolor = "#ecebe8"), yaxis = list(title = ""), legend = list(orientation = "h", y = 1.22),
+       margin = list(l = 170, t = 50), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+:::
+
+#### Weather loss cost by commodity (share of value lost per year, 2006–2025 average)
+```{r climcomm, fig.height=3.8}
+lcc <- cl$by_comm |> filter(scenario == "S2") |> mutate(lab2 = paste0(label, " · ", ifelse(commodity %in% c("cattle", "sheep", "goats"), "Iowa pasture index", scope)))
+lcc <- lcc |> arrange(lc)
+plot_ly(lcc, y = ~factor(lab2, lab2), x = ~lc * 100, type = "bar", orientation = "h", marker = list(color = "#3b3a37", line = list(color = "#fcfcfb", width = 2)),
+        text = ~percent(lc, .1), textposition = "outside", cliponaxis = FALSE, textfont = list(color = "#52514e", size = 11),
+        hovertemplate = "%{y}<br>%{x:.1f}% of value per year<extra></extra>") |>
+  layout(xaxis = list(title = "% of insured value paid for weather causes, per year", range = c(0, max(lcc$lc) * 118), gridcolor = "#ecebe8"), yaxis = list(title = ""),
+         margin = list(l = 260), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb")
+```
+
+#### Exposure map: flood zones and storm frequency
+
+Hexagon shading shows the share of each hexagon's corn and soybean acres in FEMA 100-year flood zones. The alternate layer shows damaging storm events (wind, hail, tornado, flood) per year by county from NOAA Storm Events, 2006–2025. First buyers are outlined in dark red if inside a flood zone and orange if within 250 m of one; hover for details.
+
+```{r climmap}
+hfz <- hex |> left_join(ex$hexfz, by = "hex_id") |> filter(cs_ac > 0)
+pal_f <- colorNumeric(c("#f0efec", "#b7d3f6", "#6da7ec", "#2a78d6", "#104281"), domain = c(0, max(hfz$fz_share, na.rm = TRUE)))
+stc <- ex$storms |> filter(hazard %in% c("Damaging wind", "Hail", "Tornado", "Flood & flash flood")) |> count(county, name = "n") |> mutate(per_yr = n / 20)
+ctys <- st_read("data/derived/shed_counties.gpkg", quiet = TRUE) |> st_transform(4326) |> left_join(stc, by = c("NAME" = "county"))
+pal_s <- colorNumeric(c("#fde4d8", "#f5a57f", "#eb6834", "#b8441a"), domain = range(ctys$per_yr, na.rm = TRUE))
+eb <- st_read("data/derived/buyers.gpkg", quiet = TRUE) |> left_join(select(ex$buyers, buyer_id, in_sfha, near_sfha_250m), by = "buyer_id") |>
+  mutate(ring = ifelse(in_sfha, "#7a2a0e", ifelse(near_sfha_250m, "#eb6834", "#fcfcfb")), st = ifelse(in_sfha, "inside 100-yr flood zone", ifelse(near_sfha_250m, "within 250 m of flood zone", "outside flood zones")))
+leaflet() |> addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+  addPolygons(data = hfz, group = "Corn–soy acres in flood zones", fillColor = ~pal_f(fz_share), fillOpacity = .85, color = "#fcfcfb", weight = .5,
+              label = ~sprintf("%s · %s of corn–soy acres in 100-yr flood zone (%s ac)", hex_id, percent(fz_share, 1), comma(round(fz_ac)))) |>
+  addPolygons(data = ctys, group = "Damaging storms per year (county)", fillColor = ~pal_s(per_yr), fillOpacity = .75, color = "#fcfcfb", weight = 1,
+              label = ~sprintf("%s County · %.1f damaging storm events per year (2006–2025)", NAME, per_yr)) |>
+  addCircleMarkers(data = eb, radius = 5, color = ~ring, weight = 2.5, opacity = 1, fillColor = "#0b0b0b", fillOpacity = .85, group = "First buyers",
+                   label = ~sprintf("%s (%s) · %s%s", name, city, st, ifelse(geocode == "town centroid", " · location approximate (town centroid)", ""))) |>
+  addPolylines(data = shed, color = "#0b0b0b", weight = 1.5, dashArray = "4 4") |>
+  addLayersControl(baseGroups = c("Corn–soy acres in flood zones", "Damaging storms per year (county)"), overlayGroups = "First buyers", options = layersControlOptions(collapsed = FALSE)) |>
+  addLegend("bottomright", pal = pal_f, values = c(0, max(hfz$fz_share, na.rm = TRUE)), title = "Share in flood zone", labFormat = labelFormat(suffix = "", transform = function(x) 100 * x, between = "–"), className = "info legend legc1") |>
+  addLegend("bottomright", pal = pal_s, values = ctys$per_yr, title = "Storm events / yr", className = "info legend legc2") |>
+  addLegend("bottomleft", colors = c("#7a2a0e", "#eb6834", "#fcfcfb"), labels = c("Buyer inside flood zone", "Buyer within 250 m", "Buyer outside"), title = "First buyers (ring)", opacity = 1) |>
+  setView(-91.6656, 41.9779, 8.25) |>
+  htmlwidgets::onRender("function(el, x) {
+    var upd = function(n) { el.querySelectorAll('.legc1').forEach(function(e) { e.style.display = n === 'Corn–soy acres in flood zones' ? '' : 'none'; });
+                            el.querySelectorAll('.legc2').forEach(function(e) { e.style.display = n === 'Damaging storms per year (county)' ? '' : 'none'; }); };
+    upd('Corn–soy acres in flood zones'); this.on('baselayerchange', function(e) { upd(e.name); });
+  }")
+```
+
+```{r climtbl}
+ex$storms |> group_by(Hazard = hazard) |> summarise(`Events (2006–2025)` = n(), `Per year` = round(n() / 20, 1), `Crop damage ($M)` = round(sum(dmg_crop) / 1e6, 1),
+  `Property damage ($M)` = round(sum(dmg_prop) / 1e6, 1), .groups = "drop") |> arrange(desc(`Events (2006–2025)`)) |>
+  datatable(rownames = FALSE, options = list(dom = "t"), caption = "NOAA Storm Events in the shed's counties, 2006–2025 (damage as reported; many events report none)")
+r$buyer_sum |> left_join(ex$buyers |> select(buyer_id, in_sfha, near_sfha_250m, geocode), by = "buyer_id") |> filter(in_sfha | near_sfha_250m) |>
+  group_by(Buyer = buyer, Type = type, Location = geocode, `Flood status` = ifelse(in_sfha, "Inside 100-yr zone", "Within 250 m")) |>
+  summarise(`S1 value ($M)` = round(sum(value[scenario == "S1"]) / 1e6, 1), `S2 value ($M)` = round(sum(value[scenario == "S2"]) / 1e6, 1), .groups = "drop") |>
+  arrange(desc(`S1 value ($M)`)) |> datatable(rownames = FALSE, options = list(pageLength = 10), caption = "First buyers inside or near FEMA 100-year flood zones")
+```
+
+## Cargill & ADM: field to first buyer {#cargill-adm}
+
+How much of the shed's product each scenario sends from the field to **Cargill** and **ADM** facilities: Cedar Rapids corn milling, the two Cargill soybean plants, ADM's Cedar Rapids wet mill and ethanol plant, and ADM Clinton. In S2, the acres that shift away from corn and soybeans go to buyers other than these two companies.
+
+```{r big2tiles}
+b2 <- r$big2; tv <- r$kpi |> select(scenario, value)
+bt <- b2 |> group_by(scenario) |> summarise(miles = weighted.mean(miles, tons), tons = sum(tons), value = sum(value), ghg = sum(ghg_transport)) |>
+  left_join(tv, by = "scenario", suffix = c("", "_all")) |> mutate(share = value / value_all)
+q <- function(s, v) bt[[v]][bt$scenario == s]
+htmltools::div(class = "kpis",
+  tile("Value sold to Cargill + ADM", fmt_usd(q("S1", "value")), fmt_usd(q("S2", "value")), "Farm-gate $/yr"),
+  tile("Share of shed value", percent(q("S1", "share"), 1), percent(q("S2", "share"), 1), "Cargill + ADM ÷ all first buyers"),
+  tile("Tons delivered", sprintf("%.2fM", q("S1", "tons") / 1e6), sprintf("%.2fM", q("S2", "tons") / 1e6), "Short tons/yr"),
+  tile("Avg haul · transport GHG", paste0(round(q("S1", "miles")), " mi · ", round(q("S1", "ghg") / 1e6, 1), " kt"),
+       paste0(round(q("S2", "miles")), " mi · ", round(q("S2", "ghg") / 1e6, 1), " kt"), "Tonnage-weighted road miles; kt CO₂e"))
+```
+
+#### Flows from fields (5 km hexagons) to Cargill and ADM facilities
+
+The hexagon shading shows tons per year each 5 km hexagon sells to Cargill and ADM combined. Lines are drawn only for the largest hexagon–facility flows (at least 2,000 tons per year), colored by company. Use the radio buttons to switch scenarios, and hover for details.
+
+```{r big2map}
+co_col <- c(Cargill = "#1baf7a", ADM = "#4a3aa7")
+fl2 <- b2 |> group_by(scenario, hex_id, buyer_id, buyer, parent, blat, blon) |> summarise(tons = sum(tons), value = sum(value), .groups = "drop") |>
+  filter(tons >= 2000) |> left_join(cent, by = "hex_id")
+ht <- b2 |> group_by(scenario, hex_id) |> summarise(tons = sum(tons), cg = sum(tons[parent == "Cargill"]), .groups = "drop")
+pal_t <- colorNumeric(c("#f0efec", "#c9c8c2", "#9a9994", "#6b6a66", "#3b3a37"), domain = range(ht$tons), na.color = "transparent")
+fl2 <- st_sf(fl2, geometry = st_sfc(lapply(seq_len(nrow(fl2)), function(i) st_linestring(matrix(c(fl2$X[i], fl2$blon[i], fl2$Y[i], fl2$blat[i]), 2))), crs = 4326))
+fac <- b2 |> group_by(scenario, buyer, parent, blat, blon) |> summarise(tons = sum(tons), value = sum(value),
+  commodities = paste(sort(unique(commodity)), collapse = ", "), .groups = "drop")
+m <- leaflet() |> addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+  addPolylines(data = shed, color = "#0b0b0b", weight = 1.5, dashArray = "4 4", fill = FALSE)
+for (sc in c("S1", "S2")) {
+  grp <- lab_s[[sc]]
+  hx2 <- hex |> left_join(filter(ht, scenario == sc), by = "hex_id")
+  m <- m |> addPolygons(data = hx2, group = grp, fillColor = ~pal_t(tons), fillOpacity = .8, color = "#fcfcfb", weight = .5,
+                        label = ~sprintf("%s · %s tons to Cargill+ADM (Cargill %s%%)", hex_id, comma(round(tons)), round(100 * cg / tons))) |>
+    addPolylines(data = filter(fl2, scenario == sc), group = grp, color = ~unname(co_col[parent]), opacity = .7,
+                         weight = ~pmax(.8, (tons - 1500) / 800), label = ~sprintf("%s → %s: %s tons", hex_id, buyer, comma(round(tons)))) |>
+    addCircleMarkers(data = filter(fac, scenario == sc), lng = ~blon, lat = ~blat, group = grp, radius = ~pmax(6, sqrt(tons) / 90),
+                     color = "#fcfcfb", weight = 2, fillColor = ~unname(co_col[parent]), fillOpacity = .95,
+                     label = ~sprintf("%s (%s) — %s · %s tons · %s", buyer, parent, commodities, comma(round(tons)), dollar(value, scale = 1e-6, suffix = "M", accuracy = .1)))
+}
+m |> addLayersControl(baseGroups = unname(lab_s), options = layersControlOptions(collapsed = FALSE)) |>
+  addLegend("bottomright", colors = unname(co_col), labels = names(co_col), title = "Company", opacity = 1) |>
+  addLegend("bottomleft", pal = pal_t, values = ht$tons, title = "Tons/yr to<br>Cargill + ADM", labFormat = labelFormat(big.mark = ",")) |>
+  setView(-91.3, 41.95, 8)
+```
+
+#### Field → commodity → facility
+
+Each band runs from the county where the product is grown (the 8 largest counties by tonnage; the rest are grouped) through the commodity to the Cargill or ADM facility. Hover to see tons. **Both diagrams use the same scale (pixels per ton)**, so S2 is drawn smaller in proportion to the smaller volume and value it sends to Cargill and ADM.
+
+```{r sankey}
+cn <- st_read("data/derived/shed_counties.gpkg", quiet = TRUE) |> st_drop_geometry() |> select(GEOID, county = NAME)
+sk_pad <- 14; sk_marg <- 20; sk_h1 <- 520                       # S1 height (px); S2 is scaled to the same pixels-per-ton
+sk_ncol_max <- function(sc) {                                    # nodes in the busiest column (counties: top 8 + "Other")
+  d <- filter(b2, scenario == sc); max(min(n_distinct(d$GEOID), 9), n_distinct(d$commodity), n_distinct(d$buyer)) }
+sk_tot <- b2 |> group_by(scenario) |> summarise(t = sum(tons)) |> tibble::deframe()
+sk_ky  <- (sk_h1 - sk_marg - (sk_ncol_max("S1") - 1) * sk_pad) / sk_tot[["S1"]]
+sk_h   <- c(S1 = sk_h1, S2 = round(sk_ky * sk_tot[["S2"]] + sk_marg + (sk_ncol_max("S2") - 1) * sk_pad))
+mk_sankey <- function(sc) {
+  d <- b2 |> filter(scenario == sc) |> left_join(cn, by = "GEOID")
+  topc <- d |> group_by(county) |> summarise(t = sum(tons)) |> slice_max(t, n = 8) |> pull(county)
+  d <- d |> mutate(county = ifelse(county %in% topc, paste(county, "Co."), "Other counties"), comm = tools::toTitleCase(commodity))
+  l1 <- d |> group_by(src = county, dst = comm) |> summarise(t = sum(tons), co = NA_character_, .groups = "drop")
+  l2 <- d |> group_by(src = comm, dst = buyer) |> summarise(t = sum(tons), co = first(parent), .groups = "drop")
+  lk <- bind_rows(l1, l2); nodes <- unique(c(lk$src, lk$dst))
+  ncol <- ifelse(nodes %in% d$buyer, unname(co_col[d$parent[match(nodes, d$buyer)]]), ifelse(nodes %in% d$comm, "#52514e", "#b5b4ae"))
+  lcol <- ifelse(is.na(lk$co), "rgba(181,180,174,0.35)", ifelse(lk$co == "Cargill", "rgba(27,175,122,0.35)", "rgba(74,58,167,0.35)"))
+  plot_ly(type = "sankey", arrangement = "snap", valueformat = ",.0f", valuesuffix = " tons", height = sk_h[[sc]],
+          node = list(label = nodes, color = ncol, pad = sk_pad, thickness = 14, line = list(color = "#fcfcfb", width = 1)),
+          link = list(source = match(lk$src, nodes) - 1, target = match(lk$dst, nodes) - 1, value = lk$t, color = lcol)) |>
+    layout(font = list(size = 11), margin = list(l = 10, r = 10, t = 10, b = 10), paper_bgcolor = "#fcfcfb")
+}
+```
+
+::: {layout-ncol=2}
+##### S1 · Corn & soybeans (current) — `r sprintf("%.2fM tons · %s", sk_tot[["S1"]] / 1e6, fmt_usd(sum(b2$value[b2$scenario == "S1"])))`
+```{r sk1}
+mk_sankey("S1")
+```
+
+##### S2 · Diversified (hypothetical) — `r sprintf("%.2fM tons · %s", sk_tot[["S2"]] / 1e6, fmt_usd(sum(b2$value[b2$scenario == "S2"])))`
+```{r sk2}
+mk_sankey("S2")
+```
+:::
+
+```{r big2tbl}
+fac |> transmute(Scenario = scenario, Company = parent, Facility = buyer, Commodities = commodities, `Tons (000)` = round(tons / 1000, 1), `Value ($M)` = round(value / 1e6, 1)) |>
+  arrange(Scenario, desc(`Tons (000)`)) |> datatable(rownames = FALSE, options = list(dom = "t", pageLength = 12), caption = "Cargill and ADM facilities: product received by scenario")
+```
+
+## Beyond the first buyer: level-2 buyers (Tradeverifyd) {#level2}
+
+**Level 1** is the first buyer that receives the crop from the field (modeled above). **Level 2** is the set of companies that buy *from* those first-buyer companies, according to [Tradeverifyd](https://platform.tradeverifyd.com) trade relationships. These are filtered to products made from shed commodities: corn, soybeans and oats and their derivatives (starch, glucose/HFCS, ethanol, DDGS, soybean meal and oil, and so on).
+
+::: {.callout-warning}
+**Read with care.** Tradeverifyd links are **company-level**, not plant-level. A link from ADM to a buyer in Vietnam shows that ADM sells soybean meal to that buyer, not that the product came from the Cedar Rapids plant. The records mostly come from **international trade (customs) data**, so domestic sales are largely missing, and the links carry no volumes. Band widths below therefore count *relationships*, not tons. Cargill appears in the data under many fragmented entities, so it is under-represented; POET and Big River had no outbound records, and the Quaker/PepsiCo entity had none for oat products. A few records with implausible locations are flagged in the table.
+:::
+
+```{r l2setup}
+l2 <- readRDS("data/derived/level2.rds")$edges
+bl <- st_read("data/derived/buyers.gpkg", quiet = TRUE) |> st_drop_geometry()
+l1_pts <- tibble(l1_parent = c("ADM", "Cargill", "Ingredion", "Kent Corporation"),
+                 l1_site = c("ADM Corn Processing (wet mill & ethanol)", "Cargill Corn Milling", "Ingredion Cedar Rapids", "Grain Processing Corporation")) |>
+  left_join(select(bl, l1_site = name, l1_lat = lat, l1_lon = long), by = "l1_site")
+l2m <- l2 |> filter(mapped) |> left_join(l1_pts, by = "l1_parent")
+co4 <- c(ADM = "#4a3aa7", Cargill = "#1baf7a", Ingredion = "#e87ba4", `Kent Corporation` = "#8a8984")
+co4_lab <- c(ADM = "ADM", Cargill = "Cargill", Ingredion = "Ingredion (dashed)", `Kent Corporation` = "Grain Processing Corp. (Kent)")
+htmltools::div(class = "kpis",
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Level-2 buyer companies"), htmltools::div(class = "kpi-row", htmltools::strong(n_distinct(l2$l2_entity_id))), htmltools::div(class = "kpi-n", paste(nrow(l2), "trade relationships"))),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Countries"), htmltools::div(class = "kpi-row", htmltools::strong(n_distinct(l2m$country))), htmltools::div(class = "kpi-n", paste0("Top: ", paste(names(sort(table(l2m$country), decreasing = TRUE))[1:3], collapse = ", ")))),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Soy- vs corn-derived links"), htmltools::div(class = "kpi-row", htmltools::strong(paste(sum(grepl("Soy", l2$product_group)), "·", sum(grepl("Corn", l2$product_group))))), htmltools::div(class = "kpi-n", "Soy-derived · corn-derived (5 links carry both)")),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Level-1 companies with links"), htmltools::div(class = "kpi-row", htmltools::strong(n_distinct(l2$l1_parent))), htmltools::div(class = "kpi-n", paste(names(table(l2$l1_parent)), table(l2$l1_parent), collapse = " · "))))
+```
+
+#### Map: field → level 1 (first buyer) → level 2 (their buyers)
+
+Dashed black circle: the supply shed (fields). Large markers: level-1 sites in or near the shed. Small markers: level-2 buyers, placed at city level where Tradeverifyd has an address and at the country centroid otherwise. Lines follow great-circle paths and are colored by the level-1 company; hover for details.
+
+```{r l2map}
+gc_line <- function(lon1, lat1, lon2, lat2, n = 60) {           # great-circle path by spherical interpolation
+  r <- pi / 180; v <- function(lo, la) c(cos(la * r) * cos(lo * r), cos(la * r) * sin(lo * r), sin(la * r))
+  a <- v(lon1, lat1); b <- v(lon2, lat2); w <- acos(max(-1, min(1, sum(a * b))))
+  t <- seq(0, 1, length.out = n)
+  p <- if (w < 1e-9) matrix(rep(a, n), ncol = 3, byrow = TRUE) else t(sapply(t, function(f) (sin((1 - f) * w) * a + sin(f * w) * b) / sin(w)))
+  xy <- cbind(atan2(p[, 2], p[, 1]) / r, asin(pmax(-1, pmin(1, p[, 3]))) / r)
+  for (i in 2:n) while (xy[i, 1] - xy[i - 1, 1] > 180) xy[i, 1] <- xy[i, 1] - 360   # unwrap across the antimeridian
+  for (i in 2:n) while (xy[i, 1] - xy[i - 1, 1] < -180) xy[i, 1] <- xy[i, 1] + 360
+  if (tail(xy[, 1], 1) > 30) xy[, 1] <- xy[, 1] - 360                           # draw Asia-bound routes across the Pacific side
+  st_linestring(xy)
+}
+ln <- st_sf(l2m, geometry = st_sfc(lapply(seq_len(nrow(l2m)), function(i) gc_line(l2m$l1_lon[i], l2m$l1_lat[i], l2m$lon[i], l2m$lat[i])), crs = 4326))
+l2m$lon_plot <- sapply(st_geometry(ln), function(g) tail(st_coordinates(g)[, 1], 1))
+ll <- leaflet(options = leafletOptions(worldCopyJump = FALSE, minZoom = 1)) |> addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+  addPolygons(data = shed, color = "#0b0b0b", weight = 1.5, dashArray = "4 4", fillColor = "#c9c8c2", fillOpacity = .4, label = "Cedar Rapids 50-mile supply shed (fields)")
+for (co in names(co4)) {
+  d <- filter(ln, l1_parent == co); if (!nrow(d)) next
+  ll <- ll |> addPolylines(data = d, color = co4[[co]], weight = 1.6, opacity = .7, dashArray = if (co == "Ingredion") "6 4" else NULL, group = co4_lab[[co]],
+                           label = ~sprintf("%s → %s (%s) · %s", l1_parent, l2_name, country, products))
+}
+ll |> addCircleMarkers(data = l2m, lng = ~lon_plot, lat = ~lat, radius = 4, color = "#fcfcfb", weight = 1, fillColor = unname(co4[l2m$l1_parent]), fillOpacity = .95,
+                       label = ~sprintf("Level 2: %s — %s%s · buys %s from %s (%s)", l2_name, ifelse(is.na(city), "", paste0(city, ", ")), country, products, l1_parent, loc_precision)) |>
+  addCircleMarkers(data = l1_pts, lng = ~l1_lon, lat = ~l1_lat, radius = 8, color = "#fcfcfb", weight = 2, fillColor = unname(co4[l1_pts$l1_parent]), fillOpacity = 1,
+                   label = ~sprintf("Level 1: %s (%s)", l1_site, l1_parent)) |>
+  addLegend("bottomleft", colors = unname(co4), labels = unname(co4_lab), title = "Level-1 company", opacity = 1) |>
+  addLayersControl(overlayGroups = unname(co4_lab[names(co4) %in% ln$l1_parent]), options = layersControlOptions(collapsed = FALSE)) |>
+  fitBounds(-285, -38, 25, 80)
+```
+
+#### Flow: shed commodity → level-1 company → product → level-2 country
+
+Band width is the **number of trade relationships** (Tradeverifyd has no volumes). The 10 countries with the most links are shown; the rest are grouped as "Other countries".
+
+```{r l2sankey, fig.height=6}
+cn_name <- c(PH = "Philippines", VN = "Vietnam", MX = "Mexico", US = "United States", IN = "India", CN = "China", BR = "Brazil", BE = "Belgium", TH = "Thailand",
+             KR = "South Korea", HN = "Honduras", CO = "Colombia", JM = "Jamaica", EC = "Ecuador", DO = "Dominican Rep.", CL = "Chile", GT = "Guatemala",
+             JP = "Japan", ID = "Indonesia", MY = "Malaysia", CA = "Canada", PE = "Peru", CR = "Costa Rica", SV = "El Salvador")
+sk <- l2m |> tidyr::separate_rows(hs4, sep = ";") |> mutate(product = unname(readRDS("data/derived/level2.rds")$hs[hs4]),
+  src = ifelse(hs4 %in% c("1201", "1507", "2304", "2106"), "Soybeans (shed)", ifelse(hs4 %in% c("1004", "1104"), "Oats (shed)", "Corn (shed)")),
+  ctry = coalesce(cn_name[country], country))
+topk <- names(sort(table(sk$ctry), decreasing = TRUE))[1:10]
+sk <- mutate(sk, ctry = ifelse(ctry %in% topk, ctry, "Other countries"), l1 = paste0(l1_parent, " "))
+lk <- bind_rows(count(sk, a = src, b = l1), count(sk, a = l1, b = product), count(sk, a = product, b = ctry))
+nodes <- unique(c(lk$a, lk$b))
+ncol <- ifelse(trimws(nodes) %in% names(co4), unname(co4[trimws(nodes)]), ifelse(grepl("\\(shed\\)", nodes), "#3b3a37", "#9a9994"))
+plot_ly(type = "sankey", arrangement = "snap", valuesuffix = " links",
+        node = list(label = nodes, color = ncol, pad = 12, thickness = 14, line = list(color = "#fcfcfb", width = 1)),
+        link = list(source = match(lk$a, nodes) - 1, target = match(lk$b, nodes) - 1, value = lk$n, color = "rgba(154,153,148,0.35)")) |>
+  layout(font = list(size = 11), margin = list(l = 10, r = 10, t = 10, b = 10), paper_bgcolor = "#fcfcfb")
+```
+
+```{r l2tbl}
+l2 |> transmute(`Level 1` = l1_parent, `Level 2 buyer` = l2_name, City = city, Country = country, Products = products, Location = loc_precision, `Data flag` = flag) |>
+  arrange(`Level 1`, Country) |> datatable(rownames = FALSE, filter = "top", options = list(pageLength = 10), caption = "Level-2 buyers from Tradeverifyd (company-level trade relationships)")
+```
+
+## Where shed products go: U.S. export destinations (Tradeverifyd · UN Comtrade) {#exports}
+
+This section shows the national export picture for the products the shed's first buyers make, from [UN Comtrade](https://comtradeplus.un.org/) data served through Tradeverifyd's `tia_trade_flow`. It adds **dollar values** to the level-2 relationships above.
+
+::: {.callout-warning}
+**Coverage is partial.** Tradeverifyd's Comtrade extract returned **2023 only** and **four partner countries** (China, Mexico, Japan, South Korea), with no tonnages. Requests for other partners (for example, Canada, the Philippines, Vietnam and Colombia) returned no rows. These are *U.S.* exports, not shed-specific volumes, and totals here are well below full U.S. exports. Spot check: soybeans to China, $15.2B, and corn to Mexico, $5.4B, are consistent with USDA-reported 2023 totals.
+:::
+
+```{r trade}
+tf <- readRDS("data/derived/tradeflow.rds")
+tp <- tf |> group_by(partner_lab, lat, lon) |> summarise(value = sum(value),
+        detail = paste(sprintf("%s $%s", product[order(-value)], ifelse(sort(value, TRUE) >= 1e9, sprintf("%.1fB", sort(value, TRUE) / 1e9), sprintf("%.0fM", sort(value, TRUE) / 1e6))), collapse = "<br>"), .groups = "drop")
+htmltools::div(class = "kpis",
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "2023 exports covered"), htmltools::div(class = "kpi-row", htmltools::strong(sprintf("$%.1fB", sum(tf$value) / 1e9))), htmltools::div(class = "kpi-n", "4 partner countries · 9 products")),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Largest destination"), htmltools::div(class = "kpi-row", htmltools::strong(sprintf("China · $%.1fB", max(tp$value) / 1e9))), htmltools::div(class = "kpi-n", sprintf("%.0f%% of covered value", 100 * max(tp$value) / sum(tp$value)))),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Soy vs corn products"), htmltools::div(class = "kpi-row", htmltools::strong(sprintf("$%.1fB · $%.1fB", sum(tf$value[tf$group == "Soy & soy products"]) / 1e9, sum(tf$value[tf$group == "Corn & corn products"]) / 1e9))), htmltools::div(class = "kpi-n", "Soy & soy products · corn & corn products")))
+```
+
+#### Export flows from Iowa's corn belt, 2023
+```{r trademap}
+o <- c(lon = -91.6656, lat = 41.9779)
+tl <- st_sf(tp, geometry = st_sfc(lapply(seq_len(nrow(tp)), function(i) gc_line(o[["lon"]], o[["lat"]], tp$lon[i], tp$lat[i])), crs = 4326))
+tp$lon_plot <- sapply(st_geometry(tl), function(g) tail(st_coordinates(g)[, 1], 1))
+leaflet(options = leafletOptions(minZoom = 1)) |> addProviderTiles(providers$Esri.WorldGrayCanvas) |>
+  addPolylines(data = tl, color = "#3b3a37", opacity = .6, weight = ~1.5 + value / 1e9 * 0.55, label = ~lapply(sprintf("<b>U.S. → %s: $%.1fB</b><br>%s", partner_lab, value / 1e9, detail), htmltools::HTML)) |>
+  addCircleMarkers(data = tp, lng = ~lon_plot, lat = ~lat, radius = ~pmax(5, sqrt(value / 1e9) * 3.2), color = "#fcfcfb", weight = 2, fillColor = "#3b3a37", fillOpacity = .9,
+                   label = ~lapply(sprintf("<b>%s: $%.1fB</b><br>%s", partner_lab, value / 1e9, detail), htmltools::HTML)) |>
+  (\(m) { for (i in seq_len(nrow(tp))) m <- addLabelOnlyMarkers(m, lng = tp$lon_plot[i], lat = tp$lat[i], label = sprintf("%s $%.1fB", tp$partner_lab[i], tp$value[i] / 1e9),
+      labelOptions = labelOptions(noHide = TRUE, textOnly = TRUE, offset = c(10, 0),
+                                  direction = c(China = "left", Japan = "top", `South Korea` = "bottom", Mexico = "right")[[tp$partner_lab[i]]],
+                                  style = list("font-size" = "12px", "color" = "#0b0b0b", "font-weight" = "600"))); m })() |>
+  addCircleMarkers(lng = o[["lon"]], lat = o[["lat"]], radius = 6, color = "#fcfcfb", weight = 2, fillColor = "#0b0b0b", fillOpacity = 1, label = "Cedar Rapids supply shed") |>
+  fitBounds(-272, 0, -68, 82)
+```
+
+#### Export value by product and destination, 2023
+```{r tradebar, fig.height=4}
+ordp2 <- tf |> group_by(product) |> summarise(v = sum(value)) |> arrange(v) |> pull(product)
+pn <- function(pl) {
+  d <- tf |> filter(partner_lab == pl)
+  plot_ly(d, y = ~factor(product, ordp2), x = ~value / 1e9, type = "bar", orientation = "h", marker = list(color = "#3b3a37", line = list(color = "#fcfcfb", width = 2)),
+          hovertemplate = paste0(pl, "<br>%{y}: $%{x:.2f}B<extra></extra>")) |>
+    layout(xaxis = list(title = "", range = c(0, max(tf$value) / 1e9 * 1.12), tickvals = c(0, 5, 10), gridcolor = "#ecebe8"), yaxis = list(title = "", categoryorder = "array", categoryarray = ordp2),
+           showlegend = FALSE)
+}
+pls <- c("China", "Mexico", "Japan", "South Korea")
+subplot(lapply(pls, pn), nrows = 1, shareY = TRUE, margin = 0.01) |>
+  layout(showlegend = FALSE, margin = list(l = 170, t = 30, b = 40), plot_bgcolor = "#fcfcfb", paper_bgcolor = "#fcfcfb",
+         annotations = c(lapply(seq_along(pls), function(i) list(text = paste0("<b>", pls[i], "</b>"), x = (i - 0.5) / 4, y = 1.02, xref = "paper", yref = "paper",
+                                                                  xanchor = "center", yanchor = "bottom", showarrow = FALSE, font = list(size = 12))),
+                         list(list(text = "$ billion", x = 0.5, y = -0.12, xref = "paper", yref = "paper", showarrow = FALSE, font = list(size = 11, color = "#52514e")))))
+```
+
+## Corporate ownership of first buyers (Tradeverifyd) {#ownership}
+
+Who owns the companies that buy the shed's crops? Tradeverifyd's `entity_affiliate_relationships` lists the subsidiaries and branches of each first-buyer corporation. The chart below breaks each company's affiliate network down by country; click a company or country to zoom in.
+
+::: {.callout-warning}
+**Partial and noisy.** Affiliate counts reflect only the Tradeverifyd entities matched to each company. **Cargill is badly under-counted** because its records are split across many unlinked entities, so compare footprints *within* a company, not between companies. The direction of affiliate links (parent vs. subsidiary) is not always reliable, and some entries look historical or mis-linked, such as an Air Products (China) entity listed under ADM. For in-shed buyers, 55 of 67 matched a Tradeverifyd entity with an Iowa address, but only 4 had any affiliate links, and those look like record-merge artifacts (see the table below). None of the state-licensed local elevators showed an ownership tie to ADM, Cargill or Ingredion, so the buyer-concentration figures above are left as they are.
+:::
+
+```{r own}
+af <- readRDS("data/derived/affiliates.rds"); subs <- af$subs
+rc <- c(ADM = "#4a3aa7", Cargill = "#1baf7a", Ingredion = "#e87ba4", `Grain Processing Corp. (Kent)` = "#8a8984", POET = "#b5b4ae")
+lighten <- function(hex, f) { m <- col2rgb(hex) / 255; m <- m + (1 - m) * f; rgb(m[1], m[2], m[3]) }
+htmltools::div(class = "kpis",
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Affiliates found"), htmltools::div(class = "kpi-row", htmltools::strong(nrow(subs))), htmltools::div(class = "kpi-n", paste(names(table(subs$root)), table(subs$root), collapse = " · "))),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "Countries"), htmltools::div(class = "kpi-row", htmltools::strong(n_distinct(subs$country[subs$country != "Unknown"]))), htmltools::div(class = "kpi-n", paste0("Most: ", paste(head(names(sort(table(subs$country[subs$country != "Unknown"]), TRUE)), 3), collapse = ", ")))),
+  htmltools::div(class = "kpi", htmltools::div(class = "kpi-l", "In-shed buyers with ownership links"), htmltools::div(class = "kpi-row", htmltools::strong(paste(sum(af$shed$n_links > 0), "of", nrow(af$shed)))), htmltools::div(class = "kpi-n", paste(sum(af$shed$matched), "matched in Tradeverifyd; links unverified"))))
+```
+
+```{r ownsun, fig.height=6.5}
+cty <- subs |> count(root, country, name = "n")
+ids <- c(names(rc)[names(rc) %in% subs$root], paste(cty$root, cty$country, sep = " / "), paste(subs$root, subs$country, subs$entity_id, sep = " / "))
+lab <- c(names(rc)[names(rc) %in% subs$root], cty$country, stringr::str_trunc(subs$name, 34))
+par <- c(rep("", sum(names(rc) %in% subs$root)), cty$root, paste(subs$root, subs$country, sep = " / "))
+roots <- names(rc)[names(rc) %in% subs$root]
+val <- c(as.numeric(table(subs$root)[roots]), cty$n, rep(1, nrow(subs)))
+colr <- c(unname(rc[roots]), sapply(cty$root, function(r) lighten(rc[[r]], .35)), sapply(subs$root, function(r) lighten(rc[[r]], .65)))
+hov <- c(paste0(roots, ": ", table(subs$root)[roots], " affiliates"), paste0(cty$root, " · ", cty$country, ": ", cty$n),
+         paste0(subs$name, "<br>", ifelse(is.na(subs$city), "", paste0(subs$city, ", ")), subs$country, "<br>Affiliate of ", subs$root))
+plot_ly(type = "sunburst", ids = ids, labels = lab, parents = par, values = val, branchvalues = "total", hovertext = hov, hoverinfo = "text",
+        marker = list(colors = colr, line = list(color = "#fcfcfb", width = 1)), insidetextorientation = "radial", maxdepth = 2) |>
+  layout(margin = list(l = 0, r = 0, t = 10, b = 10), paper_bgcolor = "#fcfcfb")
+```
+
+```{r owntbl}
+subs |> transmute(Company = root, Affiliate = name, City = city, Country = country) |> arrange(Company, Country) |>
+  datatable(rownames = FALSE, filter = "top", options = list(pageLength = 10), caption = "Affiliates of first-buyer companies (Tradeverifyd)")
+af$shed |> filter(n_links > 0) |> transmute(`In-shed buyer` = buyer, Type = type, `Tradeverifyd entity` = tv_name, `Affiliate links reported` = links,
+  Assessment = c(`Cargill Corn Milling` = "Links are Cargill sister companies abroad, not a parent: entity merge",
+                 `Grain Processing Corporation` = "Self-links and Kent group affiliates: consistent with known Kent ownership",
+                 `ADM Grain Company` = "Links are ADM sister companies abroad: entity merge",
+                 `Farmers Cooperative Association` = "Generic co-op name; Landus/StoneX links unverified")[buyer] |> coalesce("Not reviewed")) |>
+  datatable(rownames = FALSE, options = list(dom = "t"), caption = "In-shed first buyers with affiliate links in Tradeverifyd (unverified)")
+```
+
+## Data tables
+
+```{r tbl}
+r$by_comm |> transmute(Scenario = scenario, Commodity = label, Acres = round(acres), `Value ($M)` = round(value / 1e6, 1),
+  `Farm GHG (t CO₂e)` = round((ghg_fert_n2o + ghg_enteric + ghg_manure) / 1000), `Transport GHG (t CO₂e)` = round(ghg_transport / 1000),
+  `Avg haul (mi)` = round(ton_miles / tons, 1)) |>
+  datatable(rownames = FALSE, options = list(pageLength = 12, dom = "tip"), caption = "Results by scenario and commodity")
+```
+
+```{r tblbuy}
+r$buyer_sum |> transmute(Scenario = scenario, Buyer = buyer, Company = parent, Type = type, Commodities = commodities, `Value ($M)` = round(value / 1e6, 2), `Tons (000)` = round(tons / 1000, 1)) |>
+  arrange(Scenario, desc(`Value ($M)`)) |> datatable(rownames = FALSE, filter = "top", options = list(pageLength = 10), caption = "First buyers receiving product")
+```
+
+## Methods & assumptions
+
+- **Supply shed:** 50-mile (80.5 km) radius around downtown Cedar Rapids, which is home to corn processors (ADM, Cargill, Ingredion), two Cargill soybean plants and the Quaker Oats mill ([AgWeb](https://www.agweb.com/news/crops/corn/need-positive-corn-demand-story-look-no-further-cedar-rapids)).
+- **Land:** [USDA NASS Cropland Data Layer](https://nassgeodata.gmu.edu/CropScape/) 2025, 30 m pixels (corn = 1, soybeans = 5), summed into 5 km hexagons. S2 applies the same commodity shares to every hexagon's corn and soybean acres. All other land is unchanged and not counted.
+- **Yields:** NASS county means for 2021–2025 (corn, soybeans). Oats and alfalfa use Iowa state means, and wheat, barley and apples use U.S. means because Iowa values are not published. Livestock output comes from the stocking assumptions below.
+- **Prices:** latest NASS marketing-year prices received (Iowa where available, otherwise U.S.). Goats use the USDA AMS Kalona auction price.
+- **First-buyer allocation:** Huff gravity model. The probability that a hexagon sells to buyer *j* is proportional to attractiveness / distance², using only buyers that accept that commodity. Processors have attractiveness 10, nearby ethanol plants 6, and elevators and auctions 1 (Kalona 3). Road distance is straight-line distance × 1.3.
+- **Buyers:** major processors located by street address; 43 state-licensed grain warehouses from the [Iowa Dept. of Agriculture licensing list](https://data.iowaagriculture.gov/licensing_lists/grainwarehouse/), placed at town centroids; ethanol plants from [Iowa RFA](https://iowarfa.org/ethanol-center/ethanol-biorefineries/); livestock auctions from [IDALS](https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions); wool to [Mid-States Wool Growers](https://midstateswoolgrowers.com/) (Ohio), since no Iowa wool pool is listed. Apple markets are *modeled*.
+- **Level-2 buyers:** Tradeverifyd `entity_trade_relationships` (outbound), filtered to HS 1004, 1005, 1104, 1108, 1201, 1507, 1515, 1702, 2106, 2207, 2303, 2304, 2309, 3505 and pulled in September 2026. Addresses come from Tradeverifyd and were geocoded with OpenStreetMap Nominatim. Obvious country errors were corrected (see `data/params/tv_location_overrides.csv`).
+- **GHG:** IPCC 2006 Tier 1 direct and indirect N₂O from synthetic N; enteric and manure CH₄ for livestock; trucking CO₂e from the [EPA GHG Emission Factors Hub 2025](https://www.epa.gov/system/files/other-files/2025-01/ghg-emission-factors-hub-2025.xlsx) (0.186 kg CO₂ per short ton-mile). GWPs are from IPCC AR6 (CH₄ 27, N₂O 273).
+
+```{r assump}
+r$cm |> transmute(Commodity = label, `S2 land share` = percent(s2_share), `N rate (lb/ac)` = n_rate_lb_ac,
+  `Head/ac` = head_per_ac, Price = paste0("$", signif(price_per_unit, 3), " / ", ifelse(unit == "bu", "bu", ifelse(unit == "ton", "ton", "lb"))),
+  `Price source` = price_source, `Yield basis` = yield_basis, Notes = notes) |>
+  datatable(rownames = FALSE, options = list(dom = "t", pageLength = 20), caption = "Editable in data/params/commodities.csv")
+r$factors |> datatable(rownames = FALSE, options = list(dom = "t", pageLength = 30), caption = "Emission factors & model constants (data/params/factors.csv)")
+```
+
+### Data sources
+
+Every external dataset and reference used in this report. All links were checked in September 2026. The table is maintained in `data/params/data_sources.csv`.
+
+```{r sources}
+ds <- read.csv("data/params/data_sources.csv")
+ds |> transmute(Category = category, Dataset = dataset, `Used for` = used_for, Publisher = publisher, Vintage = vintage, Access = access,
+                Link = ifelse(url == "", "—", sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>', url, sub("^https?://(www\\.)?([^/]+).*", "\\2", url)))) |>
+  datatable(rownames = FALSE, escape = FALSE, filter = "top", options = list(pageLength = 25, dom = "ftip", autoWidth = TRUE), caption = "Data sources")
+```
+
+### Limitations
+
+- The analysis stops at the farm gate plus the haul to the first buyer. It excludes fertilizer manufacture, fuel use for field operations, soil carbon change, crop-residue N₂O, N₂O from manure deposited on pasture, and processing.
+- Value is **gross** sales, not net returns. Livestock feed and orchard establishment costs are not included.
+- Only state-licensed grain warehouses are included. Large federally licensed co-ops and multi-site elevators are under-represented, and elevators sit at town centroids.
+- In S2, wool counts only fleece (not lambs). Apple yields are U.S. averages and likely overstate Iowa yields. The shares are illustrative, not a market forecast; for example, 1% of land in apples would be a large share of U.S. apple supply.
+- Basemap tiles need an internet connection. Everything else is embedded in this file.

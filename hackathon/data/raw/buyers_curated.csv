@@ -1,0 +1,25 @@
+name,parent,type,commodities,address,city,state,attract,source
+ADM Corn Processing (wet mill & ethanol),ADM,Corn processor / ethanol,corn,1350 Waconia Ave SW,Cedar Rapids,IA,10,https://facilityexplorer.iowadnr.gov/facilityexplorer/SiteDetail.aspx?facID=310791287
+Cargill Corn Milling,Cargill,Corn processor,corn,1710 16th St SE,Cedar Rapids,IA,10,https://facilityexplorer.iowadnr.gov/FacilityExplorer/SiteDetail.aspx?facID=310392164
+Ingredion Cedar Rapids,Ingredion,Corn processor,corn,1001 1st St SW,Cedar Rapids,IA,10,https://www.cedarrapids.org/directory/detail/manufacturers/ingredion/
+Cargill Soybean Processing East,Cargill,Soybean crusher,soybeans,411 6th St NE,Cedar Rapids,IA,10,https://facilityexplorer.iowadnr.gov/facilityexplorer/SiteDetail.aspx?facID=310791269
+Cargill Soybean Processing West,Cargill,Soybean crusher,soybeans,1110 12th Ave SW,Cedar Rapids,IA,10,https://www.cedarrapids.org/directory/detail/industrial-manufacturing/cargill-inc-soybean-processing-soy-protein-west-plant/
+Quaker Oats Cedar Rapids,PepsiCo,Oat mill,oats,418 2nd St NE,Cedar Rapids,IA,10,https://en.wikipedia.org/wiki/Quaker_Oats_Plant
+Big River United Energy,Big River Resources,Ethanol plant,corn,,Dyersville,IA,6,https://iowarfa.org/ethanol-center/ethanol-biorefineries/
+Grain Processing Corporation,Kent Corporation,Corn processor / ethanol,corn,,Muscatine,IA,6,https://iowarfa.org/ethanol-center/ethanol-biorefineries/
+POET Fairbank,POET,Ethanol plant,corn,,Fairbank,IA,6,https://iowarfa.org/ethanol-center/ethanol-biorefineries/
+ADM Clinton,ADM,Corn processor / ethanol,corn,,Clinton,IA,6,https://iowarfa.org/ethanol-center/ethanol-biorefineries/
+Kalona Sales Barn,Kalona Sales Barn,Livestock & hay auction,cattle;goats;alfalfa,121 9th St,Kalona,IA,3,https://www.kalonasalesbarn.com/
+Walker Sales Barn,Walker Sales Barn,Livestock auction,cattle,4162 Walker Rd,Walker,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Oxford Sale Barn,Oxford Sale Barn,Livestock auction,cattle,1457 Salebarn Rd NE,Oxford,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Tama Livestock Auction,Tama Livestock Auction,Livestock auction,cattle,1908 E 5th St,Tama,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Cascade Livestock Auction,Cascade Livestock Auction,Livestock auction,cattle,743 Hwy 136,Cascade,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Edgewood Livestock Commission,Edgewood Livestock Commission,Livestock auction,cattle,300 Washington St,Edgewood,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+NFO Livestock Manchester,NFO,Livestock auction,cattle,1624 220th St,Manchester,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Equity Cooperative Livestock Sales,Equity Cooperative,Livestock auction,cattle,310 N Matteson St,Maquoketa,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Maquoketa Livestock Exchange,Maquoketa Livestock Exchange,Livestock auction,cattle,18140 33rd St,Maquoketa,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Keoco Auction Company,Keoco Auction Company,Livestock auction,cattle,603 S Warren St,Sigourney,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Waverly Sales Company,Waverly Sales Company,Livestock auction,cattle,2212 5th Ave NW,Waverly,IA,1,https://iowaagriculture.gov/agricultural-diversification-market-development-bureau/iowa-livestock-auctions
+Mid-States Wool Growers Cooperative,Mid-States Wool Growers,Wool marketing cooperative,wool,9449 Basil Western Rd,Canal Winchester,OH,1,https://midstateswoolgrowers.com/
+Cedar Rapids fresh market (modeled),Local direct market,Fresh produce market (modeled),apples,,Cedar Rapids,IA,1,modeled
+Iowa City fresh market (modeled),Local direct market,Fresh produce market (modeled),apples,,Iowa City,IA,1,modeled

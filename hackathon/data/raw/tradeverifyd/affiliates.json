@@ -1,0 +1,4419 @@
+{
+ "roots": {
+  "ADM": [
+   "ef83a71f-8cd6-41e3-ad31-d4661984b070"
+  ],
+  "Cargill": [
+   "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "54e2d42b-b36e-4cec-8e6f-67bffe40dffb",
+   "1d6c3f2b-06ad-475b-9628-6855c00c474a",
+   "f10bfb12-80fa-4c59-90d8-5e1ed91595e8"
+  ],
+  "Ingredion": [
+   "a09a0258-4be9-4267-b125-ce0f3e85f7ef"
+  ],
+  "Kent Corporation": [
+   "03fd2edd-9354-4ff9-a177-ff15db43f893"
+  ],
+  "Big River Resources": [
+   "dadfbe75-641d-46d1-b724-c48549a38f4f"
+  ],
+  "POET": [
+   "e01c0443-7302-4d35-a404-db9899b5829e"
+  ]
+ },
+ "subsidiaries": [
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "05e56445-c259-48c0-875f-da3dd30edced",
+   "name": "WILD INTERMARE GMBH",
+   "rel": "parent_subsidiary",
+   "city": "Hamburg",
+   "state": "DE-HH",
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "0628ebeb-0116-444b-b7df-0906523d3731",
+   "name": "ARCHER DANIELS MIDLAND ERITH LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "London",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "079acbc1-a0cb-4450-9adf-07fbc9b534fc",
+   "name": "ADM WILD UK LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Stretford",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "0c99968d-5087-4cd4-b4e0-603099eac701",
+   "name": "ADM ASIA-PACIFIC TRADING PTE. LTD.",
+   "rel": "parent_subsidiary",
+   "city": "Bugis Junction",
+   "state": "Towers",
+   "country": "SG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "0d9e10e6-abd6-4b4c-a949-b702181f913e",
+   "name": "ARCHER DANIELS MIDLAND SINGAPORE, PTE. LTD.",
+   "rel": "parent_subsidiary",
+   "city": "Bugis Junction",
+   "state": "Towers",
+   "country": "SG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "0ea04b47-fa83-48b4-9a9c-a06350273e1b",
+   "name": "ADM PARAGUAY S.R.L",
+   "rel": "parent_subsidiary",
+   "city": "Asuncion PY-ASU",
+   "state": "PY-ASU",
+   "country": "PY"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "0f0813e5-52a6-4196-b20d-ffc46cf4c56a",
+   "name": "ADM OLOMOUC S.R.O.",
+   "rel": "parent_subsidiary",
+   "city": "Olomouc CZ-71",
+   "state": "CZ-71",
+   "country": "CZ"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "10ac70ae-582e-4764-9a30-7356e8091075",
+   "name": "ADM TRADING AUSTRALIA PROPRIETARY LIMITED",
+   "rel": "unknown",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "10f908cf-c313-4004-ae3c-3995ddcfb5fc",
+   "name": "ADM PORTUGAL, S.A.",
+   "rel": "parent_subsidiary",
+   "city": "Lisboa",
+   "state": "Lisboa",
+   "country": "PT"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "135bb2cb-145c-4201-acd1-0649262aa603",
+   "name": "ARCHER-DANIELS-MIDLAND PHILIPPINES, INC.",
+   "rel": "parent_subsidiary",
+   "city": "City Of Makati",
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "148f6443-684d-4c7f-8563-4351775afd3e",
+   "name": "ADM TRADING AUSTRALIA PTY LTD",
+   "rel": "parent_subsidiary",
+   "city": "Adelaide",
+   "state": "South Australia",
+   "country": "AU"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "1904198b-e79a-4c48-8edf-bf12e0db6e6a",
+   "name": "\u0410\u0414\u041c \u0420\u0410\u0417\u0413\u0420\u0410\u0414",
+   "rel": "parent_subsidiary",
+   "city": "\u041e\u0431\u0449\u0438\u043d\u0430 \u0420\u0430\u0437\u0433\u0440\u0430\u0434",
+   "state": "\u041e\u0431\u0449\u0438\u043d\u0430: \u0420\u0430\u0437\u0433\u0440\u0430\u0434",
+   "country": "BG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "1c8c52ed-c5ba-4089-b694-a02519865b0f",
+   "name": "FARMLAND FOODS, INC.",
+   "rel": "parent_subsidiary",
+   "city": "San Juan",
+   "state": "PR",
+   "country": "PR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "1dc75715-c8fa-48be-a1ee-d7ef39ab35ab",
+   "name": "ADM AGRO INDUSTRIES LATUR & VIZAG PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "IN-MH",
+   "state": "IN-MH",
+   "country": "IN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "250f0d05-3745-4b86-bbe4-94a3aed9149d",
+   "name": "\"\u0410\u0414\u041c \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f \u0422\u0420\u0415\u0419\u0414\u0418\u041d\u0413\" \u0415\u041e\u041e\u0414",
+   "rel": "parent_subsidiary",
+   "city": "Sofia",
+   "state": null,
+   "country": "BG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "27ac5c27-354b-46f6-8038-2d067141ac08",
+   "name": "ADM ANTWERP",
+   "rel": "parent_subsidiary",
+   "city": "Antwerpen",
+   "state": null,
+   "country": "BE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "3029a98b-ea16-4755-9700-17ce0a3f2670",
+   "name": "EVIALIS INDIA LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Palghar In",
+   "state": "MH",
+   "country": "IN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "3295a94d-434a-4891-8805-9755039d5067",
+   "name": "PT ADM INDONESIA TRADING AND LOGISTICS",
+   "rel": "parent_subsidiary",
+   "city": "Jakarta",
+   "state": "ID-JK",
+   "country": "ID"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "32ee5a09-95e8-4548-bc6b-9c2ab300f64e",
+   "name": "ADM AGRO IBERICA SL",
+   "rel": "parent_subsidiary",
+   "city": "Madrid",
+   "state": "ES-MD",
+   "country": "ES"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "3307c798-b698-4030-bdcb-dfaf0f11f2cc",
+   "name": "ADM MEDSOFTS S\u00c0RL",
+   "rel": "parent_subsidiary",
+   "city": "Rolle",
+   "state": null,
+   "country": "CH"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "34681f03-3e62-4fe4-9b68-803d50ba04d2",
+   "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e40\u0e2d\u0e14\u0e35\u0e40\u0e2d\u0e47\u0e21 (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+   "rel": "parent_subsidiary",
+   "city": "Bangkok",
+   "state": null,
+   "country": "TH"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "376edee9-01a0-4d29-848b-81f7153d3299",
+   "name": "NEOVIA LATINA SL",
+   "rel": "parent_subsidiary",
+   "city": "Madrid",
+   "state": "ES-M",
+   "country": "ES"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "38f265e8-ceaf-4126-890b-c90fc7e461d6",
+   "name": "\u7a7a\u6c14\u5316\u5de5\u4ea7\u54c1\uff08\u4e2d\u56fd\uff09\u6295\u8d44\u6709\u9650\u516c\u53f8",
+   "rel": "ownership",
+   "city": "Shanghai Shanghai",
+   "state": "Shanghai",
+   "country": "CN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "3f57685b-9836-47f3-99f3-2c8aae5b4d6c",
+   "name": "ADM ARKADY IRELAND LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Dublin",
+   "state": null,
+   "country": "IE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "41b42ed8-983b-432f-b2e3-f6a055f6e93a",
+   "name": "NEOVIA PHILIPPINES INC.",
+   "rel": "parent_subsidiary",
+   "city": "PH-CEB",
+   "state": "PH-CEB",
+   "country": "PH"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "44b3865e-2fbb-4a0d-bb41-49c23afe39bc",
+   "name": "\uc544\ucc98\ub300\ub2c8\uc5bc\uc2a4\ubbf8\ub4e4\ub79c\ub4dc\ucf54\ub9ac\uc544",
+   "rel": "parent_subsidiary",
+   "city": "\uc885\ub85c\uad6c",
+   "state": "KR-11",
+   "country": "KR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "4906bdf0-45f3-4031-a91d-2c2d09e5fa49",
+   "name": "ADM Oilseeds Germany GmbH",
+   "rel": "parent_subsidiary",
+   "city": "Magdeburg",
+   "state": null,
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "4b972b2a-07d9-4cd9-9616-d19ab1323666",
+   "name": "ADM RINGASKIDDY UNLIMITED COMPANY",
+   "rel": "parent_subsidiary",
+   "city": "Citywest",
+   "state": "Citywest Dublin",
+   "country": "IE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "4e0008ff-fd81-4064-876e-e59e60c39789",
+   "name": "\"ADM SZAMOTU\u0141Y\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+   "rel": "parent_subsidiary",
+   "city": "Szamotuly",
+   "state": "Szamotulski",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "54566d3c-991a-4abc-a8e2-89ba4c548e26",
+   "name": "ADM ROMANIA TRADING S.R.L.",
+   "rel": "parent_subsidiary",
+   "city": "Bucharest RO-B",
+   "state": "RO-B",
+   "country": "RO"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "59266d8e-7f9a-4089-a76b-8ba2832cc55e",
+   "name": "\"PROVIT\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+   "rel": "parent_subsidiary",
+   "city": "Gdansk",
+   "state": "Gdansk",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "5e284611-deea-41f6-905a-0aacefdad4c3",
+   "name": "ADM AMERICAS, S. DE R.L.",
+   "rel": "parent_subsidiary",
+   "city": "Panam\u00e1",
+   "state": "PA",
+   "country": "PA"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "5f8d8f16-2070-4fef-8ef4-fecfbddb9284",
+   "name": "ADMIS Hong Kong Limited",
+   "rel": "parent_subsidiary",
+   "city": "Hong Kong",
+   "state": null,
+   "country": "HK"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "65003d04-670c-4414-867e-345fd1ff93b2",
+   "name": "PURA FOODS LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "London",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "6738c65a-2d83-472f-a425-4b1d4a17671b",
+   "name": "WILD FLAVORS POLSKA SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+   "rel": "parent_subsidiary",
+   "city": "Warszawa",
+   "state": "PL-14",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "6c62280d-0a74-425e-bbda-bc6404628875",
+   "name": "SOUTHWEST KANSAS CO-OP SERVICE COMPANY, LLC",
+   "rel": "parent_subsidiary",
+   "city": "Johnson",
+   "state": "KS",
+   "country": "US"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "6e77ab26-15a8-4ec5-a24d-df6ee2749899",
+   "name": "ADM MEXICO SA DE CV",
+   "rel": "parent_subsidiary",
+   "city": "Cuernavaca",
+   "state": "Morelos",
+   "country": "MX"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "6f0319bd-c47c-4063-b12c-c1e8c870b85c",
+   "name": "ADM INVESTOR SERVICES, INC.",
+   "rel": "parent_subsidiary",
+   "city": "Chicago",
+   "state": "Illinois",
+   "country": null
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "72149c3d-bf9d-40d2-a41a-b993afae262d",
+   "name": "C\u00f4ng ty TNHH Archer Daniels Midland VN",
+   "rel": "parent_subsidiary",
+   "city": "Thu\u1eadn An",
+   "state": "VN-57",
+   "country": "VN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "75594295-f8d5-41b6-99f3-0a518de22ba9",
+   "name": "C\u00d4NG TY TNHH ARCHER DANIELS MIDLAND VI\u1ec6T NAM",
+   "rel": "parent_subsidiary",
+   "city": "Ho Chi Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "7b4316ea-c863-4aa9-9c14-13fa3a14cdf8",
+   "name": "AGROGRAIN, LTD.",
+   "rel": "parent_subsidiary",
+   "city": "George Town Ky1-1102",
+   "state": "KY",
+   "country": "KY"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "7db4ee34-4312-43d4-85bc-03136c65d4db",
+   "name": "Archer Daniels Midland Europoort B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Europoort Rotterdam Nl-Zh Lc",
+   "state": "NL",
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "806b3f6f-5b79-44f5-872e-c5e30c8b0675",
+   "name": "ADM INTERNATIONAL",
+   "rel": "unknown",
+   "city": "Rolle Vat",
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "84f5ae2b-289f-4d14-8575-add5b53889e6",
+   "name": "Olenex C.V.",
+   "rel": "parent_subsidiary",
+   "city": "Rotterdam",
+   "state": "Zuid-Holland",
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "87ae7414-1131-464a-91e8-90fd84992791",
+   "name": "NEOVIA",
+   "rel": "parent_subsidiary",
+   "city": "Paris",
+   "state": null,
+   "country": "FR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "88b9d9f5-6c7d-4e68-9416-f4a74b086ea7",
+   "name": "Invivo NSA Asia Pte. Ltd.",
+   "rel": "parent_subsidiary",
+   "city": "Bugis Junction",
+   "state": "Towers",
+   "country": "SG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "8e9abe38-6b8b-4983-88d4-a9abf2b0256f",
+   "name": "ADM France",
+   "rel": "parent_subsidiary",
+   "city": "Saint-Laurent-Blangy",
+   "state": null,
+   "country": "FR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "91073ae5-b668-4221-ab56-582d871fb63d",
+   "name": "\"ADM CZERNIN\" SP\u00d3\u0141KA AKCYJNA",
+   "rel": "parent_subsidiary",
+   "city": "Szamotuly",
+   "state": "Wielkopolskie",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "92e54688-bebe-4c64-9ba9-4cda711d3bb9",
+   "name": "Golden Farm Production & Commerce Company Limited",
+   "rel": "parent_subsidiary",
+   "city": "Ho Chi Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "936be135-de88-496e-942e-701e922cb5cb",
+   "name": "ADM AGRICULTURE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Gainsborough",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "9b333212-5708-40b8-a383-0eaba58d4675",
+   "name": "BIOPOLIS SL",
+   "rel": "parent_subsidiary",
+   "city": "Paterna",
+   "state": null,
+   "country": "ES"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a0987515-17a7-4d1c-885d-82e48c26b5d6",
+   "name": "ADM EUROPEAN MANAGEMENT HOLDING B.V. & CO. KG",
+   "rel": "parent_subsidiary",
+   "city": "Hamburg",
+   "state": "DE-HH",
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a09ab74d-23b6-4be9-b2b0-78b78d6f8e70",
+   "name": "FUERST DAY LAWSON HOLDINGS LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Reading",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a2556b99-b304-4d9f-8830-9c5ad180ca68",
+   "name": "ADM Denmark A/S",
+   "rel": "parent_subsidiary",
+   "city": "Hundested",
+   "state": "Hovedstaden",
+   "country": "DK"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a405fea2-47e2-452f-8df5-5cd4267d5be5",
+   "name": "PT ADM Animal Nutrition Indonesia",
+   "rel": "parent_subsidiary",
+   "city": "Bekasi",
+   "state": "ID-JB",
+   "country": "ID"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a5cff759-b508-49d5-9b5d-9608467f5426",
+   "name": "ADM WILD Netherlands B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Amsterdam Al",
+   "state": "Noord-Holland",
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a628527e-e4fa-4477-86ac-49364ca505d9",
+   "name": "ADM TRADING (UK) LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Kent",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a6754db5-2a96-4a8e-b7a2-c23c231c1865",
+   "name": "ADM MAINZ GMBH",
+   "rel": "parent_subsidiary",
+   "city": "Hamburg",
+   "state": "DE-HH",
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a7b1f245-4101-440b-9772-acc2b4ee835f",
+   "name": "Silo P. Kruse Betriebs-GmbH. & Co. KG.",
+   "rel": "parent_subsidiary",
+   "city": "Hamburg",
+   "state": "Hamburg, Freie Und Hansestadt",
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "a8981162-b683-4eaf-805d-1fed0a86c057",
+   "name": "PANCOSMA FRANCE S.A.S.",
+   "rel": "parent_subsidiary",
+   "city": "Valserh\u00f4ne",
+   "state": "FR-ARA",
+   "country": "FR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "aad3a4ff-2422-41e4-81fe-b708f6d9b4cf",
+   "name": "ADM POLAND SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+   "rel": "parent_subsidiary",
+   "city": "Szamotuly",
+   "state": "Wielkopolskie",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "ae575b6a-4f1d-412e-831a-e0b3c0801d02",
+   "name": "ADM SERVICES B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Gp",
+   "state": "NL-NH",
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b0789e98-5e9e-43a9-b6c9-64d22f482584",
+   "name": "ADM AGRO INDUSTRIES INDIA PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "IN-KA",
+   "state": "IN-KA",
+   "country": "IN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b0f0dd09-4c0e-4dcd-a868-c35dda1b79e8",
+   "name": "TOTALLY NATURAL SOLUTIONS LTD",
+   "rel": "parent_subsidiary",
+   "city": "Paddock Wood Tonbridge",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b2c430d1-5f2c-4a2c-90d9-f98dc22db8ef",
+   "name": "ADM MILLING LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Brentwood",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b3754c8e-8385-41c1-bdbd-6e27ee5685d9",
+   "name": "A D M PURA FOODS",
+   "rel": "unknown",
+   "city": "Purfleet",
+   "state": "Essex",
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b5b57c05-7760-4794-8cd6-2101e9589de8",
+   "name": "Pancosma & Associates Marketing (Thailand) Co., Ltd",
+   "rel": "parent_subsidiary",
+   "city": "Samutsakhon",
+   "state": null,
+   "country": "TH"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b5d3fd1c-3de7-44d2-8a29-b04f2058df0d",
+   "name": "ADM WILD EUROPE GMBH & CO. KG",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b6fd8d0e-9cb4-4c96-9582-b7f9833003e6",
+   "name": "ADM SPECIALTY INGREDIENTS (EUROPE) B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Gp",
+   "state": "NL-NH",
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b6fe87a9-28cb-43c2-9854-0b590556012a",
+   "name": "ADM INTERNATIONAL S\u00c0RL",
+   "rel": "unknown",
+   "city": "Rolle",
+   "state": null,
+   "country": "CH"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "b7845502-07d3-41ae-980e-9d9e6d74d07e",
+   "name": "INVIVO MIX DE MEXICO SA DE CV",
+   "rel": "parent_subsidiary",
+   "city": "Tepatitl\u00e1n De Morelos",
+   "state": "Jalisco",
+   "country": "MX"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "ba8cd62a-098b-4e02-bcac-fdfcd124d0e3",
+   "name": "ADM DO BRASIL LTDA",
+   "rel": "parent_subsidiary",
+   "city": "Bras\u00edlia",
+   "state": "Distrito Federal",
+   "country": "BR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "bdf29d7a-de5a-4aa9-addb-0f9fa1d11a4a",
+   "name": "GREEN BISON SOY PROCESSING, LLC",
+   "rel": "parent_subsidiary",
+   "city": "Fargo",
+   "state": "US-ND",
+   "country": "US"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "be0672c8-b403-420a-a671-ee6f694e1b4f",
+   "name": "ADM BAZANCOURT S.A.S",
+   "rel": "parent_subsidiary",
+   "city": "Bazancourt",
+   "state": null,
+   "country": "FR"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "bf6a0d45-923b-4297-b3ab-2834b7e090fe",
+   "name": "BERN AQUA",
+   "rel": "parent_subsidiary",
+   "city": "Olen",
+   "state": "BE-VAN",
+   "country": "BE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "c1bd671a-b4bd-4590-9998-24e2de1d5d36",
+   "name": "ADMIS SINGAPORE PTE. LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Bugis Junction",
+   "state": "Towers",
+   "country": "SG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "c20acb00-0362-4f96-9352-68c2505460ee",
+   "name": "ADM AGRO INDUSTRIES KOTA & AKOLA PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Gurugram IN-HR",
+   "state": "IN-HR",
+   "country": "IN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "c2cf963e-6f8d-43d6-9f6e-8e9811bfd050",
+   "name": "ADM TRADING COMPANY",
+   "rel": "parent_subsidiary",
+   "city": "Lantana",
+   "state": "FL",
+   "country": "US"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "c49f0fe8-b13f-4972-9eb4-34160e6555ce",
+   "name": "C\u00d4NG TY TNHH GUYOMARC'H-VCN",
+   "rel": "parent_subsidiary",
+   "city": "Ha Noi",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "c66d216a-217f-441d-91d6-8754cf8e839f",
+   "name": "ADM GERMANY GMBH",
+   "rel": "parent_subsidiary",
+   "city": "Hamburg",
+   "state": "DE-HH",
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "c6c423df-2fa4-45d7-b01a-064711f0f582",
+   "name": "ADM WILD South-Eastern Europe Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g",
+   "rel": "parent_subsidiary",
+   "city": "Budapest",
+   "state": null,
+   "country": "HU"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "cc51763d-bf4b-4113-9f6c-d407bd84b55a",
+   "name": "ADM WILD NAUEN GMBH",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "cc767e5e-4c70-41cc-b913-632c8161f02f",
+   "name": "ADM EMEA Corporate Services GmbH",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "d4c791f7-a736-4b3b-bdfa-b19a4a338d22",
+   "name": "ARCHER DANIELS MIDLAND (UK) LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Kent",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "d8639f0e-0c3b-4d22-b64f-40863dcf70c1",
+   "name": "GLOBAL COCOA HOLDINGS LTD.",
+   "rel": "parent_subsidiary",
+   "city": "George Town Ky1-1107",
+   "state": "KY",
+   "country": "KY"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "d8c77213-76cf-49ad-9655-222dfdb27c3d",
+   "name": "ALFRED C. TOEPFER INTERNATIONAL NETHERLANDS B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Gp",
+   "state": "NL-NH",
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "db097b79-e4e7-4640-a3f4-cd576e2957cf",
+   "name": "ADM Slovakia, s. r. o.",
+   "rel": "parent_subsidiary",
+   "city": "Trnava",
+   "state": "Trnavsk\u00fd Kraj",
+   "country": "SK"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "db75112f-b4de-4e6e-a5e1-ec180167dde0",
+   "name": "Archer Daniels Midland Asia-Pacific Limited",
+   "rel": "parent_subsidiary",
+   "city": "Hong",
+   "state": "Kong",
+   "country": "HK"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "dbe22acc-026f-49cc-8a8c-dee7f9ad5a35",
+   "name": "ADM ANIMAL NUTRITION CZECHIA S.R.O.",
+   "rel": "parent_subsidiary",
+   "city": "Praha",
+   "state": "Praha 10",
+   "country": "CZ"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "de601edd-7faf-457d-899b-94b54a1e5ad1",
+   "name": "ADM Investment Singapore Pte. Ltd.",
+   "rel": "ownership",
+   "city": null,
+   "state": null,
+   "country": "SG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "df2060df-07dc-4559-a767-a5f4cfb521a4",
+   "name": "ADM WILD VALENCIA S.A.U.",
+   "rel": "parent_subsidiary",
+   "city": "Carcaixent",
+   "state": "Valencia",
+   "country": "ES"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "e0d93e6f-7561-4f44-84ad-5e7f231c9055",
+   "name": "\"WILD POLSKA\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+   "rel": "parent_subsidiary",
+   "city": "Mr\u0105gowo PL-28",
+   "state": "PL-28",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "e2d820a1-5690-4a78-9d5e-a2dc02fc6f2e",
+   "name": "ADM IRELAND RECEIVABLES COMPANY LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "1",
+   "state": "Dublin Dublin 1 Ireland",
+   "country": "IE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "e48bd65c-f398-4c6d-8b91-094cb0204975",
+   "name": "\"ADM MALBORK\" SP\u00d3\u0141KA AKCYJNA",
+   "rel": "parent_subsidiary",
+   "city": "Szamotu\u0142y PL-30",
+   "state": "PL-30",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "e72b061c-8bb8-49ec-9856-7dbaab74f51f",
+   "name": "ARCHER DANIELS MIDLAND EUROPE B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Koog Aan De Zaan",
+   "state": null,
+   "country": "NL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "e8f48501-394e-4194-a1fa-1b4b579f3b83",
+   "name": "ADM STF PTE. LTD.",
+   "rel": "parent_subsidiary",
+   "city": "Bugis Junction",
+   "state": "Towers",
+   "country": "SG"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "f0a3bdfd-0113-4b02-b1cb-d3c0b431ddec",
+   "name": "ADM INVESTOR SERVICES INTERNATIONAL LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "London",
+   "state": "GB-LND",
+   "country": "GB"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "f1520b18-dc09-43bc-87d5-b71dde270aa9",
+   "name": "ERICH ZIEGLER GMBH",
+   "rel": "parent_subsidiary",
+   "city": "Aufsess",
+   "state": "Bayern",
+   "country": "DE"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "fb79ac80-7798-4841-ab06-469e749fe8a7",
+   "name": "ADM DIRECT POLSKA SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+   "rel": "parent_subsidiary",
+   "city": "Szamotuly",
+   "state": "Szamotulski",
+   "country": "PL"
+  },
+  {
+   "root_parent": "ADM",
+   "root_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "entity_id": "fccaae11-bee7-415e-ae71-aefe27613faf",
+   "name": "SOCIETE INDUSTRIELLE DES OLEAGINEUX - SIO",
+   "rel": "parent_subsidiary",
+   "city": "Saint Laurent Blangy",
+   "state": "FR-62",
+   "country": "FR"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "1c976172-97ec-42cb-95ba-3e8f9f58d14a",
+   "name": "HINDOLI",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "28b06030-51d4-4b71-9a42-a41e2ab59612",
+   "name": "CARGILL HAUBOURDIN SAS",
+   "rel": "parent_subsidiary",
+   "city": "Haubourdin",
+   "state": "Hauts-De-France",
+   "country": "FR"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "3f8e5f54-4928-4962-af60-ebef2d329456",
+   "name": "CARGILL INTERNATIONAL LUXEMBOURG 3 S. \u00c0 R.L",
+   "rel": "parent_subsidiary",
+   "city": "Luxembourg",
+   "state": null,
+   "country": "LU"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "6ccca8f7-97f7-4a68-bd02-04db5d0b7d7b",
+   "name": "BIORO",
+   "rel": "parent_subsidiary",
+   "city": "Gent",
+   "state": "Vlaanderen",
+   "country": "BE"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+   "name": "CEVA Freight, LLC",
+   "rel": "parent_subsidiary",
+   "city": "Minnesota",
+   "state": "Delaware",
+   "country": null
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "name": "CARGILL NV",
+   "rel": "parent_subsidiary",
+   "city": "Mechelen",
+   "state": null,
+   "country": "BE"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "b13fa1f4-5f4d-4669-aabd-4ac57258ac53",
+   "name": "HARAPAN SAWIT LESTARI",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+   "entity_id": "f782f72a-fd57-426b-b576-67585ae34197",
+   "name": "INDO SAWIT KEKAL",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "54e2d42b-b36e-4cec-8e6f-67bffe40dffb",
+   "entity_id": "98e21a14-906f-4ad2-990b-516569aff114",
+   "name": "CARGILL SOCIEDAD ANONIMA COMERCIAL E INDUSTRIAL",
+   "rel": "parent_subsidiary",
+   "city": "Ciudad Autonoma De Buenos Aires C1001ada",
+   "state": "AR-C",
+   "country": "AR"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "54e2d42b-b36e-4cec-8e6f-67bffe40dffb",
+   "entity_id": "eb000cf5-1511-460c-b243-4cb2a06d5629",
+   "name": "PRECISION AGRICULTURAL SERVICES INC.",
+   "rel": "parent_subsidiary",
+   "city": "Griffin",
+   "state": "CA-SK",
+   "country": "CA"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "1d6c3f2b-06ad-475b-9628-6855c00c474a",
+   "entity_id": "77aafef3-dff8-4502-b726-3898e793350a",
+   "name": "CARGILL SERVICIOS FINANCIEROS SA DE CV SOFOM ENR",
+   "rel": "parent_subsidiary",
+   "city": "Santa Ciudad De M\u00e9xico",
+   "state": "Ciudad De M\u00e9xico",
+   "country": "MX"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "1d6c3f2b-06ad-475b-9628-6855c00c474a",
+   "entity_id": "869fb492-5e2a-4e4f-8a25-49bd64d5e60c",
+   "name": "CARGILL SOLUCIONES EMPRESARIALES SA DE C V SOFOM ENR",
+   "rel": "parent_subsidiary",
+   "city": "Santa Fe Mexico City MX-MEX",
+   "state": "MX-MEX",
+   "country": "MX"
+  },
+  {
+   "root_parent": "Cargill",
+   "root_entity_id": "1d6c3f2b-06ad-475b-9628-6855c00c474a",
+   "entity_id": "de340b91-4e7f-4a6e-a94a-a3c5d0d6a82c",
+   "name": "PRODUCTOS AGRICOLAS AOASS S DE RL DE CV",
+   "rel": "parent_subsidiary",
+   "city": "Santa Ciudad De M\u00e9xico",
+   "state": null,
+   "country": "MX"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "0313abf6-0411-468c-9ee9-82ba9a4ee802",
+   "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e2d\u0e34\u0e19\u0e01\u0e23\u0e34\u0e14\u0e34\u0e2d\u0e2d\u0e19 \u0e2a\u0e27\u0e35\u0e17\u0e40\u0e17\u0e47\u0e19\u0e40\u0e19\u0e2d\u0e23\u0e4c \u0e41\u0e2d\u0e19\u0e14\u0e4c \u0e2a\u0e15\u0e32\u0e23\u0e4c\u0e0a (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+   "rel": "parent_subsidiary",
+   "city": "\u0e2a\u0e21\u0e38\u0e17\u0e23\u0e1b\u0e23\u0e32\u0e01\u0e32\u0e23",
+   "state": "TH",
+   "country": "TH"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "04f1df83-c03f-4912-966d-d677eb1882c9",
+   "name": "INGREDION UK LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Manchester",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "0a9790af-b96f-425a-86db-d992c0930ea5",
+   "name": "INGREDION ANZ PTY LTD",
+   "rel": "parent_subsidiary",
+   "city": "Sydney",
+   "state": "AU-NSW",
+   "country": "AU"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "0b90b9d7-424e-437e-8d5a-33f373d278eb",
+   "name": "INGREDION MALAYSIA SDN. BHD.",
+   "rel": "parent_subsidiary",
+   "city": "Kuala",
+   "state": null,
+   "country": "MY"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "0d21583f-fd1c-4b5f-a772-a52589046270",
+   "name": "INGREDION MEXICO, S.A. DE C.V.",
+   "rel": "parent_subsidiary",
+   "city": "Parque Industrial/Zona Industrial Industrial Tlaxcolpan",
+   "state": "Estado De M\u00e9xico",
+   "country": "MX"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "13a9746e-5d97-4640-b8bc-ec7d20818bde",
+   "name": "MANNITAB PHARMA SPECIALITIES PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Nashik",
+   "state": "Mh,nashik",
+   "country": "IN"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "168b109f-4827-4b8c-9dab-a367fef12b7b",
+   "name": "INGREDION NETHERLANDS B.V.",
+   "rel": "parent_subsidiary",
+   "city": "Amsterdam",
+   "state": "Noord-Holland",
+   "country": "NL"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "197649ef-6339-4ba0-a32b-cbf6d027906d",
+   "name": "INGREDION INTEGRA S.A DE C.V",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "338f5377-0ec8-4a83-8442-00f621b471e8",
+   "name": "\u30a4\u30f3\u30b0\u30ec\u30c7\u30a3\u30aa\u30f3\u30fb\u30b8\u30e3\u30d1\u30f3\u682a\u5f0f\u4f1a\u793e",
+   "rel": "parent_subsidiary",
+   "city": "\u6e2f\u533a",
+   "state": "JP-13",
+   "country": "JP"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "398e051f-cf19-439d-8e60-1f42af2c582a",
+   "name": "INGREDION COLOMBIA S.A.",
+   "rel": "parent_subsidiary",
+   "city": "Cali",
+   "state": "CO-VAC",
+   "country": "CO"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "3fbe1837-3d15-47e7-9c70-4f54e6d1f5ba",
+   "name": "ICI MAURITIUS (HOLDINGS) LIMITED",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": "MU"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "404ca568-c2cf-4cc4-a47c-a5f203f4dac1",
+   "name": "\uc778\uadf8\ub9ac\ub514\uc5b8\ucf54\ub9ac\uc544",
+   "rel": "parent_subsidiary",
+   "city": "KR-11",
+   "state": "KR-11",
+   "country": "KR"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "4a67ceb6-0f05-4245-99d0-cc192bca57f9",
+   "name": "PURECIRCLE (UK) LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Manchester",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "4d964e9e-a280-4e2d-98f1-101c8592ed98",
+   "name": "PURECIRCLE DO BRASIL COMERCIO, IMPORTACAO E EXPORTACAO LTDA.",
+   "rel": "parent_subsidiary",
+   "city": "S\u00e3o Paulo",
+   "state": null,
+   "country": "BR"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "4e1a66d1-c488-431a-9c4e-a580b6d8e8c0",
+   "name": "KATECH INGREDIENT SOLUTIONS LTD",
+   "rel": "parent_subsidiary",
+   "city": "Ellesmere Port",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "58739a7b-6596-4c56-8587-2f20077c803e",
+   "name": "INGREDION GERMANY GMBH",
+   "rel": "parent_subsidiary",
+   "city": "Hamburg",
+   "state": "DE-HH",
+   "country": "DE"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "65f3c8e4-6174-40e8-a531-90c122695e8c",
+   "name": "CORN PRODUCTS MALAYSIA SDN. BHD.",
+   "rel": "parent_subsidiary",
+   "city": "Selangor Darul Ehsan",
+   "state": null,
+   "country": "MY"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "7016100e-95ae-4cd5-ab47-0dc1e6ceb4db",
+   "name": "INGREDION CANADA CORPORATION",
+   "rel": "parent_subsidiary",
+   "city": "Cardinal",
+   "state": "ON",
+   "country": "CA"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "7934756a-6598-4aa5-95f6-e47da0c5893c",
+   "name": "IMASA BRASIL LTDA",
+   "rel": "parent_subsidiary",
+   "city": "Barueri",
+   "state": "SP",
+   "country": "BR"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "7f38859b-6cd4-4c93-8fb2-8d2280cd4988",
+   "name": "TEXTURE INNOVATION COMPANY DE MEXICO, S. DE RL. DE C.V.",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "8201b3cf-7191-4997-950a-5b47b838ed71",
+   "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e2d\u0e34\u0e19\u0e01\u0e23\u0e34\u0e14\u0e34\u0e2d\u0e2d\u0e19 \u0e42\u0e2e\u0e25\u0e14\u0e34\u0e49\u0e07\u0e2a\u0e4c (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+   "rel": "parent_subsidiary",
+   "city": "Bang Kaeo",
+   "state": null,
+   "country": "TH"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "833a0707-fb8d-4ceb-b398-95762a12439d",
+   "name": "PURECIRCLE USA INC.",
+   "rel": "parent_subsidiary",
+   "city": "Oak Brook",
+   "state": "IL",
+   "country": "US"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "83cd6dfa-48ed-4c52-a761-353986015497",
+   "name": "GETEC GUANABARA QUIMICA INDUSTRIAL S/A",
+   "rel": "parent_subsidiary",
+   "city": "Sao Goncalo",
+   "state": "Rio De Janeiro",
+   "country": "BR"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "969b97c8-e954-4010-b2c8-21d0855b30df",
+   "name": "PURECIRCLE MEXICO SA DE CV",
+   "rel": "parent_subsidiary",
+   "city": "Mexico City MX-MEX",
+   "state": "MX-MEX",
+   "country": "MX"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "a63fd6ce-e48b-417c-9318-f3fec5f692e5",
+   "name": "INGREDION PERU S.A.",
+   "rel": "parent_subsidiary",
+   "city": "Lima",
+   "state": "PE-LMA",
+   "country": "PE"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "a9b8d30f-2bf9-463a-bbc6-3a8386afccda",
+   "name": "PURECIRCLE (S.E.A.) SDN. BHD.",
+   "rel": "parent_subsidiary",
+   "city": "Kuala",
+   "state": null,
+   "country": "MY"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "ab5a6b73-32f7-4bf7-a267-d0d3d7c9fd9c",
+   "name": "CORN PRODUCTS DEVELOPMENT, INC.",
+   "rel": "parent_subsidiary",
+   "city": "Wilmington",
+   "state": "US-DE",
+   "country": "US"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "b8107374-da12-4d9d-8a3f-febf783f43e4",
+   "name": "C\u00d4NG TY TNHH INGREDION VI\u1ec6T NAM",
+   "rel": "parent_subsidiary",
+   "city": "Ho Chi Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "b8284f62-4d59-4661-8e8c-2296368b0304",
+   "name": "INGREDION SINGAPORE PTE. LTD.",
+   "rel": "parent_subsidiary",
+   "city": "Singapore",
+   "state": null,
+   "country": "SG"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "bedfc75f-2fd8-4b64-8de1-f5c340cb18e1",
+   "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e40\u0e2d\u0e40\u0e27\u0e2d\u0e23\u0e35\u0e48 \u0e40\u0e14\u0e19\u0e19\u0e34\u0e2a\u0e2a\u0e31\u0e19 (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+   "rel": "parent_subsidiary",
+   "city": "Bang Sao Thong, Samutprakan",
+   "state": null,
+   "country": "TH"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "c87f7211-7f17-4fde-9d31-8bbf39d9a60d",
+   "name": "INGREDION SOUTH AFRICA (PTY) LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Wadeville ZA-GP",
+   "state": "ZA-GP",
+   "country": "ZA"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "c90e9351-95ae-443d-b941-119e1e64679d",
+   "name": "PURECIRCLE TRADING SDN. BHD.",
+   "rel": "parent_subsidiary",
+   "city": "Kuala",
+   "state": null,
+   "country": "MY"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "cfe8ee05-7761-4e5a-a904-372ff4ee0edb",
+   "name": "PureCircle (China) Limited",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "d1b43d50-423e-46a3-9bc3-27ade6c31e69",
+   "name": "INGREDION INDIA PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Navi Mumbai In",
+   "state": "MH",
+   "country": "IN"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "d2799518-f886-464f-af40-aebd8b506603",
+   "name": "AMISHI DRUGS AND CHEMICALS PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Naroda",
+   "state": "In Gj",
+   "country": "IN"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "d6e260ad-1fca-4ad5-89fb-786df2c59589",
+   "name": "PURECIRCLE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Manchester",
+   "state": null,
+   "country": "GB"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "d90a8e59-1a08-4193-b185-f1b341aa9a44",
+   "name": "HAAN HOLDINGS LIMITED",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": null
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "ddfd3b00-4d34-4dae-aef8-86f9550be08e",
+   "name": "Corn Products Mauritius (Pty) Ltd",
+   "rel": "parent_subsidiary",
+   "city": null,
+   "state": null,
+   "country": "MU"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "ea7e4eed-5ba1-414c-b89b-63c98a5c788d",
+   "name": "PT INGREDION INDONESIA",
+   "rel": "parent_subsidiary",
+   "city": "Jakarta",
+   "state": "ID-JK",
+   "country": "ID"
+  },
+  {
+   "root_parent": "Ingredion",
+   "root_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "entity_id": "fd599566-0ed4-4360-9411-9830de539cae",
+   "name": "PURECIRCLE NATURAL INGREDIENT INDIA PRIVATE LIMITED",
+   "rel": "parent_subsidiary",
+   "city": "Gurgaon IN-HR",
+   "state": "IN-HR",
+   "country": "IN"
+  },
+  {
+   "root_parent": "Kent Corporation",
+   "root_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "name": "GRAIN PROCESSING CORPORATION",
+   "rel": "parent_subsidiary",
+   "city": "Belle Mead",
+   "state": "NJ",
+   "country": "US"
+  },
+  {
+   "root_parent": "Kent Corporation",
+   "root_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "entity_id": "27e12cbf-6b23-43c8-8344-e2a0a0cede6b",
+   "name": "KENT PET GROUP, INC.",
+   "rel": "parent_subsidiary",
+   "city": "Roseville",
+   "state": "MN",
+   "country": "US"
+  },
+  {
+   "root_parent": "Kent Corporation",
+   "root_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "entity_id": "6187c4b6-32cd-4526-a0c7-a5813f3bf609",
+   "name": "Gerber Childrenswear Real Estate, LLC",
+   "rel": "parent_subsidiary",
+   "city": "Wilmington",
+   "state": "US-DE",
+   "country": "US"
+  },
+  {
+   "root_parent": "POET",
+   "root_entity_id": "e01c0443-7302-4d35-a404-db9899b5829e",
+   "entity_id": "e4c00652-2ed4-4741-b058-c7592558a15c",
+   "name": "POET Investments, LLC",
+   "rel": "parent_subsidiary",
+   "city": "Sioux Falls",
+   "state": "SD",
+   "country": "US"
+  }
+ ],
+ "shed_buyers": [
+  {
+   "buyer": "ADM Corn Processing (wet mill & ethanol)",
+   "buyer_parent_model": "ADM",
+   "type": "Corn processor / ethanol",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Cargill Corn Milling",
+   "buyer_parent_model": "Cargill",
+   "type": "Corn processor",
+   "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+   "tv_name": "CEVA Freight, LLC",
+   "parents": [
+    {
+     "entity_id": "001328c4-85f0-43d5-afff-0709629021b3",
+     "name": "CARGILL CHOCOLATE UK LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "005c4917-6148-4338-affc-a91c72c61bd3",
+     "name": "PROVIMI IRELAND UNLIMITED COMPANY",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "020dc90e-f09e-4b51-b83e-1d614288379d",
+     "name": "\u5609\u5409\u98df\u54c1\uff08\u6f2f\u6cb3\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "029ac438-9fec-4f4d-989b-5cbdb7f864a1",
+     "name": "C\u00d4NG TY C\u1ed4 PH\u1ea6N EWOS VI\u1ec6T NAM",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "070c1bd5-d173-45f0-80d5-73e00fa834b7",
+     "name": "CARGILL AQUAFEED SPAIN SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "07cf1b66-b1fd-4dee-917f-324b92c313bc",
+     "name": "EWOS GROUP AS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "07cf1b66-b1fd-4dee-917f-324b92c313bc",
+     "name": "EWOS GROUP AS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0cc76661-55bd-4bf9-ba7a-6e0fb55428d8",
+     "name": "PROVIMI ROMANIA S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0fd4457b-61c6-4199-a959-c495092b7436",
+     "name": "STATKORN AQUA AS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0fd4457b-61c6-4199-a959-c495092b7436",
+     "name": "STATKORN AQUA AS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "106be807-c9bf-4d36-bd03-3b2a02b0fd22",
+     "name": "FAIRMILE PORTFOLIO MANAGEMENT LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "11106667-f9fd-4e93-9601-85642c0f3381",
+     "name": "CARGILL GHANA LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1137b364-e7b5-49eb-9659-56c455be6dd6",
+     "name": "CARGO AIRCRAFT MANAGEMENT, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1137b364-e7b5-49eb-9659-56c455be6dd6",
+     "name": "CARGO AIRCRAFT MANAGEMENT, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "123365ad-e9ed-4c1f-8bf2-2f0ad18fff5c",
+     "name": "CARGILL TEXTURIZING SOLUTIONS PHILIPPINES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "12857bac-a044-4b3f-ae2c-cf466b933081",
+     "name": "LEGAR DEVELOPMENTS SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "12857bac-a044-4b3f-ae2c-cf466b933081",
+     "name": "LEGAR DEVELOPMENTS SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "12e21286-8b25-430f-a4a6-da81805e4c27",
+     "name": "CARGILL TEXTURIZING SOLUTIONS DEUTSCHLAND GMBH & CO. KG",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "153e81a7-a9f7-4224-b0bc-0ee42af57b1b",
+     "name": "PRZEDSI\u0118BIORSTWO PRODUKCYJNO-HANDLOWO-US\u0141UGOWE \"KONSPOL-BIS\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "153e81a7-a9f7-4224-b0bc-0ee42af57b1b",
+     "name": "PRZEDSI\u0118BIORSTWO PRODUKCYJNO-HANDLOWO-US\u0141UGOWE \"KONSPOL-BIS\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1583d073-f92e-45ef-ad1c-b44d63267338",
+     "name": "IMC B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "163928bd-36b3-4ec8-bd85-e74b041e32da",
+     "name": "\u592a\u9633\u8c37\u98df\u54c1\uff08\u6ec1\u5dde\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "173fa171-0bc4-483a-952b-7bdeec416473",
+     "name": "PT MAYA AGRO INVESTAMA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1823d31d-f97b-4cfe-914d-5a56e05dce12",
+     "name": "CARGILL TROPICAL PALM HOLDINGS PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1823d31d-f97b-4cfe-914d-5a56e05dce12",
+     "name": "CARGILL TROPICAL PALM HOLDINGS PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1912d248-12ef-4d07-8db1-4cb32a2390f4",
+     "name": "CARGILL MOROCCO HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1912d248-12ef-4d07-8db1-4cb32a2390f4",
+     "name": "CARGILL MOROCCO HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1a553f7e-1d81-427c-8611-3e198682933e",
+     "name": "\u5609\u5409\u7cae\u6cb9\uff08\u65e5\u7167\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1b03b6f9-7082-49b8-8084-d00d10edcaa5",
+     "name": "PROVIMI VET LANKA (PRIVATE) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1d355992-2cf8-4994-a6c7-1131412a617c",
+     "name": "SOYVEN SARL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1d6080fb-88cf-4c30-bba2-386c4e50cd6a",
+     "name": "CARGILL DEUTSCHLAND GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1e136b2d-fc80-4336-a371-5f0ffee7259b",
+     "name": "C-JOY POULTRY MEATS PRODUCTION, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1e9faff9-db24-49f4-8e2f-e2a9efca80e3",
+     "name": "CARGILL EURIT S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1fc78de6-2d4a-4f42-968a-e779d605b199",
+     "name": "CARGILL HOLDINGS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1fc78de6-2d4a-4f42-968a-e779d605b199",
+     "name": "CARGILL HOLDINGS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2042f744-12f6-4b7f-8898-79148c04f153",
+     "name": "PT HARAPAN SAWIT LESTARI",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "21b92d0f-688c-4886-913f-78fad253baa3",
+     "name": "CARGILL RSA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2226b1a7-b7a1-46ca-8915-356c9188515c",
+     "name": "CARGILL SUPREMA HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2226b1a7-b7a1-46ca-8915-356c9188515c",
+     "name": "CARGILL SUPREMA HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "23398fd1-cc5e-4b0a-87af-683474039b5b",
+     "name": "PROVIMI LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "23398fd1-cc5e-4b0a-87af-683474039b5b",
+     "name": "PROVIMI LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2362a0f8-bff1-42ff-8919-37f2dc4f5386",
+     "name": "CARGILL FOOD INGREDIENTS SDN. BHD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "27de0836-5e01-443a-b68a-f20a85da93fa",
+     "name": "CARGILL EGYPT HOLDING I B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "28b06030-51d4-4b71-9a42-a41e2ab59612",
+     "name": "CARGILL HAUBOURDIN SAS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "297b2b7d-4953-4d36-bb80-07b5f7f8442c",
+     "name": "\u6cb3\u5317\u5609\u597d\u7cae\u6cb9\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2a17ff2a-665a-4da9-bc3b-de7ca1d82883",
+     "name": "PRZEDSI\u0118BIORSTWO PRODUKCYJNO - US\u0141UGOWO - HANDLOWE \"PASZ KONSPOL\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2a17ff2a-665a-4da9-bc3b-de7ca1d82883",
+     "name": "PRZEDSI\u0118BIORSTWO PRODUKCYJNO - US\u0141UGOWO - HANDLOWE \"PASZ KONSPOL\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2acf7fda-b2cc-4292-8db9-f059272834d2",
+     "name": "CARGILL CEREALE SRL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "2f011a84-949b-46b2-9967-1f99906b1d42",
+     "name": "CARGILL PARAGUAY HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "34b46267-8c20-4db9-ae60-800232eec52a",
+     "name": "PT ANDES AGRO INVESTAMA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "350ae070-7fe9-4044-aac9-2ed76ca00b07",
+     "name": "EKOL GIDA TARIM HAYVANCILIK PAZARLAMA SANAYI\u0307 VE TI\u0307CARET ANONI\u0307M \u015eI\u0307RKETI\u0307",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "350ae070-7fe9-4044-aac9-2ed76ca00b07",
+     "name": "EKOL GIDA TARIM HAYVANCILIK PAZARLAMA SANAYI\u0307 VE TI\u0307CARET ANONI\u0307M \u015eI\u0307RKETI\u0307",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "35e81069-0128-4c05-bc4f-316464ed2f1f",
+     "name": "CARGILL ENERGY TRADING CANADA, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "35e81069-0128-4c05-bc4f-316464ed2f1f",
+     "name": "CARGILL ENERGY TRADING CANADA, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "38ca51dc-67f7-4275-ab3a-b42a21b02c6a",
+     "name": "FREEMANS OF NEWENT LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "38ca51dc-67f7-4275-ab3a-b42a21b02c6a",
+     "name": "FREEMANS OF NEWENT LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "396488f9-11d7-485b-b9db-54f10ec0c697",
+     "name": "\u5609\u5409\u6295\u8d44\uff08\u4e2d\u56fd\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "396488f9-11d7-485b-b9db-54f10ec0c697",
+     "name": "\u5609\u5409\u6295\u8d44\uff08\u4e2d\u56fd\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "39f49513-bcb7-4425-a6d5-984a1fb3ae50",
+     "name": "CARGILL HOLDINGS (MALAYSIA) SDN. BHD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "39f49513-bcb7-4425-a6d5-984a1fb3ae50",
+     "name": "CARGILL HOLDINGS (MALAYSIA) SDN. BHD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "39ff3334-2cda-427c-860a-15291a0f240a",
+     "name": "CARGILL MEATS EUROPE 1 B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "39ff3334-2cda-427c-860a-15291a0f240a",
+     "name": "CARGILL MEATS EUROPE 1 B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3bfc2434-6131-4e19-93b7-33bac78ddf98",
+     "name": "CARGILL MAGYARORSZ\u00c1G KERESKEDELMI Z\u00c1RTK\u00d6R\u0170EN M\u0170K\u00d6D\u0150 R\u00c9SZV\u00c9NYT\u00c1RSAS\u00c1G",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3cbeff05-f6a5-4d1b-bd75-96c52d16fefc",
+     "name": "\u5609\u5409\u751f\u5316\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3d7e98f9-9cce-4668-9759-0c044c0b46bb",
+     "name": "PT CARGILL INDONESIA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3e13d746-9ede-42cc-a44c-cfe134e1fd96",
+     "name": "\u4e1c\u839e\u5609\u5409\u7cae\u6cb9\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3f8e5f54-4928-4962-af60-ebef2d329456",
+     "name": "CARGILL INTERNATIONAL LUXEMBOURG 3 S. \u00c0 R.L",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3f8e5f54-4928-4962-af60-ebef2d329456",
+     "name": "CARGILL INTERNATIONAL LUXEMBOURG 3 S. \u00c0 R.L",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4010036b-a1c3-4064-8cf2-7d7b84ac94da",
+     "name": "CARGILL OIL MILLS PHILIPPINES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "43bcc11d-2382-41f9-8d34-a6727d2fc399",
+     "name": "CARGILL FOOD SYSTEMS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "43bcc11d-2382-41f9-8d34-a6727d2fc399",
+     "name": "CARGILL FOOD SYSTEMS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "457cfdc3-4061-499e-8513-0f6c4f70340e",
+     "name": "Format Solutions, Inc.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "46473e7c-d671-4312-8cb3-84b8f194cfe0",
+     "name": "CARGILL NUTRI\u0162IE ANIMAL\u0102 SRL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "46473e7c-d671-4312-8cb3-84b8f194cfe0",
+     "name": "CARGILL NUTRI\u0162IE ANIMAL\u0102 SRL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "46473e7c-d671-4312-8cb3-84b8f194cfe0",
+     "name": "CARGILL NUTRI\u0162IE ANIMAL\u0102 SRL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "46473e7c-d671-4312-8cb3-84b8f194cfe0",
+     "name": "CARGILL NUTRI\u0162IE ANIMAL\u0102 SRL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4787f016-e94c-4024-bc6a-b6449fa79b03",
+     "name": "CARGILL GLOBAL TRADING (UK) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "49fbe135-3164-4724-be95-ac219cc2638f",
+     "name": "\"\u041a\u0410\u0420\u0413\u0418\u041b \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f\" \u0415\u041e\u041e\u0414",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4b79faea-4ec8-4962-b410-085e2cd684cf",
+     "name": "\u041e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u0441 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e \"\u041f\u0440\u043e\u0432\u0438\u043c\u0438\"",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4b79faea-4ec8-4962-b410-085e2cd684cf",
+     "name": "\u041e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u0441 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e \"\u041f\u0440\u043e\u0432\u0438\u043c\u0438\"",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4bfa67ba-e6e5-444a-acf0-9ebed7300351",
+     "name": "Cargill International Luxembourg 18 S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4cabb9b7-c029-4cc3-b8f6-77ed4a3dbc95",
+     "name": "ARDENT MILLS ULC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4cabb9b7-c029-4cc3-b8f6-77ed4a3dbc95",
+     "name": "ARDENT MILLS ULC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4f953f2e-767f-4356-8b69-2a4737f33423",
+     "name": "Cargill International Luxembourg 5 S. \u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "50ace771-81ad-4258-b3d4-14f873caa606",
+     "name": "CARGILL POLAND SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "50fd9e9d-6c96-4628-b300-98c4d3e5c21f",
+     "name": "ALBAIN BIDCO UK LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "5581d192-0737-407c-8e48-47665ae7a5cd",
+     "name": "\u5609\u5409\u4e9a\u592a\u98df\u54c1\u7cfb\u7edf\uff08\u5317\u4eac\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "55efe66a-7bdb-4939-8891-a11badd22605",
+     "name": "CARGILL FINANCIAL SERVICES EUROPE B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "55efe66a-7bdb-4939-8891-a11badd22605",
+     "name": "CARGILL FINANCIAL SERVICES EUROPE B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "568ab112-69ac-45a6-b368-f079a1105400",
+     "name": "EWOS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "58eee133-6685-4d7f-8a1d-52b71a030772",
+     "name": "\u5609\u5409\u5b9e\u4e1a\uff08\u6b66\u6c49\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "5d7823ad-e31c-44cc-b707-22d73bc7ce94",
+     "name": "\u5609\u5409\u7cae\u6cb9\uff08\u5357\u901a\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6149d422-9e0d-4682-951a-0d90a20f2438",
+     "name": "SUN VALLEY POULTRY LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "617157ed-d895-4532-8b3c-c0063af2fbdb",
+     "name": "CARGILL KENYA LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "617157ed-d895-4532-8b3c-c0063af2fbdb",
+     "name": "CARGILL KENYA LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "62565bf5-fe58-4f5a-9050-9bd6c4dd7d34",
+     "name": "PROVIMI ANIMAL NUTRITION INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6752b26b-994b-4191-9de6-0a0bfff8095f",
+     "name": "CARGILL AUSTRIA HANDELSGESELLSCHAFT M.B.H.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "67bfdd35-f04b-4595-b640-280f72c61432",
+     "name": "PT ANDES SAWIT MAS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6bbce535-6294-4d5a-bc98-a5ee6d7b564b",
+     "name": "Cargill International AM 2 S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6bbce535-6294-4d5a-bc98-a5ee6d7b564b",
+     "name": "Cargill International AM 2 S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6c05aabf-4898-4f34-84a1-adea976ef1e2",
+     "name": "EWOS AS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6c05aabf-4898-4f34-84a1-adea976ef1e2",
+     "name": "EWOS AS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6ccca8f7-97f7-4a68-bd02-04db5d0b7d7b",
+     "name": "BIORO",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "70a46906-bee2-412f-8bc0-e9778537dd24",
+     "name": "\u5609\u5409\u98df\u54c1\uff08\u5929\u6d25\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "75338c10-73e5-43ed-aad6-ec851da40833",
+     "name": "CARGILL PECTIN ITALY S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "77ca7b68-0b5e-40c7-8d22-7fc54c56ec2d",
+     "name": "CARGILL PALM PRODUCTS SDN. BHD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "78e0132b-e500-4f06-b97a-4a327d1d886a",
+     "name": "CARGILL IB LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "78e0132b-e500-4f06-b97a-4a327d1d886a",
+     "name": "CARGILL IB LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7933a64d-6afa-44e6-8270-5055624a83e8",
+     "name": "PT POLIPLANT SEJAHTERA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7a1f4e5b-c9da-47e3-a4f1-ffae9d94e2f3",
+     "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e04\u0e32\u0e23\u0e4c\u0e01\u0e34\u0e25\u0e25\u0e4c\u0e2a\u0e22\u0e32\u0e21 \u0e08\u0e33\u0e01\u0e31\u0e14",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7a32fb76-43d8-4f4c-8ca7-fa7aeeb8243e",
+     "name": "CARGILL FINANCIAL SERVICES 2 CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7a32fb76-43d8-4f4c-8ca7-fa7aeeb8243e",
+     "name": "CARGILL FINANCIAL SERVICES 2 CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7bc59f63-21b4-4241-9141-3a2ac183b71c",
+     "name": "PT PACRIM NUSANTARA LESTARI FOODS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7dca7f54-278d-41d3-9425-8d3d76385660",
+     "name": "CARGILL INTERNATIONAL LUXEMBOURG 17 S.\u00c0 R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7dca7f54-278d-41d3-9425-8d3d76385660",
+     "name": "CARGILL INTERNATIONAL LUXEMBOURG 17 S.\u00c0 R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7e97863c-e7fb-4360-b930-e18c39481bba",
+     "name": "ENDON EUROPE POWER 6 LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7f076f53-ec41-4ec5-842f-a90de3e5b673",
+     "name": "CERES GLOBAL AG CORP.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7f094bcb-fca2-4c8b-ac53-772a4e5247db",
+     "name": "CERESTAR UK LTD",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "81a3cb66-a6d8-4c9e-9db5-792d8d18fa45",
+     "name": "CARGILL SWEETENERS HOLDING B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "81b1e5de-5e08-4994-81b2-d561e95ea825",
+     "name": "JBS S/A",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "81b1e5de-5e08-4994-81b2-d561e95ea825",
+     "name": "JBS S/A",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "81b1e5de-5e08-4994-81b2-d561e95ea825",
+     "name": "JBS S/A",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "81b1e5de-5e08-4994-81b2-d561e95ea825",
+     "name": "JBS S/A",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "854e6c0c-da65-4bcf-922e-e53ac0e32659",
+     "name": "CARGILL SOUTH AMERICAN HOLDINGS S.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "867988c5-c5b3-48d4-9132-15396d33b7f8",
+     "name": "CARGILL TCM SWITZERLAND S\u00c0RL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "88c71923-6ac7-490d-a45d-1e99b3d30a96",
+     "name": "GREEN HERCULES TRADING LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "88c71923-6ac7-490d-a45d-1e99b3d30a96",
+     "name": "GREEN HERCULES TRADING LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8b780350-0b0f-48ac-a9da-d783726e611f",
+     "name": "M.A. CARGILL TRADING LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8b780350-0b0f-48ac-a9da-d783726e611f",
+     "name": "M.A. CARGILL TRADING LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+     "name": "CEVA Freight, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8c3cc24f-d6a1-4bf5-9e24-880e9b9a1065",
+     "name": "\u5609\u5409\u98df\u54c1\u79d1\u6280\uff08\u5e73\u6e56\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8c55af5a-8eef-4f48-85b5-61dbb9e94c76",
+     "name": "CARGILL SWITZERLAND OT HOLDINGS SARL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+     "name": "CARGILL NV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+     "name": "CARGILL NV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+     "name": "CARGILL NV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+     "name": "CARGILL NV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8ca03db7-bc8b-4c84-9308-2a32e3e0959e",
+     "name": "CARGILL NV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8cce12ea-bb27-42e3-a428-a8517b8df292",
+     "name": "CARGILL PORTUGAL - COM\u00c9RCIO E IND\u00daSTRIA AGRO-ALIMENTAR, SOCIEDADE UNIPESSOAL LDA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8d1b108b-a0a8-4281-b148-8d348dffa3ef",
+     "name": "CARGILL VELOCITY HOLDINGS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8e28152c-bdd4-4c16-9e15-edf847e88c29",
+     "name": "Cargill de Venezuela, S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8e28152c-bdd4-4c16-9e15-edf847e88c29",
+     "name": "Cargill de Venezuela, S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8eb59765-5d38-4603-bf7a-36e9f7eda53b",
+     "name": "SUN VALLEY FOODS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9099d572-ab7f-4682-94e4-a567b86ad546",
+     "name": "\u5609\u5409\u7cae\u6cb9\uff08\u9633\u6c5f\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9221c110-ed48-42fd-a46a-442dd595f84b",
+     "name": "STANDART",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9221c110-ed48-42fd-a46a-442dd595f84b",
+     "name": "STANDART",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "92791ced-d728-43f1-8cc2-4eaf66107396",
+     "name": "Cardinal Capital Master Collective Trust",
+     "rel": "fund_management"
+    },
+    {
+     "entity_id": "99d0d3f0-91c5-45c5-8e91-bec35d800e17",
+     "name": "CARGILL FINANCIAL SERVICES 3 CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "99d0d3f0-91c5-45c5-8e91-bec35d800e17",
+     "name": "CARGILL FINANCIAL SERVICES 3 CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9a684352-983d-4ca0-bd27-64022986845e",
+     "name": "CARGILL FOODS FRANCE",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9b6d7f1c-1646-42d4-94d6-21b09c555b04",
+     "name": "PT HINDOLI",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9c82de30-0383-4cb2-acee-5f8eed6fcb88",
+     "name": "CARGILL PROTEIN POLAND SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9d447712-eed0-4185-9c83-ae28a404d9fe",
+     "name": "\u4e1c\u839e\u5609\u5409\u9972\u6599\u86cb\u767d\u79d1\u6280\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9d447712-eed0-4185-9c83-ae28a404d9fe",
+     "name": "\u4e1c\u839e\u5609\u5409\u9972\u6599\u86cb\u767d\u79d1\u6280\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9dec58ff-006a-4b23-ab90-7c810239f4a4",
+     "name": "GRANOVIT TRADING SA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9dec58ff-006a-4b23-ab90-7c810239f4a4",
+     "name": "GRANOVIT TRADING SA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9e86faf7-091a-4457-86ed-a82bb9b89b73",
+     "name": "Cargill VenInvest S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9eeef1df-8d07-4163-8776-9ef802281650",
+     "name": "CARGILL GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9eeef1df-8d07-4163-8776-9ef802281650",
+     "name": "CARGILL GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a1884659-ba8b-4f87-be82-0edef2f72a5c",
+     "name": "SOYVEN HOLDING B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a456b4c3-5249-4922-9db3-d91d0f57dbf7",
+     "name": "CARGILL CENTRAL AMERICAN HOLDINGS SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a4a91048-674b-43ef-bba4-6fb363b0e7bc",
+     "name": "\u5609\u5409\u8d38\u6613\uff08\u4e0a\u6d77\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a787ddf7-8c8f-452a-8d9c-67acd3f85290",
+     "name": "CERESTAR HOLDING B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a787ddf7-8c8f-452a-8d9c-67acd3f85290",
+     "name": "CERESTAR HOLDING B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a78baea3-088b-41f2-aaf4-c7b3141ae92f",
+     "name": "CARGILL TAKARM\u00c1NY Z\u00c1RTK\u00d6R\u0170EN M\u0170K\u00d6D\u0150 R\u00c9SZV\u00c9NYT\u00c1RSAS\u00c1G",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "aa2b6579-df2a-4fa6-835b-cf372f2eaa85",
+     "name": "CHICKENS 'R' US LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "aac53bdb-8cda-4046-a326-2443a9ff1049",
+     "name": "C\u00d4NG TY TNHH CARGILL VI\u1ec6T NAM",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ab0bfa92-00f7-436f-8326-8ad54723b170",
+     "name": "CARGILL CACAO ET CHOCOLAT FRANCE SAS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "af917eed-189e-4d0d-93cd-0c5aded1fc9f",
+     "name": "Cargill International Luxembourg 13 S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b2266186-7d84-46c6-a29f-e79c58463dfd",
+     "name": "PT CARGILL FOODS INDONESIA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b23307b0-e578-4aaf-9fa7-25a601aebd6c",
+     "name": "CARGILL S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b3e4f819-58ff-4d72-88d1-37499f3b431c",
+     "name": "CARGILL INVESTMENTS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b411ed75-1caa-40c2-a72f-894db0b75ba0",
+     "name": "C\u00d4NG TY TNHH M\u1ed8T TH\u00c0NH VI\u00caN PROVIMI",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b411ed75-1caa-40c2-a72f-894db0b75ba0",
+     "name": "C\u00d4NG TY TNHH M\u1ed8T TH\u00c0NH VI\u00caN PROVIMI",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b84994c8-f990-41cb-8a52-f83d46bc0e48",
+     "name": "CARGILL (MALAYSIA) SDN. BHD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b84994c8-f990-41cb-8a52-f83d46bc0e48",
+     "name": "CARGILL (MALAYSIA) SDN. BHD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bf4914ae-a25c-4ce2-a736-5cc7ad4060e8",
+     "name": "BLACK RIVER ASSET MANAGEMENT (UK) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bf4914ae-a25c-4ce2-a736-5cc7ad4060e8",
+     "name": "BLACK RIVER ASSET MANAGEMENT (UK) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c4b4353d-a1a5-4202-b38e-f3414e020663",
+     "name": "Ardent Mills S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c4b4353d-a1a5-4202-b38e-f3414e020663",
+     "name": "Ardent Mills S.\u00e0 r.l.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c5c1a9d3-f149-4eba-8497-3985e5229e70",
+     "name": "PT SORINI AGRO ASIA CORPORINDO",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "cc4dd858-5b2c-4b80-bee9-a4f7bf4669cb",
+     "name": "CARGILL THE NETHERLANDS HOLDING B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ce996d2a-0fb5-4820-8fd3-0442a907c115",
+     "name": "MEADOWFIELDS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d175e968-51df-4381-a8b2-b78d11378211",
+     "name": "CARGILL PLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d22076a9-baaa-4dd2-af9b-c554346953de",
+     "name": "THAI FOODS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d2594d39-d819-4a6b-9c0f-4e92e167ec39",
+     "name": "CARGILL FRANCE",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d3835599-2a94-4def-8363-e720c4caa403",
+     "name": "(\uc8fc)\uce74\uae38\uc560\uadf8\ub9ac\ud4e8\ub9ac\ub098",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d99ac2e0-47f2-47a6-8459-5a8e1153aa0b",
+     "name": "CARGILL SUPREMA HOLDINGS II B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "db6c7f19-1e33-4d17-916d-f1cee8a1bd7b",
+     "name": "AWB INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "dc339320-f1f6-4bbd-b2cd-291626972236",
+     "name": "CARGILL TARIM VE GIDA SANAYI TICARET ANONIM \u015eIRKETI",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "dc8d384f-2e8b-45f9-8500-727b3fb0ffd7",
+     "name": "CFSC Capital Corp. XVII",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "dd39f481-89f4-408c-abe9-f085c8845af4",
+     "name": "CARGILL INTEGRA (UK) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e183487d-5e2a-4991-adea-164df50c992d",
+     "name": "\u5609\u51a0\u6295\u8cc7\u80a1\u4efd\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e5d417a8-d118-45c9-8ca7-ed16ef35c0e0",
+     "name": "CARGILL HOLDING (GERMANY) GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e655802b-b7a4-4dc3-ad98-052d199a3483",
+     "name": "CARGILL INTERNATIONAL LUXEMBOURG 2 S. \u00c0 R.L",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e655802b-b7a4-4dc3-ad98-052d199a3483",
+     "name": "CARGILL INTERNATIONAL LUXEMBOURG 2 S. \u00c0 R.L",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e65e4e8b-59d1-4ca3-95f6-90e7fe62c5fc",
+     "name": "CARGILL BUSINESS SERVICES INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e65e4e8b-59d1-4ca3-95f6-90e7fe62c5fc",
+     "name": "CARGILL BUSINESS SERVICES INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e742afef-27bb-40cd-a65a-b9e421e0c96e",
+     "name": "LOWESMOOR FOODS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "eb000cf5-1511-460c-b243-4cb2a06d5629",
+     "name": "PRECISION AGRICULTURAL SERVICES INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ebc99a09-302d-4ce5-8095-8c1891121680",
+     "name": "\u041e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u0441 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e \"\u041a\u0430\u0440\u0433\u0438\u043b\u043b\"",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ebc99a09-302d-4ce5-8095-8c1891121680",
+     "name": "\u041e\u0431\u0449\u0435\u0441\u0442\u0432\u043e \u0441 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u043e\u0439 \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c\u044e \"\u041a\u0430\u0440\u0433\u0438\u043b\u043b\"",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f089f20d-8a83-42bc-b8c3-71bc93cf5ace",
+     "name": "MERIT CORPORATION SAL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f089f20d-8a83-42bc-b8c3-71bc93cf5ace",
+     "name": "MERIT CORPORATION SAL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f3ea8149-653b-4a3b-9043-2730c2fb6944",
+     "name": "\u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \u0421 \u041e\u0413\u0420\u0410\u041d\u0418\u0427\u0415\u041d\u041d\u041e\u0419 \u041e\u0422\u0412\u0415\u0422\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0421\u0422\u042c\u042e \"\u041a\u0410\u0420\u0413\u0418\u041b\u041b \u041d\u041e\u0412\u041e\u0410\u041d\u041d\u0418\u041d\u0421\u041a\u0418\u0419\"",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f3ea8149-653b-4a3b-9043-2730c2fb6944",
+     "name": "\u041e\u0411\u0429\u0415\u0421\u0422\u0412\u041e \u0421 \u041e\u0413\u0420\u0410\u041d\u0418\u0427\u0415\u041d\u041d\u041e\u0419 \u041e\u0422\u0412\u0415\u0422\u0421\u0422\u0412\u0415\u041d\u041d\u041e\u0421\u0422\u042c\u042e \"\u041a\u0410\u0420\u0413\u0418\u041b\u041b \u041d\u041e\u0412\u041e\u0410\u041d\u041d\u0418\u041d\u0421\u041a\u0418\u0419\"",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f3eef1a4-4d6b-480b-9844-a7b75742964d",
+     "name": "CARGILL MAURITIUS LTD",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f731ac3d-2e3b-4bd9-8df4-8cdbe7f239ee",
+     "name": "CARGILL MIDDLE EAST DMCC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f75691ed-8778-4df5-ad4b-2ac58ac2f094",
+     "name": "\u5609\u5409\u52a8\u7269\u86cb\u767d\uff08\u5b89\u5fbd\uff09\u6709\u9650\u516c\u53f8",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f9593dac-7b06-478c-a443-b4cd26701526",
+     "name": "CARGILL INTERNATIONAL SA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fbb960b7-80a1-4420-bc54-10ddc79c6e19",
+     "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e04\u0e32\u0e23\u0e4c\u0e01\u0e34\u0e25\u0e25\u0e4c\u0e21\u0e35\u0e17\u0e2a\u0e4c (\u0e44\u0e17\u0e22\u0e41\u0e25\u0e19\u0e14\u0e4c) \u0e08\u0e33\u0e01\u0e31\u0e14",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fbdd4873-08bb-4b09-bfe5-0f573fff2091",
+     "name": "CARGILL HOLDINGS II B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fdbb0fe1-750c-4128-bb8e-5e1079a1bcde",
+     "name": "CARGILL HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fdbb0fe1-750c-4128-bb8e-5e1079a1bcde",
+     "name": "CARGILL HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fdbb0fe1-750c-4128-bb8e-5e1079a1bcde",
+     "name": "CARGILL HOLDINGS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fe26d118-90c0-4300-89ed-64d18991b585",
+     "name": "PT ANDES SAWIT LESTARI",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fedfa7a2-f721-488a-8760-a27893bc7e6e",
+     "name": "CARGILL PHILIPPINES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fedfa7a2-f721-488a-8760-a27893bc7e6e",
+     "name": "CARGILL PHILIPPINES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ffec99b0-feb9-4a6e-88fd-5c14f063b69e",
+     "name": "AWB (SWITZERLAND) SA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ffec99b0-feb9-4a6e-88fd-5c14f063b69e",
+     "name": "AWB (SWITZERLAND) SA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fc3ebbe9-a6d3-4ab2-8be9-b7ccf9373774",
+     "name": "CARGILL ASIA PACIFIC HOLDINGS PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fc3ebbe9-a6d3-4ab2-8be9-b7ccf9373774",
+     "name": "CARGILL ASIA PACIFIC HOLDINGS PTE. LTD.",
+     "rel": "parent_subsidiary"
+    }
+   ]
+  },
+  {
+   "buyer": "Ingredion Cedar Rapids",
+   "buyer_parent_model": "Ingredion",
+   "type": "Corn processor",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Cargill Soybean Processing East",
+   "buyer_parent_model": "Cargill",
+   "type": "Soybean crusher",
+   "entity_id": "a1003c97-68e9-4aa6-9153-8ef538dd53e3",
+   "tv_name": "CARGILL INC. - SOYBEAN PROCESSING EAST",
+   "parents": []
+  },
+  {
+   "buyer": "Cargill Soybean Processing West",
+   "buyer_parent_model": "Cargill",
+   "type": "Soybean crusher",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Quaker Oats Cedar Rapids",
+   "buyer_parent_model": "PepsiCo",
+   "type": "Oat mill",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Big River United Energy",
+   "buyer_parent_model": "Big River Resources",
+   "type": "Ethanol plant",
+   "entity_id": "b08bf13e-bb73-4cc3-9920-8af3c9e6a3d1",
+   "tv_name": "Big River United Energy, LLC",
+   "parents": []
+  },
+  {
+   "buyer": "Grain Processing Corporation",
+   "buyer_parent_model": "Kent Corporation",
+   "type": "Corn processor / ethanol",
+   "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "tv_name": "GRAIN PROCESSING CORPORATION",
+   "parents": [
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+     "name": "GRAIN PROCESSING CORPORATION",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "27e12cbf-6b23-43c8-8344-e2a0a0cede6b",
+     "name": "KENT PET GROUP, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "27e12cbf-6b23-43c8-8344-e2a0a0cede6b",
+     "name": "KENT PET GROUP, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6187c4b6-32cd-4526-a0c7-a5813f3bf609",
+     "name": "Gerber Childrenswear Real Estate, LLC",
+     "rel": "parent_subsidiary"
+    }
+   ]
+  },
+  {
+   "buyer": "POET Fairbank",
+   "buyer_parent_model": "POET",
+   "type": "Ethanol plant",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "ADM Clinton",
+   "buyer_parent_model": "ADM",
+   "type": "Corn processor / ethanol",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Kalona Sales Barn",
+   "buyer_parent_model": "Kalona Sales Barn",
+   "type": "Livestock & hay auction",
+   "entity_id": "77177416-d6cb-4bd2-8583-fa935fa0fab2",
+   "tv_name": "KALONA SALES BARN, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Walker Sales Barn",
+   "buyer_parent_model": "Walker Sales Barn",
+   "type": "Livestock auction",
+   "entity_id": "4f7ca321-1971-4f17-9567-b3706a6a58cb",
+   "tv_name": "WALKER SALES BARN, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Oxford Sale Barn",
+   "buyer_parent_model": "Oxford Sale Barn",
+   "type": "Livestock auction",
+   "entity_id": "d764e841-9e9a-47c1-9476-fa4e5dcc1f6d",
+   "tv_name": "OXFORD SALE BARN, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Tama Livestock Auction",
+   "buyer_parent_model": "Tama Livestock Auction",
+   "type": "Livestock auction",
+   "entity_id": "0d2d86e4-45bf-43de-9e06-21eff1ed8ba5",
+   "tv_name": "TAMA LIVESTOCK AUCTION",
+   "parents": []
+  },
+  {
+   "buyer": "Cascade Livestock Auction",
+   "buyer_parent_model": "Cascade Livestock Auction",
+   "type": "Livestock auction",
+   "entity_id": "76791078-0222-4f0b-98e6-8b0072fb7ea8",
+   "tv_name": "CASCADE LIVESTOCK AUCTION, LLC",
+   "parents": []
+  },
+  {
+   "buyer": "Edgewood Livestock Commission",
+   "buyer_parent_model": "Edgewood Livestock Commission",
+   "type": "Livestock auction",
+   "entity_id": "f94b7388-992f-4d37-9c97-11191c01bf5f",
+   "tv_name": "EDGEWOOD LIVESTOCK COMMISSION, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "NFO Livestock Manchester",
+   "buyer_parent_model": "NFO",
+   "type": "Livestock auction",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Equity Cooperative Livestock Sales",
+   "buyer_parent_model": "Equity Cooperative",
+   "type": "Livestock auction",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Maquoketa Livestock Exchange",
+   "buyer_parent_model": "Maquoketa Livestock Exchange",
+   "type": "Livestock auction",
+   "entity_id": "6cef0ee9-f0de-48a8-8a5f-583615ed48fc",
+   "tv_name": "MAQUOKETA LIVESTOCK EXCHANGE LLC",
+   "parents": []
+  },
+  {
+   "buyer": "Keoco Auction Company",
+   "buyer_parent_model": "Keoco Auction Company",
+   "type": "Livestock auction",
+   "entity_id": "1a25578b-2b11-48f2-8ce4-66a1d728ead3",
+   "tv_name": "KEOCO AUCTION COMPANY, LLC.",
+   "parents": []
+  },
+  {
+   "buyer": "Waverly Sales Company",
+   "buyer_parent_model": "Waverly Sales Company",
+   "type": "Livestock auction",
+   "entity_id": "c0800409-d7ab-4e11-9f94-71f956286ee9",
+   "tv_name": "WAVERLY SALES CORPORATION",
+   "parents": []
+  },
+  {
+   "buyer": "Mid-States Wool Growers Cooperative",
+   "buyer_parent_model": "Mid-States Wool Growers",
+   "type": "Wool marketing cooperative",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Cedar Rapids fresh market (modeled)",
+   "buyer_parent_model": "Local direct market",
+   "type": "Fresh produce market (modeled)",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Iowa City fresh market (modeled)",
+   "buyer_parent_model": "Local direct market",
+   "type": "Fresh produce market (modeled)",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "ADM Grain Company",
+   "buyer_parent_model": "ADM Grain Company",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "tv_name": "SKYLAND GRAIN, L.L.C.",
+   "parents": [
+    {
+     "entity_id": "05e56445-c259-48c0-875f-da3dd30edced",
+     "name": "WILD INTERMARE GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "05e56445-c259-48c0-875f-da3dd30edced",
+     "name": "WILD INTERMARE GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0628ebeb-0116-444b-b7df-0906523d3731",
+     "name": "ARCHER DANIELS MIDLAND ERITH LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0628ebeb-0116-444b-b7df-0906523d3731",
+     "name": "ARCHER DANIELS MIDLAND ERITH LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "079acbc1-a0cb-4450-9adf-07fbc9b534fc",
+     "name": "ADM WILD UK LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "079acbc1-a0cb-4450-9adf-07fbc9b534fc",
+     "name": "ADM WILD UK LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0c99968d-5087-4cd4-b4e0-603099eac701",
+     "name": "ADM ASIA-PACIFIC TRADING PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0c99968d-5087-4cd4-b4e0-603099eac701",
+     "name": "ADM ASIA-PACIFIC TRADING PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0d9e10e6-abd6-4b4c-a949-b702181f913e",
+     "name": "ARCHER DANIELS MIDLAND SINGAPORE, PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0d9e10e6-abd6-4b4c-a949-b702181f913e",
+     "name": "ARCHER DANIELS MIDLAND SINGAPORE, PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0ea04b47-fa83-48b4-9a9c-a06350273e1b",
+     "name": "ADM PARAGUAY S.R.L",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0ea04b47-fa83-48b4-9a9c-a06350273e1b",
+     "name": "ADM PARAGUAY S.R.L",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0f0813e5-52a6-4196-b20d-ffc46cf4c56a",
+     "name": "ADM OLOMOUC S.R.O.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "0f0813e5-52a6-4196-b20d-ffc46cf4c56a",
+     "name": "ADM OLOMOUC S.R.O.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "10f908cf-c313-4004-ae3c-3995ddcfb5fc",
+     "name": "ADM PORTUGAL, S.A.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "10f908cf-c313-4004-ae3c-3995ddcfb5fc",
+     "name": "ADM PORTUGAL, S.A.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "135bb2cb-145c-4201-acd1-0649262aa603",
+     "name": "ARCHER-DANIELS-MIDLAND PHILIPPINES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "135bb2cb-145c-4201-acd1-0649262aa603",
+     "name": "ARCHER-DANIELS-MIDLAND PHILIPPINES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "148f6443-684d-4c7f-8563-4351775afd3e",
+     "name": "ADM TRADING AUSTRALIA PTY LTD",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "148f6443-684d-4c7f-8563-4351775afd3e",
+     "name": "ADM TRADING AUSTRALIA PTY LTD",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "14b8f8c8-5dc2-4b27-b6d1-374d3cd89827",
+     "name": "State Street Bank and Trust Company",
+     "rel": "ownership"
+    },
+    {
+     "entity_id": "1904198b-e79a-4c48-8edf-bf12e0db6e6a",
+     "name": "\u0410\u0414\u041c \u0420\u0410\u0417\u0413\u0420\u0410\u0414",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1904198b-e79a-4c48-8edf-bf12e0db6e6a",
+     "name": "\u0410\u0414\u041c \u0420\u0410\u0417\u0413\u0420\u0410\u0414",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1b141f16-5be6-478f-a7f7-8172c4815727",
+     "name": "ADM CHILE COMERCIAL LIMITADA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1ed09a0f-ae6b-432c-a6bc-1dfcf23f6c8a",
+     "name": "ADM BES\u0130N VE TARIM ANON\u0130M \u015e\u0130RKET\u0130",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "1ed09a0f-ae6b-432c-a6bc-1dfcf23f6c8a",
+     "name": "ADM BES\u0130N VE TARIM ANON\u0130M \u015e\u0130RKET\u0130",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "250f0d05-3745-4b86-bbe4-94a3aed9149d",
+     "name": "\"\u0410\u0414\u041c \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f \u0422\u0420\u0415\u0419\u0414\u0418\u041d\u0413\" \u0415\u041e\u041e\u0414",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "250f0d05-3745-4b86-bbe4-94a3aed9149d",
+     "name": "\"\u0410\u0414\u041c \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f \u0422\u0420\u0415\u0419\u0414\u0418\u041d\u0413\" \u0415\u041e\u041e\u0414",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "25815d29-d4d5-4077-92fe-bed6553a2015",
+     "name": "ADM Hungary Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "25815d29-d4d5-4077-92fe-bed6553a2015",
+     "name": "ADM Hungary Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "27ac5c27-354b-46f6-8038-2d067141ac08",
+     "name": "ADM ANTWERP",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "27ac5c27-354b-46f6-8038-2d067141ac08",
+     "name": "ADM ANTWERP",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "310815d1-50e2-41e7-8c61-b5d87ad6dcab",
+     "name": "NEOVIA S.A.S.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "310815d1-50e2-41e7-8c61-b5d87ad6dcab",
+     "name": "NEOVIA S.A.S.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3295a94d-434a-4891-8805-9755039d5067",
+     "name": "PT ADM INDONESIA TRADING AND LOGISTICS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3295a94d-434a-4891-8805-9755039d5067",
+     "name": "PT ADM INDONESIA TRADING AND LOGISTICS",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "32ee5a09-95e8-4548-bc6b-9c2ab300f64e",
+     "name": "ADM AGRO IBERICA SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "32ee5a09-95e8-4548-bc6b-9c2ab300f64e",
+     "name": "ADM AGRO IBERICA SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3307c798-b698-4030-bdcb-dfaf0f11f2cc",
+     "name": "ADM MEDSOFTS S\u00c0RL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3307c798-b698-4030-bdcb-dfaf0f11f2cc",
+     "name": "ADM MEDSOFTS S\u00c0RL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "34681f03-3e62-4fe4-9b68-803d50ba04d2",
+     "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e40\u0e2d\u0e14\u0e35\u0e40\u0e2d\u0e47\u0e21 (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "34681f03-3e62-4fe4-9b68-803d50ba04d2",
+     "name": "\u0e1a\u0e23\u0e34\u0e29\u0e31\u0e17 \u0e40\u0e2d\u0e14\u0e35\u0e40\u0e2d\u0e47\u0e21 (\u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22) \u0e08\u0e33\u0e01\u0e31\u0e14",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "376edee9-01a0-4d29-848b-81f7153d3299",
+     "name": "NEOVIA LATINA SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "376edee9-01a0-4d29-848b-81f7153d3299",
+     "name": "NEOVIA LATINA SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3794da45-9195-4138-bffb-55f719dd97d4",
+     "name": "ADM GCC INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3f57685b-9836-47f3-99f3-2c8aae5b4d6c",
+     "name": "ADM ARKADY IRELAND LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "3f57685b-9836-47f3-99f3-2c8aae5b4d6c",
+     "name": "ADM ARKADY IRELAND LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "41b42ed8-983b-432f-b2e3-f6a055f6e93a",
+     "name": "NEOVIA PHILIPPINES INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "41b42ed8-983b-432f-b2e3-f6a055f6e93a",
+     "name": "NEOVIA PHILIPPINES INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "44b3865e-2fbb-4a0d-bb41-49c23afe39bc",
+     "name": "\uc544\ucc98\ub300\ub2c8\uc5bc\uc2a4\ubbf8\ub4e4\ub79c\ub4dc\ucf54\ub9ac\uc544",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "44b3865e-2fbb-4a0d-bb41-49c23afe39bc",
+     "name": "\uc544\ucc98\ub300\ub2c8\uc5bc\uc2a4\ubbf8\ub4e4\ub79c\ub4dc\ucf54\ub9ac\uc544",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4906bdf0-45f3-4031-a91d-2c2d09e5fa49",
+     "name": "ADM Oilseeds Germany GmbH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4906bdf0-45f3-4031-a91d-2c2d09e5fa49",
+     "name": "ADM Oilseeds Germany GmbH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4906bdf0-45f3-4031-a91d-2c2d09e5fa49",
+     "name": "ADM Oilseeds Germany GmbH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4906bdf0-45f3-4031-a91d-2c2d09e5fa49",
+     "name": "ADM Oilseeds Germany GmbH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4b972b2a-07d9-4cd9-9616-d19ab1323666",
+     "name": "ADM RINGASKIDDY UNLIMITED COMPANY",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4b972b2a-07d9-4cd9-9616-d19ab1323666",
+     "name": "ADM RINGASKIDDY UNLIMITED COMPANY",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4e0008ff-fd81-4064-876e-e59e60c39789",
+     "name": "\"ADM SZAMOTU\u0141Y\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "4e0008ff-fd81-4064-876e-e59e60c39789",
+     "name": "\"ADM SZAMOTU\u0141Y\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "54566d3c-991a-4abc-a8e2-89ba4c548e26",
+     "name": "ADM ROMANIA TRADING S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "54566d3c-991a-4abc-a8e2-89ba4c548e26",
+     "name": "ADM ROMANIA TRADING S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "59266d8e-7f9a-4089-a76b-8ba2832cc55e",
+     "name": "\"PROVIT\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "59266d8e-7f9a-4089-a76b-8ba2832cc55e",
+     "name": "\"PROVIT\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "5e284611-deea-41f6-905a-0aacefdad4c3",
+     "name": "ADM AMERICAS, S. DE R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "5e284611-deea-41f6-905a-0aacefdad4c3",
+     "name": "ADM AMERICAS, S. DE R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "5f8d8f16-2070-4fef-8ef4-fecfbddb9284",
+     "name": "ADMIS Hong Kong Limited",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "5f8d8f16-2070-4fef-8ef4-fecfbddb9284",
+     "name": "ADMIS Hong Kong Limited",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "65003d04-670c-4414-867e-345fd1ff93b2",
+     "name": "PURA FOODS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "65003d04-670c-4414-867e-345fd1ff93b2",
+     "name": "PURA FOODS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "66e5f521-f11f-4f72-9abe-e7039fee9e5e",
+     "name": "ADM TURKEY TARIM T\u0130CARET ANON\u0130M \u015e\u0130RKET\u0130",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "66e5f521-f11f-4f72-9abe-e7039fee9e5e",
+     "name": "ADM TURKEY TARIM T\u0130CARET ANON\u0130M \u015e\u0130RKET\u0130",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6738c65a-2d83-472f-a425-4b1d4a17671b",
+     "name": "WILD FLAVORS POLSKA SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6738c65a-2d83-472f-a425-4b1d4a17671b",
+     "name": "WILD FLAVORS POLSKA SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6c62280d-0a74-425e-bbda-bc6404628875",
+     "name": "SOUTHWEST KANSAS CO-OP SERVICE COMPANY, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6c62280d-0a74-425e-bbda-bc6404628875",
+     "name": "SOUTHWEST KANSAS CO-OP SERVICE COMPANY, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6e77ab26-15a8-4ec5-a24d-df6ee2749899",
+     "name": "ADM MEXICO SA DE CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6f0319bd-c47c-4063-b12c-c1e8c870b85c",
+     "name": "ADM INVESTOR SERVICES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "6f0319bd-c47c-4063-b12c-c1e8c870b85c",
+     "name": "ADM INVESTOR SERVICES, INC.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "72149c3d-bf9d-40d2-a41a-b993afae262d",
+     "name": "C\u00f4ng ty TNHH Archer Daniels Midland VN",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "72149c3d-bf9d-40d2-a41a-b993afae262d",
+     "name": "C\u00f4ng ty TNHH Archer Daniels Midland VN",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "75594295-f8d5-41b6-99f3-0a518de22ba9",
+     "name": "C\u00d4NG TY TNHH ARCHER DANIELS MIDLAND VI\u1ec6T NAM",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "75594295-f8d5-41b6-99f3-0a518de22ba9",
+     "name": "C\u00d4NG TY TNHH ARCHER DANIELS MIDLAND VI\u1ec6T NAM",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7b4316ea-c863-4aa9-9c14-13fa3a14cdf8",
+     "name": "AGROGRAIN, LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7db4ee34-4312-43d4-85bc-03136c65d4db",
+     "name": "Archer Daniels Midland Europoort B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "7db4ee34-4312-43d4-85bc-03136c65d4db",
+     "name": "Archer Daniels Midland Europoort B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "836d84d2-ba6a-4b28-9993-55922a4330bf",
+     "name": "ADM DOMINICANA, S.A",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "836d84d2-ba6a-4b28-9993-55922a4330bf",
+     "name": "ADM DOMINICANA, S.A",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "88b9d9f5-6c7d-4e68-9416-f4a74b086ea7",
+     "name": "Invivo NSA Asia Pte. Ltd.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8e9abe38-6b8b-4983-88d4-a9abf2b0256f",
+     "name": "ADM France",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "8e9abe38-6b8b-4983-88d4-a9abf2b0256f",
+     "name": "ADM France",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "91073ae5-b668-4221-ab56-582d871fb63d",
+     "name": "\"ADM CZERNIN\" SP\u00d3\u0141KA AKCYJNA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "91073ae5-b668-4221-ab56-582d871fb63d",
+     "name": "\"ADM CZERNIN\" SP\u00d3\u0141KA AKCYJNA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "92e54688-bebe-4c64-9ba9-4cda711d3bb9",
+     "name": "Golden Farm Production & Commerce Company Limited",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "936be135-de88-496e-942e-701e922cb5cb",
+     "name": "ADM AGRICULTURE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "936be135-de88-496e-942e-701e922cb5cb",
+     "name": "ADM AGRICULTURE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "936be135-de88-496e-942e-701e922cb5cb",
+     "name": "ADM AGRICULTURE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "936be135-de88-496e-942e-701e922cb5cb",
+     "name": "ADM AGRICULTURE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "9b333212-5708-40b8-a383-0eaba58d4675",
+     "name": "BIOPOLIS SL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a0987515-17a7-4d1c-885d-82e48c26b5d6",
+     "name": "ADM EUROPEAN MANAGEMENT HOLDING B.V. & CO. KG",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a0987515-17a7-4d1c-885d-82e48c26b5d6",
+     "name": "ADM EUROPEAN MANAGEMENT HOLDING B.V. & CO. KG",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a09ab74d-23b6-4be9-b2b0-78b78d6f8e70",
+     "name": "FUERST DAY LAWSON HOLDINGS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a09ab74d-23b6-4be9-b2b0-78b78d6f8e70",
+     "name": "FUERST DAY LAWSON HOLDINGS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a09ab74d-23b6-4be9-b2b0-78b78d6f8e70",
+     "name": "FUERST DAY LAWSON HOLDINGS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a09ab74d-23b6-4be9-b2b0-78b78d6f8e70",
+     "name": "FUERST DAY LAWSON HOLDINGS LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a2556b99-b304-4d9f-8830-9c5ad180ca68",
+     "name": "ADM Denmark A/S",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a2556b99-b304-4d9f-8830-9c5ad180ca68",
+     "name": "ADM Denmark A/S",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a405fea2-47e2-452f-8df5-5cd4267d5be5",
+     "name": "PT ADM Animal Nutrition Indonesia",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a405fea2-47e2-452f-8df5-5cd4267d5be5",
+     "name": "PT ADM Animal Nutrition Indonesia",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a5cff759-b508-49d5-9b5d-9608467f5426",
+     "name": "ADM WILD Netherlands B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a5cff759-b508-49d5-9b5d-9608467f5426",
+     "name": "ADM WILD Netherlands B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a7b1f245-4101-440b-9772-acc2b4ee835f",
+     "name": "Silo P. Kruse Betriebs-GmbH. & Co. KG.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a7b1f245-4101-440b-9772-acc2b4ee835f",
+     "name": "Silo P. Kruse Betriebs-GmbH. & Co. KG.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a8981162-b683-4eaf-805d-1fed0a86c057",
+     "name": "PANCOSMA FRANCE S.A.S.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a8981162-b683-4eaf-805d-1fed0a86c057",
+     "name": "PANCOSMA FRANCE S.A.S.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "aad3a4ff-2422-41e4-81fe-b708f6d9b4cf",
+     "name": "ADM POLAND SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "aad3a4ff-2422-41e4-81fe-b708f6d9b4cf",
+     "name": "ADM POLAND SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ae575b6a-4f1d-412e-831a-e0b3c0801d02",
+     "name": "ADM SERVICES B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ae575b6a-4f1d-412e-831a-e0b3c0801d02",
+     "name": "ADM SERVICES B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b0789e98-5e9e-43a9-b6c9-64d22f482584",
+     "name": "ADM AGRO INDUSTRIES INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b0789e98-5e9e-43a9-b6c9-64d22f482584",
+     "name": "ADM AGRO INDUSTRIES INDIA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b0f0dd09-4c0e-4dcd-a868-c35dda1b79e8",
+     "name": "TOTALLY NATURAL SOLUTIONS LTD",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b0f0dd09-4c0e-4dcd-a868-c35dda1b79e8",
+     "name": "TOTALLY NATURAL SOLUTIONS LTD",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b2c430d1-5f2c-4a2c-90d9-f98dc22db8ef",
+     "name": "ADM MILLING LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b2c430d1-5f2c-4a2c-90d9-f98dc22db8ef",
+     "name": "ADM MILLING LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b5b57c05-7760-4794-8cd6-2101e9589de8",
+     "name": "Pancosma & Associates Marketing (Thailand) Co., Ltd",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b5d3fd1c-3de7-44d2-8a29-b04f2058df0d",
+     "name": "ADM WILD EUROPE GMBH & CO. KG",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b5d3fd1c-3de7-44d2-8a29-b04f2058df0d",
+     "name": "ADM WILD EUROPE GMBH & CO. KG",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b6fd8d0e-9cb4-4c96-9582-b7f9833003e6",
+     "name": "ADM SPECIALTY INGREDIENTS (EUROPE) B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b6fd8d0e-9cb4-4c96-9582-b7f9833003e6",
+     "name": "ADM SPECIALTY INGREDIENTS (EUROPE) B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b6fe87a9-28cb-43c2-9854-0b590556012a",
+     "name": "ADM INTERNATIONAL S\u00c0RL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b6fe87a9-28cb-43c2-9854-0b590556012a",
+     "name": "ADM INTERNATIONAL S\u00c0RL",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b7845502-07d3-41ae-980e-9d9e6d74d07e",
+     "name": "INVIVO MIX DE MEXICO SA DE CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "b7845502-07d3-41ae-980e-9d9e6d74d07e",
+     "name": "INVIVO MIX DE MEXICO SA DE CV",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ba8cd62a-098b-4e02-bcac-fdfcd124d0e3",
+     "name": "ADM DO BRASIL LTDA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "ba8cd62a-098b-4e02-bcac-fdfcd124d0e3",
+     "name": "ADM DO BRASIL LTDA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bc865865-130b-40f6-a7da-0bd9dd14c1a9",
+     "name": "SOCI\u00c9T\u00c9 INDUSTRIELLE DES OL\u00c9AGINEUX - SIO S.A.S.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bc865865-130b-40f6-a7da-0bd9dd14c1a9",
+     "name": "SOCI\u00c9T\u00c9 INDUSTRIELLE DES OL\u00c9AGINEUX - SIO S.A.S.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bdf29d7a-de5a-4aa9-addb-0f9fa1d11a4a",
+     "name": "GREEN BISON SOY PROCESSING, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bdf29d7a-de5a-4aa9-addb-0f9fa1d11a4a",
+     "name": "GREEN BISON SOY PROCESSING, LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "be0672c8-b403-420a-a671-ee6f694e1b4f",
+     "name": "ADM BAZANCOURT S.A.S",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "be0672c8-b403-420a-a671-ee6f694e1b4f",
+     "name": "ADM BAZANCOURT S.A.S",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bf6a0d45-923b-4297-b3ab-2834b7e090fe",
+     "name": "BERN AQUA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "bf6a0d45-923b-4297-b3ab-2834b7e090fe",
+     "name": "BERN AQUA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c014d9e3-192d-4aa8-b480-ad230d00a10a",
+     "name": "ADM W\u0130LD GIDA SANAY\u0130 VE T\u0130CARET L\u0130M\u0130TED \u015e\u0130RKET\u0130",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c014d9e3-192d-4aa8-b480-ad230d00a10a",
+     "name": "ADM W\u0130LD GIDA SANAY\u0130 VE T\u0130CARET L\u0130M\u0130TED \u015e\u0130RKET\u0130",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c1bd671a-b4bd-4590-9998-24e2de1d5d36",
+     "name": "ADMIS SINGAPORE PTE. LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c20acb00-0362-4f96-9352-68c2505460ee",
+     "name": "ADM AGRO INDUSTRIES KOTA & AKOLA PRIVATE LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c2cf963e-6f8d-43d6-9f6e-8e9811bfd050",
+     "name": "ADM TRADING COMPANY",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c2cf963e-6f8d-43d6-9f6e-8e9811bfd050",
+     "name": "ADM TRADING COMPANY",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c49f0fe8-b13f-4972-9eb4-34160e6555ce",
+     "name": "C\u00d4NG TY TNHH GUYOMARC'H-VCN",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c49f0fe8-b13f-4972-9eb4-34160e6555ce",
+     "name": "C\u00d4NG TY TNHH GUYOMARC'H-VCN",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c66d216a-217f-441d-91d6-8754cf8e839f",
+     "name": "ADM GERMANY GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c66d216a-217f-441d-91d6-8754cf8e839f",
+     "name": "ADM GERMANY GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c6c423df-2fa4-45d7-b01a-064711f0f582",
+     "name": "ADM WILD South-Eastern Europe Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c6c423df-2fa4-45d7-b01a-064711f0f582",
+     "name": "ADM WILD South-Eastern Europe Korl\u00e1tolt Felel\u0151ss\u00e9g\u0171 T\u00e1rsas\u00e1g",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c6c9b14c-c122-468e-933d-1918f1cd1c81",
+     "name": "State Farm Mutual Automobile Insurance Company",
+     "rel": "ownership"
+    },
+    {
+     "entity_id": "cc51763d-bf4b-4113-9f6c-d407bd84b55a",
+     "name": "ADM WILD NAUEN GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "cc51763d-bf4b-4113-9f6c-d407bd84b55a",
+     "name": "ADM WILD NAUEN GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "cc767e5e-4c70-41cc-b913-632c8161f02f",
+     "name": "ADM EMEA Corporate Services GmbH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "cc767e5e-4c70-41cc-b913-632c8161f02f",
+     "name": "ADM EMEA Corporate Services GmbH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d4c791f7-a736-4b3b-bdfa-b19a4a338d22",
+     "name": "ARCHER DANIELS MIDLAND (UK) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d4c791f7-a736-4b3b-bdfa-b19a4a338d22",
+     "name": "ARCHER DANIELS MIDLAND (UK) LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d5e34c9e-c850-4ff8-8b1e-ce8704145620",
+     "name": "PFIZER INC.",
+     "rel": "ownership"
+    },
+    {
+     "entity_id": "d63d7d26-7e2e-497e-832c-5ad3d0be44cf",
+     "name": "BLACKROCK CAPITAL MANAGEMENT, INC.",
+     "rel": "ownership"
+    },
+    {
+     "entity_id": "d8639f0e-0c3b-4d22-b64f-40863dcf70c1",
+     "name": "GLOBAL COCOA HOLDINGS LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d8639f0e-0c3b-4d22-b64f-40863dcf70c1",
+     "name": "GLOBAL COCOA HOLDINGS LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d8c77213-76cf-49ad-9655-222dfdb27c3d",
+     "name": "ALFRED C. TOEPFER INTERNATIONAL NETHERLANDS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "d8c77213-76cf-49ad-9655-222dfdb27c3d",
+     "name": "ALFRED C. TOEPFER INTERNATIONAL NETHERLANDS B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "db097b79-e4e7-4640-a3f4-cd576e2957cf",
+     "name": "ADM Slovakia, s. r. o.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "db097b79-e4e7-4640-a3f4-cd576e2957cf",
+     "name": "ADM Slovakia, s. r. o.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "db75112f-b4de-4e6e-a5e1-ec180167dde0",
+     "name": "Archer Daniels Midland Asia-Pacific Limited",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "db75112f-b4de-4e6e-a5e1-ec180167dde0",
+     "name": "Archer Daniels Midland Asia-Pacific Limited",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "dbe22acc-026f-49cc-8a8c-dee7f9ad5a35",
+     "name": "ADM ANIMAL NUTRITION CZECHIA S.R.O.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "dbe22acc-026f-49cc-8a8c-dee7f9ad5a35",
+     "name": "ADM ANIMAL NUTRITION CZECHIA S.R.O.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "de601edd-7faf-457d-899b-94b54a1e5ad1",
+     "name": "ADM Investment Singapore Pte. Ltd.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "de601edd-7faf-457d-899b-94b54a1e5ad1",
+     "name": "ADM Investment Singapore Pte. Ltd.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "df2060df-07dc-4559-a767-a5f4cfb521a4",
+     "name": "ADM WILD VALENCIA S.A.U.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "df2060df-07dc-4559-a767-a5f4cfb521a4",
+     "name": "ADM WILD VALENCIA S.A.U.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e0d93e6f-7561-4f44-84ad-5e7f231c9055",
+     "name": "\"WILD POLSKA\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e0d93e6f-7561-4f44-84ad-5e7f231c9055",
+     "name": "\"WILD POLSKA\" SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e2d820a1-5690-4a78-9d5e-a2dc02fc6f2e",
+     "name": "ADM IRELAND RECEIVABLES COMPANY LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e2d820a1-5690-4a78-9d5e-a2dc02fc6f2e",
+     "name": "ADM IRELAND RECEIVABLES COMPANY LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e48bd65c-f398-4c6d-8b91-094cb0204975",
+     "name": "\"ADM MALBORK\" SP\u00d3\u0141KA AKCYJNA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e48bd65c-f398-4c6d-8b91-094cb0204975",
+     "name": "\"ADM MALBORK\" SP\u00d3\u0141KA AKCYJNA",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e72b061c-8bb8-49ec-9856-7dbaab74f51f",
+     "name": "ARCHER DANIELS MIDLAND EUROPE B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e72b061c-8bb8-49ec-9856-7dbaab74f51f",
+     "name": "ARCHER DANIELS MIDLAND EUROPE B.V.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e8f48501-394e-4194-a1fa-1b4b579f3b83",
+     "name": "ADM STF PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "e8f48501-394e-4194-a1fa-1b4b579f3b83",
+     "name": "ADM STF PTE. LTD.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f0a3bdfd-0113-4b02-b1cb-d3c0b431ddec",
+     "name": "ADM INVESTOR SERVICES INTERNATIONAL LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f0a3bdfd-0113-4b02-b1cb-d3c0b431ddec",
+     "name": "ADM INVESTOR SERVICES INTERNATIONAL LIMITED",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f1520b18-dc09-43bc-87d5-b71dde270aa9",
+     "name": "ERICH ZIEGLER GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "f1520b18-dc09-43bc-87d5-b71dde270aa9",
+     "name": "ERICH ZIEGLER GMBH",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fb79ac80-7798-4841-ab06-469e749fe8a7",
+     "name": "ADM DIRECT POLSKA SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fb79ac80-7798-4841-ab06-469e749fe8a7",
+     "name": "ADM DIRECT POLSKA SP\u00d3\u0141KA Z OGRANICZON\u0104 ODPOWIEDZIALNO\u015aCI\u0104",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fbbea015-1cd4-4518-9078-1d07289d2b5d",
+     "name": "ADM Italia S.R.L.",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "fbbea015-1cd4-4518-9078-1d07289d2b5d",
+     "name": "ADM Italia S.R.L.",
+     "rel": "parent_subsidiary"
+    }
+   ]
+  },
+  {
+   "buyer": "Amana Farms, Inc.",
+   "buyer_parent_model": "Amana Farms, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "95f4baed-a8aa-4181-aeba-ea24c8e5f744",
+   "tv_name": "AMANA SOCIETY",
+   "parents": []
+  },
+  {
+   "buyer": "Andover Grain & Fertilizer, Inc.",
+   "buyer_parent_model": "Andover Grain & Fertilizer, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "dcbe95ce-637d-4c3a-812a-0daa7fb028ca",
+   "tv_name": "ANDOVER GRAIN & FERTILIZER, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Aurora Elevator, Inc.",
+   "buyer_parent_model": "Aurora Elevator, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "1241119e-7d17-4a45-95a4-63d715fd4373",
+   "tv_name": "AURORA ELEVATOR, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Benton Grain Company, L.L.C.",
+   "buyer_parent_model": "Benton Grain Company, L.L.C.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "45292870-dd2d-44d1-a23a-9497af8a4820",
+   "tv_name": "BENTON GRAIN COMPANY, L.L.C.",
+   "parents": []
+  },
+  {
+   "buyer": "Buckingham Co-Operative Co.",
+   "buyer_parent_model": "Buckingham Co-Operative Co.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "bd092046-8dde-489b-a7a0-3debe790ca97",
+   "tv_name": "BUCKINGHAM CO-OPERATIVE CO.",
+   "parents": []
+  },
+  {
+   "buyer": "Bullock Ag Service, Inc.- Preston",
+   "buyer_parent_model": "Bullock Ag Service, Inc.- Preston",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "12abc391-4764-4bf7-9873-9cd69876c7b2",
+   "tv_name": "BULLOCK AG SERVICE, INC.-LAMOTTE",
+   "parents": []
+  },
+  {
+   "buyer": "Bullocks, Inc.",
+   "buyer_parent_model": "Bullocks, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "2618ab8c-eba5-450f-9815-ff590df3c1ad",
+   "tv_name": "BULLOCK'S, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Carson Grain Company",
+   "buyer_parent_model": "Carson Grain Company",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "4e0ac215-ddb9-43cc-9a60-6283f7b75094",
+   "tv_name": "CARSON GRAIN AND IMPLEMENT COMPANY",
+   "parents": []
+  },
+  {
+   "buyer": "Cedar County Cooperative",
+   "buyer_parent_model": "Cedar County Cooperative",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "1d2390d9-acad-4923-83bb-80416f43a245",
+   "tv_name": "CEDAR COUNTY COOP",
+   "parents": []
+  },
+  {
+   "buyer": "Clinton Grain, LLC",
+   "buyer_parent_model": "Clinton Grain, LLC",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "012fd3d0-17f6-4ae8-b463-d347d626619b",
+   "tv_name": "CLINTON GRAIN, LLC",
+   "parents": []
+  },
+  {
+   "buyer": "County Line Feed Mill, LLC",
+   "buyer_parent_model": "County Line Feed Mill, LLC",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "77071a39-6abf-4253-bcbb-cfb0c5e9dafe",
+   "tv_name": "COUNTY LINE FEED MILL, LLC",
+   "parents": []
+  },
+  {
+   "buyer": "Crawfordsville Feed & Grain, Inc.",
+   "buyer_parent_model": "Crawfordsville Feed & Grain, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "8aca626a-0d52-4472-9d36-7c4d47c671f5",
+   "tv_name": "CRAWFORDSVILLE FEED & GRAIN, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Dave's Feed Store, Inc.",
+   "buyer_parent_model": "Dave's Feed Store, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "102d6639-0fc7-4e5d-bc4f-7398aeffaf13",
+   "tv_name": "DAVE'S FEED STORE, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Delmar Grain Service Inc.",
+   "buyer_parent_model": "Delmar Grain Service Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "81fd0174-45a9-44b1-8c44-2e915f83be68",
+   "tv_name": "DELMAR GRAIN SERVICE INC",
+   "parents": []
+  },
+  {
+   "buyer": "Dunkerton Cooperative Elevator",
+   "buyer_parent_model": "Dunkerton Cooperative Elevator",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "5e7a4255-3064-4b96-9460-e8bad86563a4",
+   "tv_name": "Dunkerton Cooperative Elevator",
+   "parents": []
+  },
+  {
+   "buyer": "Exporter Elevator Co.",
+   "buyer_parent_model": "Exporter Elevator Co.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "e1ee4fec-378e-49c8-b441-3335c4cd7a7d",
+   "tv_name": "EXPORTER ELEVATOR CO.",
+   "parents": []
+  },
+  {
+   "buyer": "F. J. Krob & Co.",
+   "buyer_parent_model": "F. J. Krob & Co.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "a07baa47-d1d5-4bfd-8b4a-282b377af2da",
+   "tv_name": "F J KROB & CO",
+   "parents": []
+  },
+  {
+   "buyer": "Fairchild Feed and Supply, Inc.",
+   "buyer_parent_model": "Fairchild Feed and Supply, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "013f9c27-8ec1-41cf-bd1b-57ac3c25120d",
+   "tv_name": "FAIRCHILD FEED AND SUPPLY, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Farmers Cooperative Association",
+   "buyer_parent_model": "Farmers Cooperative Association",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "b25a8e8b-ec05-454f-aacc-c6ceb816c027",
+   "tv_name": "Farmers Co-operative Elevator Company",
+   "parents": [
+    {
+     "entity_id": "208cd773-dad3-41db-9099-9ea8376c22ba",
+     "name": "LANDUS AG ULC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "208cd773-dad3-41db-9099-9ea8376c22ba",
+     "name": "LANDUS AG ULC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "a8c507c9-4e7d-46c9-8f74-0e0c4a4f1c93",
+     "name": "STONEX MARKETS LLC",
+     "rel": "parent_subsidiary"
+    },
+    {
+     "entity_id": "c34171e1-34f1-46cd-8a2e-a2a61c0d3b59",
+     "name": "STONEX GROUP INC.",
+     "rel": "parent_subsidiary"
+    }
+   ]
+  },
+  {
+   "buyer": "Farmers Shipping Association",
+   "buyer_parent_model": "Farmers Shipping Association",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "7245c8a5-8804-4b6f-a24f-9dafd17b87f3",
+   "tv_name": "FARMERS SHIPPING ASSOCIATION",
+   "parents": []
+  },
+  {
+   "buyer": "Farrell's Trucking II, Inc.",
+   "buyer_parent_model": "Farrell's Trucking II, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "d57ac5d3-c049-41fa-881d-31c461b5198d",
+   "tv_name": "FARRELLS",
+   "parents": []
+  },
+  {
+   "buyer": "Garnavillo Mill, Inc.",
+   "buyer_parent_model": "Garnavillo Mill, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "5eafebc8-8288-40e1-b405-c582aab2ecd9",
+   "tv_name": "GARNAVILLO MILL, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Interstate Grain Service, LLC",
+   "buyer_parent_model": "Interstate Grain Service, LLC",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "819f048c-c359-4e4f-bc63-d8d5703d9779",
+   "tv_name": "Interstate Grain Corporation",
+   "parents": []
+  },
+  {
+   "buyer": "JBS Live Pork, LLC",
+   "buyer_parent_model": "JBS Live Pork, LLC",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": null,
+   "tv_name": null,
+   "parents": []
+  },
+  {
+   "buyer": "Kay Farms Elevator, Inc.",
+   "buyer_parent_model": "Kay Farms Elevator, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "d11cbd26-bbab-4d2f-b35e-d872242a15d2",
+   "tv_name": "KAY FARMS ELEVATOR INC",
+   "parents": []
+  },
+  {
+   "buyer": "L & S Ag Center, Inc.",
+   "buyer_parent_model": "L & S Ag Center, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "b6ff1cd2-5c51-4b46-9d2d-b355761f26da",
+   "tv_name": "L & S AG. CENTER, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Linn Cooperative Oil Company",
+   "buyer_parent_model": "Linn Cooperative Oil Company",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "e6d2c4a5-f3cb-4698-884c-d93aeccdd1e2",
+   "tv_name": "Linn Co-operative Oil Company",
+   "parents": []
+  },
+  {
+   "buyer": "Lloyd Kelchen Grain, Ltd.",
+   "buyer_parent_model": "Lloyd Kelchen Grain, Ltd.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "bfad9812-6afe-40da-8941-4ae288ad8d31",
+   "tv_name": "LLOYD KELCHEN GRAIN, LTD.",
+   "parents": []
+  },
+  {
+   "buyer": "Maquoketa Feeds",
+   "buyer_parent_model": "Maquoketa Feeds",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "3c201bbb-4d88-4698-9cf6-f7cd29f1083b",
+   "tv_name": "MAQUOKETA FEEDS, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Minerva North Grain and Milling, LLC",
+   "buyer_parent_model": "Minerva North Grain and Milling, LLC",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "0af69613-113e-4b45-a520-07d9ce273679",
+   "tv_name": "MINERVA NORTH GRAIN AND MILLING, LLC",
+   "parents": []
+  },
+  {
+   "buyer": "Nichols Agriservice, L.L.C.",
+   "buyer_parent_model": "Nichols Agriservice, L.L.C.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "9560fc9c-19b0-4c03-95d6-b9ecb9e7a7d3",
+   "tv_name": "NICHOLS AGRISERVICE, L.L.C.",
+   "parents": []
+  },
+  {
+   "buyer": "Petersburg Feed Mill, Inc.",
+   "buyer_parent_model": "Petersburg Feed Mill, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "aaff8ab5-9b1c-4f5d-a249-8e0d3882a03f",
+   "tv_name": "PETERSBURG FEED MILL, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Rex Feed and Elevator Co.",
+   "buyer_parent_model": "Rex Feed and Elevator Co.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "23b0aed5-c7ba-4d9c-812d-c21a6131c42c",
+   "tv_name": "REX FEED AND ELEVATOR CO.",
+   "parents": []
+  },
+  {
+   "buyer": "Riverside Grain & Feed Company, Inc.",
+   "buyer_parent_model": "Riverside Grain & Feed Company, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "e000bf44-dc6c-438d-81ac-cbb3fe29e9c7",
+   "tv_name": "RIVERSIDE GRAIN & FEED COMPANY, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "SilverEdge Cooperative",
+   "buyer_parent_model": "SilverEdge Cooperative",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "22280e33-f788-42ab-b4b8-ba0bda0a5763",
+   "tv_name": "SILVEREDGE COOPERATIVE",
+   "parents": []
+  },
+  {
+   "buyer": "Spillville Mill",
+   "buyer_parent_model": "Spillville Mill",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "fc174f2b-cf7c-41f9-9acf-62b986bb3281",
+   "tv_name": "SPILLVILLE MILL",
+   "parents": []
+  },
+  {
+   "buyer": "St. Olaf Ag Sales & Service, Inc.",
+   "buyer_parent_model": "St. Olaf Ag Sales & Service, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "77c62211-d9ce-4ab9-bfe5-8aa1361da490",
+   "tv_name": "ST. OLAF AG SALES & SERVICE, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Steve's Farm Supply, Inc.",
+   "buyer_parent_model": "Steve's Farm Supply, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "16d238fb-2744-4719-8c31-3fa39bd4128e",
+   "tv_name": "STEVE'S FARM SUPPLY, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Terra Products Company, LLC",
+   "buyer_parent_model": "Terra Products Company, LLC",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "7b7c2e0a-430f-4229-b4e5-6c518e5a3713",
+   "tv_name": "TERRA PRODUCTS COMPANY, LLC",
+   "parents": []
+  },
+  {
+   "buyer": "The Feed & Grain Store, Inc.",
+   "buyer_parent_model": "The Feed & Grain Store, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "ac5adef8-cfba-4cf8-8e24-553d7f1b865e",
+   "tv_name": "THE FEED & GRAIN STORE, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "W. C. Gretter and Sons, Inc.",
+   "buyer_parent_model": "W. C. Gretter and Sons, Inc.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "a2cfabfe-951d-4bec-b512-78e56a6a46d7",
+   "tv_name": "W. C. GRETTER AND SONS, INC.",
+   "parents": []
+  },
+  {
+   "buyer": "Wellman Produce Co.",
+   "buyer_parent_model": "Wellman Produce Co.",
+   "type": "Grain elevator / feed mill (state-licensed)",
+   "entity_id": "0c3a0f5c-4b48-4909-8331-2c0aa11f7bf0",
+   "tv_name": "WELLMAN PRODUCE CO",
+   "parents": []
+  }
+ ]
+}

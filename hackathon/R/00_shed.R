@@ -1,0 +1,8 @@
+suppressPackageStartupMessages(library(sf))
+# Cedar Rapids city center (downtown), 50-mile (80.467 km) supply shed, CDL native CRS (EPSG:5070)
+center <- st_sfc(st_point(c(-91.6656, 41.9779)), crs = 4326) |> st_transform(5070)
+shed <- st_buffer(center, 80467.2)
+dir.create("data/derived", showWarnings = FALSE, recursive = TRUE)
+st_write(st_sf(name = "Cedar Rapids 50-mile supply shed", geometry = shed), "data/derived/shed.gpkg", delete_dsn = TRUE, quiet = TRUE)
+st_write(st_sf(name = "Cedar Rapids", geometry = center), "data/derived/center.gpkg", delete_dsn = TRUE, quiet = TRUE)
+print(st_bbox(shed))

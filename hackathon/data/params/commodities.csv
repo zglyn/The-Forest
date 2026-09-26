@@ -1,0 +1,11 @@
+commodity,label,group,s2_share,unit,lb_per_unit,yield_basis,yield_assumed,price_assumed,n_rate_lb_ac,head_per_ac,output_per_head,buyer_key,notes
+corn,Corn,Grain,0.30,bu,56,NASS county,,,150,,,corn,N rate: typical Iowa corn-after-soybean rate (assumption; see ISU Corn N Rate Calculator)
+soybeans,Soybeans,Grain,0.20,bu,60,NASS county,,,0,,,soybeans,Legume; no synthetic N
+oats,Oats,Small grain,0.08,bu,32,NASS Iowa,,,40,,,oats,
+wheat,Wheat,Small grain,0.06,bu,60,NASS US,,,70,,,wheat,Iowa yield not published; US yield used
+barley,Barley,Small grain,0.04,bu,48,NASS US,,,60,,,barley,Iowa yield not published; US yield used
+alfalfa,Alfalfa hay,Forage,0.10,ton,2000,NASS Iowa,,,0,,,alfalfa,Legume; no synthetic N
+apples,Apples,Fruit,0.01,lb,1,NASS US,,,60,,,apples,US yield (Washington-dominated) likely overstates Iowa
+cattle,Cattle (cow-calf),Livestock,0.14,lb liveweight,1,Stocking assumption,,2.4799,0,0.5,495,cattle,2 ac pasture per cow-calf pair (hay purchased; cost in ERS budget); value per cow = USDA ERS 2025 Heartland calf value ($1227.54/cow) spread over 495 lb
+sheep,Sheep (wool),Livestock,0.04,lb wool,1,Stocking assumption,,,0,0.94,7,wool,1.06 ac pasture per ewe (Univ. of Missouri G686 sheep budget); 7 lb grease wool per ewe; wool only
+goats,Goats (meat),Livestock,0.03,lb liveweight,1,Stocking assumption,,3.40,0,0.96,96,goats,1.04 ac pasture per doe (Univ. of Missouri G691 meat goat budget); 1.6 kids x 60 lb; Kalona auction price

@@ -1,0 +1,13 @@
+parent_pattern,ownership,hq,note
+^ADM$|ADM Grain,Out-of-state corporation,"Chicago, IL",
+^Cargill$,Out-of-state corporation,"Minneapolis, MN (Wayzata)",
+^Ingredion$,Out-of-state corporation,"Westchester, IL",
+^PepsiCo$,Out-of-state corporation,"Purchase, NY",Quaker Oats parent
+^POET$,Out-of-state corporation,"Sioux Falls, SD",
+^Mid-States Wool Growers$,Out-of-state cooperative,"Canal Winchester, OH",
+^Equity Cooperative$,Out-of-state cooperative,"Baraboo, WI",
+JBS,Out-of-state corporation,"São Paulo, Brazil (JBS USA: Greeley, CO)",
+^Big River Resources$,Iowa-owned outside shed,"West Burlington, IA",Farmer/investor-owned ethanol
+^Kent Corporation$,Iowa-owned outside shed,"Muscatine, IA",Private; owns Grain Processing Corp.
+^NFO$,Iowa-owned outside shed,"Ames, IA",National Farmers Organization
+.*,Local (in-shed) ownership,Local,"Default: state-licensed elevators, local sale barns and modeled local markets"

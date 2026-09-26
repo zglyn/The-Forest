@@ -1,0 +1,1194 @@
+{
+ "hs": {
+  "1005": "Corn",
+  "1201": "Soybeans",
+  "1004": "Oats",
+  "1104": "Worked grains (rolled oats)",
+  "1108": "Starch",
+  "1702": "Glucose / HFCS",
+  "2207": "Ethanol",
+  "2303": "Corn gluten feed / DDGS",
+  "2304": "Soybean meal",
+  "1507": "Soybean oil",
+  "1515": "Corn oil (other veg. oils)",
+  "2106": "Food preparations (soy protein)",
+  "3505": "Modified starch",
+  "2309": "Animal feed preparations"
+ },
+ "level1_entities": {
+  "ADM": [
+   "ef83a71f-8cd6-41e3-ad31-d4661984b070"
+  ],
+  "Cargill": [
+   "f10bfb12-80fa-4c59-90d8-5e1ed91595e8",
+   "b20f037d-bd56-4114-845e-6e85a7cada47",
+   "58574b3c-241c-4d0f-ba6e-ad2449173ca9",
+   "df16f4b0-34d7-4bf6-9c78-30b98ebe4eb5",
+   "3509a3da-7bc5-4258-85ab-dfea5a36424e"
+  ],
+  "Ingredion": [
+   "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "f4c88397-6fe1-43b6-b66d-41f3405449a1"
+  ],
+  "Kent Corporation": [
+   "03fd2edd-9354-4ff9-a177-ff15db43f893"
+  ],
+  "PepsiCo": [
+   "527acae7-72ba-4658-a8d7-140247183ec5"
+  ]
+ },
+ "edges": [
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "dd590e55-dc1e-4c6a-9145-acc1995fda11",
+   "l2_name": "ADM BIO PRODUCTOS S.A. DE C.V.",
+   "hs4": [
+    "1201",
+    "1515",
+    "2106",
+    "2304"
+   ],
+   "city": "Parque Industrial",
+   "state": "Sonora",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "34eaec8d-c272-4a18-9c9e-0f62301a81f6",
+   "l2_name": "ALMIDONES MEXICANOS SA DE CV",
+   "hs4": [
+    "1005",
+    "1108",
+    "1702"
+   ],
+   "city": "San Jos\u00e9 Iturbide",
+   "state": "Guanajuato",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d0259d83-73ae-46cb-b529-b8fff7ec80cb",
+   "l2_name": "SIGMA ALIMENTOS CENTRO, S.A. DE C.V.",
+   "hs4": [
+    "2106"
+   ],
+   "city": "Sector Region 101",
+   "state": "Quintana Roo",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "6e77ab26-15a8-4ec5-a24d-df6ee2749899",
+   "l2_name": "ADM MEXICO SA DE CV",
+   "hs4": [
+    "1005",
+    "2303"
+   ],
+   "city": "Cuernavaca",
+   "state": "Morelos",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "6bdb7ed7-7f6b-4285-a653-d09dfef88314",
+   "l2_name": "BARTLETT LOGISTICS MEXICO, S. DE R.L. DE C.V.",
+   "hs4": [
+    "1005",
+    "2303"
+   ],
+   "city": "Aguascalientes",
+   "state": "Aguascalientes",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "8edc823e-da52-4d92-9994-623a0a3051f4",
+   "l2_name": "C\u00d4NG TY C\u1ed4 PH\u1ea6N C\u00d4NG NGH\u1ec6 DINH D\u01af\u1ee0NG VI\u1ec6T NH\u1eacT",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Y\u00ean M\u1ef9",
+   "state": "T\u1ec9nh H\u01b0ng Y\u00ean",
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "53e7402b-dfd3-4684-9494-b347de1ec97d",
+   "l2_name": "Fresenius Medical Care de Mexico, S.A. de C.V.",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Zapopan MX-JAL",
+   "state": "MX-JAL",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "45f9e085-0775-40a2-863c-d3944087a0f2",
+   "l2_name": "khai anh binh thuan joint stock",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "8713e333-5d4d-4cf9-96c2-a8c0b2b2f0cb",
+   "l2_name": "LECHERIA ESCOBAR SA. DE CV.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "El Sauzal Ciudad Juarez",
+   "state": "Chihuahua",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "5d342d57-d6d9-4a3a-a27c-fa333418a4b4",
+   "l2_name": "PILMICO FOODS CORP.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Iligan City",
+   "state": "Lanao Del Norte",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "02d39cda-fa22-4f33-957c-0a3789667950",
+   "l2_name": "INDUSTRIALIZADORA OLEOFINOS SA DE CV",
+   "hs4": [
+    "1507"
+   ],
+   "city": "La Venta Del Astillero",
+   "state": "Jalisco",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "e5cd2e4f-e8e5-4c01-886c-e555c5c0a199",
+   "l2_name": "bounty plus inc",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "fedfa7a2-f721-488a-8760-a27893bc7e6e",
+   "l2_name": "CARGILL PHILIPPINES, INC.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Taguig City",
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "5dd57bc6-45d3-4d81-845c-b9b9514a3881",
+   "l2_name": "mcr agri venture corporation",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "CN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d6bc3a39-80d1-4585-92a0-4668cf97732d",
+   "l2_name": "AGROINDUSTRIAL LIDERLAC, S.A. DE C.V.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Puente Alto Delicias",
+   "state": "Chihuahua",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "4683f4a0-dc50-4c05-8223-cc77342b723a",
+   "l2_name": "bulacan hog farmers association inc",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "c4366adc-c8a3-4c41-8188-5fc64a713ac1",
+   "l2_name": "UNAHCO, INC.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Mandaluyong PH-00",
+   "state": "PH-00",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "75594295-f8d5-41b6-99f3-0a518de22ba9",
+   "l2_name": "C\u00d4NG TY TNHH ARCHER DANIELS MIDLAND VI\u1ec6T NAM",
+   "hs4": [
+    "2303"
+   ],
+   "city": "Ho Chi Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "58dad0c4-4e0d-47e0-a2b3-eb773413580f",
+   "l2_name": "d wesscon exim inc",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "SC"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "521ec7da-01fe-4696-9840-1f80f49b8934",
+   "l2_name": "thuan an investment and trading company limited",
+   "hs4": [
+    "1005",
+    "1201",
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "2105a216-a994-46b6-8943-718f2de99b94",
+   "l2_name": "philippine super feed corporation",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "3aae2c10-f215-4a20-877f-e82a17ed17d3",
+   "l2_name": "SIMON AGRIBUSINESS CORPORATION",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Mandaue City",
+   "state": "PH-07",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "8c75ef7c-3da8-4434-b2c7-cf7f4235d290",
+   "l2_name": "C\u00d4NG TY C\u1ed4 PH\u1ea6N TH\u01af\u01a0NG M\u1ea0I V\u00c0 V\u1eacN T\u1ea2I TR\u00c0NG AN",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Th\u00e0nh Ph\u1ed1 H\u00e0 N\u1ed9i",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "922ecc1a-ea50-4bdc-8acf-f8d46223df55",
+   "l2_name": "kabuhayan livestock growers",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d7418d8f-cce0-4fe5-8909-bc8aa43b9bf9",
+   "l2_name": "great harvest enterprises inc.",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "9700519c-c018-4c16-8bc9-a12dd5648876",
+   "l2_name": "DKSH PHILIPPINES, INC.",
+   "hs4": [
+    "2106"
+   ],
+   "city": "Taguig PH-00",
+   "state": "PH-00",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "5f5c38ed-598e-452b-be7b-a5443fd1034b",
+   "l2_name": "sunjin philippines corporation",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "CN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "e69c9878-0145-45ed-b229-f26e51e51876",
+   "l2_name": "C\u00d4NG TY C\u1ed4 PH\u1ea6N TH\u01af\u01a0NG M\u1ea0I D\u1ecaCH V\u1ee4 QU\u1ed0C T\u1ebe ABC VI\u1ec6T NAM",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Qu\u1eadn H\u00e0 \u0110\u00f4ng Th\u00e0nh Ph\u1ed1 H\u00e0 N\u1ed9i",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "02d8d2be-ef37-4992-aa69-373e21d458e6",
+   "l2_name": "tan viet biotechnology joint stock company",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "6ae64a27-ab0e-4b99-b3f8-51e40ff8e7dd",
+   "l2_name": "pilmico animal nutrition corporatio",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "f7e3ae72-9bd4-4f58-af29-cf8c4ea23083",
+   "l2_name": "nhat thanh import-export joint stock company",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "51b19994-8dec-4ef6-be99-7f4b9b81bd18",
+   "l2_name": "new panay agri-ventures development",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "664f62b3-184e-4805-b365-af7784ef7c29",
+   "l2_name": "GENERAL MILLING CORPORATION",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Cebu City",
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "41b42ed8-983b-432f-b2e3-f6a055f6e93a",
+   "l2_name": "NEOVIA PHILIPPINES INC.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "PH-CEB",
+   "state": "PH-CEB",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "9daba16f-ce0d-4ab4-b603-38cec1ae1e9a",
+   "l2_name": "general farm industries corporation",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "21fcc58d-007d-4388-a193-b2ead849bde8",
+   "l2_name": "SABRITAS S DE RL DE CV",
+   "hs4": [
+    "1515"
+   ],
+   "city": "Toluca",
+   "state": "Mexico",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "3094d738-fd8d-40a8-a2a0-b97422ed8db7",
+   "l2_name": "bulacan agri resources association",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "16dfaf75-b6b1-4dd6-b881-fb02b3d96ef8",
+   "l2_name": "alibra impex corporation",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "13f41f57-98e3-4b0e-83b9-0f0663e53562",
+   "l2_name": "marcela farms incorporated",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "545e6d99-5ab8-454d-ab7e-ba152c723210",
+   "l2_name": "universal feed mill corporation",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "68724aac-bb3e-47d6-8a98-8f0ad1cff145",
+   "l2_name": "angeles core enterprises inc",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "efaf8d07-55bf-4070-9e48-a972e7094ca8",
+   "l2_name": "CEREALTO TEPEJI S DE RL DE CV",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Tepeji Del R\u00edo De Ocampo",
+   "state": "MX-HID",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "51c6fc53-1b90-4838-9e1d-ce6ac17bcee3",
+   "l2_name": "LA FILIPINA UY GONGCO CORP.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Manila",
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "8b31c9ee-f42c-4a67-a124-72f7d101c87b",
+   "l2_name": "C\u00d4NG TY C\u1ed4 PH\u1ea6N \u0110\u1ed2 G\u1ed6 THANH B\u00ccNH",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Th\u00e0nh Ph\u1ed1 H\u00e0 Giang",
+   "state": "T\u1ec9nh H\u00e0 Giang",
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "49a3377b-ee53-4df8-9093-f5aff7c7e655",
+   "l2_name": "THE PUREFOODS HORMEL COMPANY INC.,",
+   "hs4": [
+    "2106"
+   ],
+   "city": null,
+   "state": "Batangas",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "fc873970-2c6d-4fdb-a623-c4e51ccc1b61",
+   "l2_name": "jetbest animal nutrition and health",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "dc4d5832-09ef-464b-acf1-9b98a1a99d39",
+   "l2_name": "anyou vietnam biotechnology joint stock company",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "efb2dacd-8be8-4432-aac7-7113df8148cd",
+   "l2_name": "PASTAS Y ACEITES COREREPE",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Ahome",
+   "state": "Sinaloa",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d91b170d-2841-4d59-9bd3-59324e22c8e8",
+   "l2_name": "cj philippines inc",
+   "hs4": [
+    "2304"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "32ec48b8-467e-44be-b061-1fc13be915a5",
+   "l2_name": "INDUSTRIAL PECUARIA DE LOS ALTOS SA DE CV",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Guadalajara",
+   "state": "MX-JAL",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "803b9813-078d-4219-a5d1-de83a6fbeccb",
+   "l2_name": "SAN MIGUEL FOODS, INC.",
+   "hs4": [
+    "2304"
+   ],
+   "city": "Pasig",
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "b0b47327-2c63-45ea-9dfd-94c742ab953a",
+   "l2_name": "hoan duong ha nam production and trading joint stock company",
+   "hs4": [
+    "1005"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d7dd3785-a00e-4a5f-89de-87d668cced02",
+   "l2_name": "Lotte Wellfood Co Ltd",
+   "hs4": [
+    "2106"
+   ],
+   "city": null,
+   "state": null,
+   "country": "US"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d9874cef-e88d-44bd-b406-aac821e2309c",
+   "l2_name": "SIAS ENTERPRISES LLC",
+   "hs4": [
+    "2106"
+   ],
+   "city": "Bainbridge Island",
+   "state": "WA",
+   "country": "US"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "7c25729b-9c46-4caf-9ab1-cf45c1e5995f",
+   "l2_name": "Companion Animal Hospital",
+   "hs4": [
+    "1005",
+    "2303"
+   ],
+   "city": "Hartford",
+   "state": "CT",
+   "country": "US"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "7fbb8d7a-ac05-4d11-a6e7-47522b220303",
+   "l2_name": "Cargill De Honduras S De Rl",
+   "hs4": [
+    "2106"
+   ],
+   "city": null,
+   "state": null,
+   "country": "US"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "1d6c3f2b-06ad-475b-9628-6855c00c474a",
+   "l2_name": "CARGILL DE MEXICO SA DE CV",
+   "hs4": [
+    "1005"
+   ],
+   "city": "Cd. Obreg\u00f3n",
+   "state": "Sonora",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "9f9dd44e-e506-40d3-9600-28c055c5cec5",
+   "l2_name": "Life Supplies",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Olen",
+   "state": null,
+   "country": "BE"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "d929f12e-acd3-4f16-b5c6-ef0e45fa73c8",
+   "l2_name": "PET FLAVORS INC.",
+   "hs4": [
+    "2309"
+   ],
+   "city": "Dakota Dunes",
+   "state": "SD",
+   "country": "US"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "be5d7ca7-ac03-4065-af33-26dc7bd6f8d9",
+   "l2_name": "BRF S.A.",
+   "hs4": [
+    "1005"
+   ],
+   "city": "Aparecida De Goiania",
+   "state": null,
+   "country": "BR"
+  },
+  {
+   "l1_parent": "ADM",
+   "l1_entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "l2_entity_id": "8a225a4d-7fe9-4823-ac38-079120fd0de0",
+   "l2_name": "SEARA ALIMENTOS LTDA",
+   "hs4": [
+    "1005"
+   ],
+   "city": "Curitiba",
+   "state": "Paran\u00e1",
+   "country": "BR"
+  },
+  {
+   "l1_parent": "Cargill",
+   "l1_entity_id": "f10bfb12-80fa-4c59-90d8-5e1ed91595e8",
+   "l2_entity_id": "fef5aeae-2ac4-4044-a7c3-b1209a7f5c5f",
+   "l2_name": "C\u00d4NG TY TNHH CHEMICO VI\u1ec6T NAM",
+   "hs4": [
+    "3505"
+   ],
+   "city": "Hai Phong",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Cargill",
+   "l1_entity_id": "f10bfb12-80fa-4c59-90d8-5e1ed91595e8",
+   "l2_entity_id": "b411ed75-1caa-40c2-a72f-894db0b75ba0",
+   "l2_name": "C\u00d4NG TY TNHH M\u1ed8T TH\u00c0NH VI\u00caN PROVIMI",
+   "hs4": [
+    "2309"
+   ],
+   "city": "Bien Hoa",
+   "state": "VN-39",
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Cargill",
+   "l1_entity_id": "f10bfb12-80fa-4c59-90d8-5e1ed91595e8",
+   "l2_entity_id": "aac53bdb-8cda-4046-a326-2443a9ff1049",
+   "l2_name": "C\u00d4NG TY TNHH CARGILL VI\u1ec6T NAM",
+   "hs4": [
+    "2309"
+   ],
+   "city": "Bien Hoa",
+   "state": "VN-39",
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "d1b43d50-423e-46a3-9bc3-27ade6c31e69",
+   "l2_name": "INGREDION INDIA PRIVATE LIMITED",
+   "hs4": [
+    "1108",
+    "1702",
+    "3505"
+   ],
+   "city": "Navi Mumbai In",
+   "state": "MH",
+   "country": "IN"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "0d21583f-fd1c-4b5f-a772-a52589046270",
+   "l2_name": "INGREDION MEXICO, S.A. DE C.V.",
+   "hs4": [
+    "1104",
+    "1108",
+    "1702",
+    "2106",
+    "3505"
+   ],
+   "city": "Parque Industrial/Zona Industrial Industrial Tlaxcolpan",
+   "state": "Estado De M\u00e9xico",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "b0441421-a9b9-44ae-b4e2-b4d8aed45cae",
+   "l2_name": "ingredion philippines inc.",
+   "hs4": [
+    "3505"
+   ],
+   "city": null,
+   "state": null,
+   "country": "TH"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "b8107374-da12-4d9d-8a3f-febf783f43e4",
+   "l2_name": "C\u00d4NG TY TNHH INGREDION VI\u1ec6T NAM",
+   "hs4": [
+    "2106",
+    "3505"
+   ],
+   "city": "Ho Chi Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "40592035-dcc6-48b6-8798-25e82a4627c9",
+   "l2_name": "INGREDIENTES KERRY DE MEXICO, S.A. DE C.V.",
+   "hs4": [
+    "2106",
+    "3505"
+   ],
+   "city": "Ciudad De M\u00e9xico",
+   "state": "Distrito Federal",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "4f89000c-d9a5-490a-b706-835deeb2b3e3",
+   "l2_name": "BAXTER, SA DE CV",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Las Americas",
+   "state": "Coahuila",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "78bbcc90-51df-4b3c-b7a6-7418738c93a6",
+   "l2_name": "purechem corporation",
+   "hs4": [
+    "1702"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "9fffe016-7414-44ae-8f83-f5e9c6c4802a",
+   "l2_name": "OMNIACTIVE HEALTH TECHNOLOGIES LIMITED",
+   "hs4": [
+    "3505"
+   ],
+   "city": "In",
+   "state": null,
+   "country": "IN"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "d90f3424-bd25-47b8-94f3-628a828188f7",
+   "l2_name": "GENERAL TUNA CORPORATION",
+   "hs4": [
+    "2106"
+   ],
+   "city": "General Santos City",
+   "state": "PH-SCO",
+   "country": "PH"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "c0491d55-42df-4475-ab12-be22ac2a7529",
+   "l2_name": "Kerry Manufacturing Philippines Inc",
+   "hs4": [
+    "3505"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "68ac389d-9c79-4320-bd68-7452d761cfb0",
+   "l2_name": "FLY-WINGS ENTERPRISES",
+   "hs4": [
+    "1108"
+   ],
+   "city": null,
+   "state": null,
+   "country": "SS"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "fa2a87bf-c9b7-46df-a604-4da4638152cd",
+   "l2_name": "BOSCH AUTOMOTIVE ELECTRONICS INDIA PRIVATE LIMITED",
+   "hs4": [
+    "3505"
+   ],
+   "city": "IN-KA",
+   "state": "IN-KA",
+   "country": "IN"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "l2_entity_id": "8bbc16f6-bf29-404c-a366-b0941ea15396",
+   "l2_name": "HARMAN INTERNATIONAL (INDIA) PRIVATE LIMITED",
+   "hs4": [
+    "3505"
+   ],
+   "city": "Bangalore In",
+   "state": "KA",
+   "country": "IN"
+  },
+  {
+   "l1_parent": "Ingredion",
+   "l1_entity_id": "f4c88397-6fe1-43b6-b66d-41f3405449a1",
+   "l2_entity_id": "0d21583f-fd1c-4b5f-a772-a52589046270",
+   "l2_name": "INGREDION MEXICO, S.A. DE C.V.",
+   "hs4": [
+    "1108",
+    "3505"
+   ],
+   "city": "Parque Industrial/Zona Industrial Industrial Tlaxcolpan",
+   "state": "Estado De M\u00e9xico",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "78e9e63e-a9be-46db-94a4-7348cec6cc28",
+   "l2_name": "BEST INGREDIENTS M\u00c9XICO, S.A. DE C.V.",
+   "hs4": [
+    "1108",
+    "1702",
+    "2303",
+    "3505"
+   ],
+   "city": "Iztapalapa",
+   "state": "M\u00e9xico",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "c676163a-619c-46f0-a798-95341f39b9cc",
+   "l2_name": "C\u00d4NG TY TNHH DENEAST VI\u1ec6T NAM",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Khu C\u00f4ng Nghi\u1ec7p Singapore Th\u1ecb X\u00e3 T\u00e2n Uy\u00ean",
+   "state": "T\u1ec9nh B\u00ecnh D\u01b0\u01a1ng",
+   "country": "Vi\u1ec7t Nam Vi\u1ec7t Nam Vn"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "d867870a-6a88-4666-9265-3580af9a55f7",
+   "l2_name": "ATLAS HYTEC, S.A. DE C.V.",
+   "hs4": [
+    "2207"
+   ],
+   "city": "Matamoros",
+   "state": "Tamaulipas",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "08c53358-ea15-4f38-b267-b7dddd202168",
+   "l2_name": "GRUPO INDUSTRIAL POSEIDON, S.A. DE C.V.",
+   "hs4": [
+    "3505"
+   ],
+   "city": "Narvarte",
+   "state": "Distrito Federal",
+   "country": "MX"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "2b877c72-e57b-463e-a4f3-3a8479305806",
+   "l2_name": "victa trading joint stock company",
+   "hs4": [
+    "3505"
+   ],
+   "city": null,
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "587b2c69-b267-48f6-880d-96a2d7f91a4d",
+   "l2_name": "C\u00d4NG TY TNHH CONNELL BROS. (VI\u1ec6T NAM)",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "f5cea3e8-a479-4a34-8835-12ba0b3f88c4",
+   "l2_name": "commodity quest inc",
+   "hs4": [
+    "1702"
+   ],
+   "city": null,
+   "state": null,
+   "country": "PH"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "363e9e0f-31c9-4287-b7a2-6b3467eb9da7",
+   "l2_name": "La Fabril Usa Inc 3250 N E",
+   "hs4": [
+    "1108"
+   ],
+   "city": "Manta",
+   "state": null,
+   "country": "EC"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "c968d577-387c-4d77-9e41-69d742f19b53",
+   "l2_name": "CONG TY TNHH INNOFOOD",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Ho Chi Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "0c2e67d2-76f3-4779-9416-9f74bdd2207f",
+   "l2_name": "C\u00f4ng ty TNHH Brenntag Vi\u1ec7t Nam",
+   "hs4": [
+    "1702"
+   ],
+   "city": "H\u1ed3 Ch\u00ed Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "a8b1a191-cdf8-4f38-8c72-b27e70908c1c",
+   "l2_name": "Rocsa Colombia Sa Nit Tax Id",
+   "hs4": [
+    "1702"
+   ],
+   "city": null,
+   "state": null,
+   "country": "US"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "737b5223-f387-4e23-bf7f-101ee6323a8d",
+   "l2_name": "asia chemical joint stock company",
+   "hs4": [
+    "3505"
+   ],
+   "city": "Ho Chi Minh City",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "20de5734-50ae-45c7-b1d8-290c6c09b5bd",
+   "l2_name": "Paramount Trade Ja Limited",
+   "hs4": [
+    "1108",
+    "3505"
+   ],
+   "city": "Kingston",
+   "state": null,
+   "country": "US"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "b23dbc19-fc6e-40c3-83e7-7fde8d0166f7",
+   "l2_name": "C\u00d4NG TY TNHH TH\u01af\u01a0NG M\u1ea0I MINH TH\u00c1I L\u1ed8C",
+   "hs4": [
+    "1702"
+   ],
+   "city": "Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh",
+   "state": null,
+   "country": "VN"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "aaab4751-649d-41dc-b733-a9d013906c36",
+   "l2_name": "Especias Y Aditivos Alimentarios Sr Espalsa Srl",
+   "hs4": [
+    "1108",
+    "3505"
+   ],
+   "city": "Santiago",
+   "state": null,
+   "country": "US"
+  },
+  {
+   "l1_parent": "Kent Corporation",
+   "l1_entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "l2_entity_id": "43d18fb7-867d-4bad-9125-9ccdc7e47e08",
+   "l2_name": "Proalpet S A",
+   "hs4": [
+    "1702"
+   ],
+   "city": null,
+   "state": null,
+   "country": "US"
+  }
+ ]
+}

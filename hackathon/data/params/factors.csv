@@ -1,0 +1,19 @@
+key,value,unit,source
+gwp_ch4,27,kg CO2e/kg CH4,IPCC AR6 WG1 Table 7.15 (non-fossil CH4 GWP100)
+gwp_n2o,273,kg CO2e/kg N2O,IPCC AR6 WG1 Table 7.15 (GWP100)
+ef1_direct,0.01,kg N2O-N/kg N,IPCC 2006 Vol 4 Ch 11 Table 11.1
+frac_gasf,0.10,fraction,IPCC 2006 Vol 4 Ch 11 Table 11.3
+ef4_volat,0.01,kg N2O-N/kg N volatilised,IPCC 2006 Vol 4 Ch 11 Table 11.3
+frac_leach,0.30,fraction,IPCC 2006 Vol 4 Ch 11 Table 11.3
+ef5_leach,0.0075,kg N2O-N/kg N leached,IPCC 2006 Vol 4 Ch 11 Table 11.3
+enteric_cattle,53,kg CH4/head/yr,IPCC 2006 Vol 4 Ch 10 Table 10.11 (North America other cattle)
+enteric_sheep,8,kg CH4/head/yr,IPCC 2006 Vol 4 Ch 10 Table 10.10 (developed countries)
+enteric_goats,5,kg CH4/head/yr,IPCC 2006 Vol 4 Ch 10 Table 10.10 (developed countries)
+manure_cattle,1,kg CH4/head/yr,IPCC 2006 Vol 4 Ch 10 Table 10.14 (North America other cattle cool)
+manure_sheep,0.19,kg CH4/head/yr,IPCC 2006 Vol 4 Ch 10 Table 10.15 (developed cool)
+manure_goats,0.13,kg CH4/head/yr,IPCC 2006 Vol 4 Ch 10 Table 10.15 (developed cool)
+truck_co2,0.186,kg CO2/short ton-mile,EPA GHG Emission Factors Hub 2025 Table 8
+truck_ch4,0.0016,g CH4/short ton-mile,EPA GHG Emission Factors Hub 2025 Table 8
+truck_n2o,0.0054,g N2O/short ton-mile,EPA GHG Emission Factors Hub 2025 Table 8
+circuity,1.3,road/straight-line ratio,Assumption
+huff_beta,2,distance decay exponent,Assumption

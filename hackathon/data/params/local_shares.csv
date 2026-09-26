@@ -1,0 +1,19 @@
+category,group,local_share,low,high,rationale
+Seed,Purchased inputs,0.15,0.10,0.25,Local dealer or agent margin; seed produced and owned by firms outside the shed
+Fertilizer,Purchased inputs,0.15,0.10,0.25,Local retailer margin and application; nitrogen and potash manufactured outside the region
+Chemicals,Purchased inputs,0.15,0.10,0.25,Local retailer margin; chemicals manufactured outside the region
+Fuel & energy,Fuel & energy,0.25,0.15,0.35,Retail margin plus local electric-co-op distribution; fuel refined elsewhere
+Repairs,Machinery & equipment,0.50,0.35,0.65,Local shop labor; parts manufactured elsewhere
+Machinery ownership,Machinery & equipment,0.15,0.10,0.25,Dealer margin and service; machinery manufactured outside the shed
+Custom services,Local services & labor,0.90,0.80,1.00,Custom operators are mostly local
+Hired labor,Local services & labor,0.95,0.85,1.00,Workers mostly live in the region
+Operator labor,Local services & labor,1.00,1.00,1.00,Farm operators live in the shed
+Interest,Finance insurance & overhead,0.50,0.30,0.70,Mix of local banks/Farm Credit and outside lenders
+Taxes & insurance,Finance insurance & overhead,0.60,0.45,0.75,Property taxes stay local; insurance premiums mostly leave
+General overhead,Finance insurance & overhead,0.50,0.35,0.65,Mix of local services and outside suppliers
+Purchased feed,Feed vet & other,0.60,0.40,0.80,Feed often from local grain and mills
+Homegrown & grazed feed,Local services & labor,1.00,1.00,1.00,Produced on local land
+Veterinary & medicine,Feed vet & other,0.40,0.25,0.55,Local vet services; drugs manufactured elsewhere
+Marketing & packaging,Feed vet & other,0.60,0.40,0.80,Local auction commissions and market labor; packaging materials imported
+Other,Feed vet & other,0.50,0.35,0.65,Unspecified
+Land,Land rent,0.75,0.65,0.85,"25% of Iowa farmland is owned by people who are not full-time Iowa residents (ISU Farmland Ownership and Tenure Survey 2022); treated as leaving the shed"

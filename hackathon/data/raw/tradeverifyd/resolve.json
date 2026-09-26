@@ -1,0 +1,436 @@
+{
+ "Cargill": [
+  {
+   "entity_id": "8be28028-3723-4fbd-b5ee-5515a4820e81",
+   "name": "CEVA Freight, LLC",
+   "naics": "488510",
+   "industry": "Freight Transportation Arrangement",
+   "direct_outbound_relationships": 337,
+   "direct_inbound_relationships": 1000,
+   "affiliate_relationship_count": 632,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "146c08d0-fced-407f-955e-d51bf54371ac",
+   "name": "CARGILL INC 1 OF GEORGIA",
+   "naics": "424490",
+   "industry": "Other Grocery and Related Products Merchant Wholesalers",
+   "direct_outbound_relationships": 6,
+   "direct_inbound_relationships": 7,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "6adfc3fa-bada-40cc-8096-c78464247f3f",
+   "name": "ARDENT MILLS, LLC",
+   "naics": "311211",
+   "industry": "Flour Milling",
+   "direct_outbound_relationships": 6,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 5,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "b177ebfd-889b-4496-a3e3-267725363c02",
+   "name": "CORPORACION PIPASA SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 1,
+   "direct_inbound_relationships": 2,
+   "affiliate_relationship_count": 1,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "df16f4b0-34d7-4bf6-9c78-30b98ebe4eb5",
+   "name": "Cargill Incorporated",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 1,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "2afa28c2-b3a9-4fe7-9219-df5fcb86a43d",
+   "name": "CARGIL, LLC",
+   "naics": "311999",
+   "industry": "All Other Miscellaneous Food Manufacturing",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  }
+ ],
+ "ADM": [
+  {
+   "entity_id": "ef83a71f-8cd6-41e3-ad31-d4661984b070",
+   "name": "SKYLAND GRAIN, L.L.C.",
+   "naics": "333241",
+   "industry": "Food Product Machinery Manufacturing",
+   "direct_outbound_relationships": 165,
+   "direct_inbound_relationships": 372,
+   "affiliate_relationship_count": 390,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "1b366d2c-09f7-4457-ac62-d0c467419711",
+   "name": "MOORMAN MANUFACTURING CO",
+   "naics": "333241",
+   "industry": "Food Product Machinery Manufacturing",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 13,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "f7cb0973-cc50-421c-91d1-992bced3eb74",
+   "name": "Archer Daniels Midland Korea Llc",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 9,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "7b4be2b7-93ed-4078-97b3-d223694df6c5",
+   "name": "Archer Daniels Midland D/B/A Adm Fertilizer",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 4,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "56ff6db6-65ed-44c9-98d3-ecc53aec0648",
+   "name": "Archer Daniels Midland Vietnam Co Ltd",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 3,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "e6347fca-e785-4096-885d-1675b311f484",
+   "name": "Archer Danielsmidland Company",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 2,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  }
+ ],
+ "Ingredion": [
+  {
+   "entity_id": "a09a0258-4be9-4267-b125-ce0f3e85f7ef",
+   "name": "INGREDION INCORPORATED",
+   "naics": "325180",
+   "industry": "Other Basic Inorganic Chemical Manufacturing",
+   "direct_outbound_relationships": 17,
+   "direct_inbound_relationships": 171,
+   "affiliate_relationship_count": 199,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "c9603091-2624-431d-85a7-ef980b1d5613",
+   "name": "PAXFORD CORPORATION",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 3,
+   "affiliate_relationship_count": 0,
+   "alias_hit": false
+  },
+  {
+   "entity_id": "f4c88397-6fe1-43b6-b66d-41f3405449a1",
+   "name": "INGREDION INCORPORATED",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 1,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "2dd67e84-4b2c-4bed-8c2b-001639f878b1",
+   "name": "Ingredion Incorporated Idaho Falls",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "e7a239ee-052d-436a-b07f-0436fa4e0bd9",
+   "name": "INGREDION INC.",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "ddfe7074-dc3c-40f5-9688-8923df623ae3",
+   "name": "INGREDION INCORPORATED",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  }
+ ],
+ "PepsiCo (Quaker)": [
+  {
+   "entity_id": "4574650d-9dd4-4845-9328-f309d96c95c0",
+   "name": "Pepsi MidAmerica Co.",
+   "naics": "312111",
+   "industry": "Soft Drink Manufacturing",
+   "direct_outbound_relationships": 5,
+   "direct_inbound_relationships": 46,
+   "affiliate_relationship_count": 1522,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "527acae7-72ba-4658-a8d7-140247183ec5",
+   "name": "THE QUAKER OATS COMPANY",
+   "naics": "311999",
+   "industry": "All Other Miscellaneous Food Manufacturing",
+   "direct_outbound_relationships": 1,
+   "direct_inbound_relationships": 4,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "307d86a0-37fd-4ff4-844a-bf485b5909a4",
+   "name": "PEPSI-COLA BOTTLING COMPANY OF NY, INC",
+   "naics": "312111",
+   "industry": "Soft Drink Manufacturing",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 4,
+   "affiliate_relationship_count": 0,
+   "alias_hit": false
+  },
+  {
+   "entity_id": "9dc631df-b900-45a1-a733-27e58ab11c46",
+   "name": "PEPSICO, INC.",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 2,
+   "affiliate_relationship_count": 0,
+   "alias_hit": false
+  },
+  {
+   "entity_id": "44f18e3e-b168-46d5-b901-f4e99f9b68da",
+   "name": "BOTTLING GROUP, LLC",
+   "naics": "312111",
+   "industry": "Soft Drink Manufacturing",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 11,
+   "alias_hit": false
+  },
+  {
+   "entity_id": "10d86db6-91ab-48a4-8242-dacf4c09ed48",
+   "name": "PEPSICO, INC.",
+   "naics": "311919",
+   "industry": "Other Snack Food Manufacturing",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 0,
+   "alias_hit": false
+  }
+ ],
+ "POET": [
+  {
+   "entity_id": "e01c0443-7302-4d35-a404-db9899b5829e",
+   "name": "POET, INC.",
+   "naics": "424690",
+   "industry": "Other Chemical and Allied Products Merchant Wholesalers",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 6,
+   "affiliate_relationship_count": 2,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "eadf11b2-2d12-4fa9-9b3f-7a847062fc1e",
+   "name": "\u5408\u540c\u4f1a\u793e\uff50\uff4f\uff45\uff54",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "7ba257b7-a35c-49ca-b076-0d7112c1119d",
+   "name": "POET, LLC LIMITED",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "ff6f05c6-9bcd-43ca-8890-a37ae40b1ca0",
+   "name": "POET AG",
+   "naics": "541511",
+   "industry": "Custom Computer Programming Services",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "67c0a451-b39a-44b0-8c66-09636a31bced",
+   "name": "POET-A",
+   "naics": "541990",
+   "industry": "All Other Professional, Scientific and Technical Services",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "e4e780c2-c263-46d0-ad02-3b58690e40b8",
+   "name": "PEEB, LLC",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": false
+  }
+ ],
+ "Big River Resources": [
+  {
+   "entity_id": "12bd8627-cb99-48f7-9bce-3cdc6de5aeda",
+   "name": "PARRISH RESTAURANTS, LTD.",
+   "naics": "456110",
+   "industry": "Pharmacies and Drug Retailers",
+   "direct_outbound_relationships": 140,
+   "direct_inbound_relationships": 497,
+   "affiliate_relationship_count": 1056,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "d229fdc3-b406-4025-9557-94f7756a18db",
+   "name": "State of Utah",
+   "naics": "491110",
+   "industry": "Postal Service",
+   "direct_outbound_relationships": 34,
+   "direct_inbound_relationships": 24,
+   "affiliate_relationship_count": 88,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "84261072-fbc1-45a3-a52d-1ca2ee0366e9",
+   "name": "BLACK HILLS GAS DISTRIBUTION, LLC",
+   "naics": "457120",
+   "industry": "Other Gasoline Stations",
+   "direct_outbound_relationships": 13,
+   "direct_inbound_relationships": 15,
+   "affiliate_relationship_count": 205,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "05da96ce-5171-4794-b30c-d00997bc2ce1",
+   "name": "Big River Resources West Burlington, LLC",
+   "naics": "325110",
+   "industry": "Petrochemical Manufacturing",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "1e61a3ec-f3bd-43e9-857a-a44a8138bcd0",
+   "name": "BIG RIVER EQUIPMENT UNITED STATES",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 1,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "dadfbe75-641d-46d1-b724-c48549a38f4f",
+   "name": "Big River Resources LLC",
+   "naics": "424690",
+   "industry": "Other Chemical and Allied Products Merchant Wholesalers",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  }
+ ],
+ "Kent Corporation (GPC)": [
+  {
+   "entity_id": "03fd2edd-9354-4ff9-a177-ff15db43f893",
+   "name": "GRAIN PROCESSING CORPORATION",
+   "naics": "541990",
+   "industry": "All Other Professional, Scientific and Technical Services",
+   "direct_outbound_relationships": 32,
+   "direct_inbound_relationships": 171,
+   "affiliate_relationship_count": 14,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "e9df011b-a818-40e8-98c0-959a0e060dde",
+   "name": "GREEN PROCESSING LLC",
+   "naics": "484110",
+   "industry": "General Freight Trucking, Local",
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 5,
+   "affiliate_relationship_count": 0,
+   "alias_hit": false
+  },
+  {
+   "entity_id": "628098ac-8990-4b80-8dfe-5f926331dc2f",
+   "name": "Grain Processing Corp",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 1,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "32a3485e-f70a-427a-a59c-d645225989d0",
+   "name": "Grain Processing Corp Gstc",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 1,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "27c7043c-0911-44f5-83fb-a1e07e949c2a",
+   "name": "GRAIN PROCESSING CORP.",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  },
+  {
+   "entity_id": "8bcb5a72-cd53-406a-9b94-6d0442ad4fd7",
+   "name": "GRAIN PROCESSING CORPORATION",
+   "naics": null,
+   "industry": null,
+   "direct_outbound_relationships": 0,
+   "direct_inbound_relationships": 0,
+   "affiliate_relationship_count": 0,
+   "alias_hit": true
+  }
+ ]
+}

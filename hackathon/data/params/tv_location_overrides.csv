@@ -1,0 +1,9 @@
+l2_name,country,reason
+Lotte Wellfood Co Ltd,KR,Korean food company; Tradeverifyd jurisdiction US
+Cargill De Honduras S De Rl,HN,Name indicates Honduras
+Rocsa Colombia Sa Nit Tax Id,CO,Name indicates Colombia
+Paramount Trade Ja Limited,JM,City Kingston + 'JA' indicates Jamaica
+CÔNG TY TNHH DENEAST VIỆT NAM,VN,Malformed country field
+sunjin philippines corporation,PH,Name indicates Philippines; Tradeverifyd jurisdiction CN
+cj philippines inc,PH,Name indicates Philippines; Tradeverifyd jurisdiction VN
+ingredion philippines inc.,PH,Name indicates Philippines; Tradeverifyd jurisdiction TH

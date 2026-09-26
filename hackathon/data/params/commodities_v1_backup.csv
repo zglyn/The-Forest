@@ -1,0 +1,11 @@
+commodity,label,group,s2_share,unit,lb_per_unit,yield_basis,yield_assumed,price_assumed,n_rate_lb_ac,head_per_ac,output_per_head,buyer_key,notes
+corn,Corn,Grain,0.30,bu,56,NASS county,,,150,,,corn,N rate: typical Iowa corn-after-soybean rate (assumption; see ISU Corn N Rate Calculator)
+soybeans,Soybeans,Grain,0.20,bu,60,NASS county,,,0,,,soybeans,Legume; no synthetic N
+oats,Oats,Small grain,0.08,bu,32,NASS Iowa,,,40,,,oats,
+wheat,Wheat,Small grain,0.06,bu,60,NASS US,,,70,,,wheat,Iowa yield not published; US yield used
+barley,Barley,Small grain,0.04,bu,48,NASS US,,,60,,,barley,Iowa yield not published; US yield used
+alfalfa,Alfalfa hay,Forage,0.10,ton,2000,NASS Iowa,,,0,,,alfalfa,Legume; no synthetic N
+apples,Apples,Fruit,0.01,lb,1,NASS US,,,60,,,apples,US yield (Washington-dominated) likely overstates Iowa
+cattle,Cattle (cow-calf),Livestock,0.14,lb liveweight,1,Stocking assumption,,,0,0.333,495,cattle,3 ac per cow-calf pair incl. winter forage; 0.9 calves x 550 lb weaned
+sheep,Sheep (wool),Livestock,0.04,lb wool,1,Stocking assumption,,,0,3,7,wool,3 ewes/ac incl. winter forage; 7 lb grease wool per ewe; wool only
+goats,Goats (meat),Livestock,0.03,lb liveweight,1,Stocking assumption,,3.40,0,3,96,goats,3 does/ac; 1.6 kids x 60 lb; price from Kalona auction (USDA AMS 2153 Sep 23 2026)
